@@ -11,9 +11,10 @@ sphinx:
   configuration: conf.py
   fail_on_warning: false
 
-# Do not install any Python dependencies
+# Install required theme
 python:
-  install: []
+  install:
+    - requirements: requirements.txt
 
 # Tell Read the Docs the output directory is the root directory
-formats: []
+formats: ["htmlzip"]

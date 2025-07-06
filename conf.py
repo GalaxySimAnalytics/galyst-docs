@@ -10,16 +10,13 @@ release = '0.1.0'
 extensions = []
 
 # Simplest HTML theme
-html_theme = 'basic'
+html_theme = 'sphinx_book_theme'
 
-# No static file paths needed
-html_static_path = []
+html_static_path = ['_static']
 
-# Disable various automatic generation features
-html_use_index = False
-html_use_modindex = False
 html_copy_source = False
 html_show_sourcelink = False
 
 # Main document
 master_doc = 'index'
+root_doc = 'index'  # For newer Sphinx versions
