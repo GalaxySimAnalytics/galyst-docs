@@ -8,10 +8,10 @@ Welcome to the Galyst documentation!
 
 .. raw:: html
 
-   <p align="right">
-   <a href="../en/index.html">English</a> |
-   <a href="../zh_CN/index.html">简体中文</a>
-   </p>
+   <div style="border:1px solid #ccc; background:#f9f9f9; padding:8px; border-radius:6px; width:max-content; float:right;">
+     <a href="../en/index.html">English</a> |
+     <a href="../zh_CN/index.html">简体中文</a>
+   </div>
 
 ``Galyst``: a Python package for multi-dimensional analysis of galaxy simulations. Built on top of `pynbody <http://pynbody.readthedocs.io>`_ and `tangos <https://tangos.readthedocs.io/>`_.
 It uses ``pynbody`` for data processing and analysis, and ``tangos`` for data management. ``Galyst`` provides a complete toolchain for analyzing galaxies in simulations from multiple dimensions.

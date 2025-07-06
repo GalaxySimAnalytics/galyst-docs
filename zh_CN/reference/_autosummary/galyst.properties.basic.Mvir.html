@@ -31,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/galyst.css?v=5a0ae46b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/galyst.css?v=0907f922" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -49,8 +49,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'reference/_autosummary/galyst.properties.basic.Mvir';</script>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="galyst.properties.basic.Mvir.calculate" href="galyst.properties.basic.Mvir.calculate.html" />
-    <link rel="prev" title="galyst.properties.basic.Mass30kpc.requires_property" href="galyst.properties.basic.Mass30kpc.requires_property.html" />
+    <link rel="next" title="galyst.properties.basic.RadiusContainMassFraction2D_star" href="galyst.properties.basic.RadiusContainMassFraction2D_star.html" />
+    <link rel="prev" title="galyst.properties.basic.Mass30kpc" href="galyst.properties.basic.Mass30kpc.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="zh-CN"/>
   </head>
@@ -219,74 +219,7 @@
 </details></li>
 </ul>
 </details></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="galyst.core.html">galyst.core</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.data_mapper.html">galyst.core.data_mapper</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.data_mapper.SimArrayAttributeMapper.html">galyst.core.data_mapper.SimArrayAttributeMapper</a></li>
-</ul>
-</details></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.dbdata.html">galyst.core.dbdata</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbdata.HaloImage.html">galyst.core.dbdata.HaloImage</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbdata.HaloProfile.html">galyst.core.dbdata.HaloProfile</a></li>
-</ul>
-</details></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.dbextract.html">galyst.core.dbextract</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbextract.HaloImageGetter.html">galyst.core.dbextract.HaloImageGetter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbextract.HaloImageValueGetter.html">galyst.core.dbextract.HaloImageValueGetter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbextract.HaloProfileGetter.html">galyst.core.dbextract.HaloProfileGetter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbextract.HaloProfileValueGetter.html">galyst.core.dbextract.HaloProfileValueGetter</a></li>
-</ul>
-</details></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.dbobject.html">galyst.core.dbobject</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbobject.Snapshot.html">galyst.core.dbobject.Snapshot</a></li>
-</ul>
-</details></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.dboperate.html">galyst.core.dboperate</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dboperate.remove_duplicated_halos.html">galyst.core.dboperate.remove_duplicated_halos</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dboperate.remove_haloproperties.html">galyst.core.dboperate.remove_haloproperties</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dboperate.remove_timestep_without_host_simulation.html">galyst.core.dboperate.remove_timestep_without_host_simulation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dboperate.write_property_list.html">galyst.core.dboperate.write_property_list</a></li>
-</ul>
-</details></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.dbpatch.html">galyst.core.dbpatch</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbpatch.apply.html">galyst.core.dbpatch.apply</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbpatch.get_image_objects.html">galyst.core.dbpatch.get_image_objects</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbpatch.get_images.html">galyst.core.dbpatch.get_images</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbpatch.get_profile_objects.html">galyst.core.dbpatch.get_profile_objects</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbpatch.get_profiles.html">galyst.core.dbpatch.get_profiles</a></li>
-</ul>
-</details></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.halo.html">galyst.core.halo</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.halo.SimulationObject.html">galyst.core.halo.SimulationObject</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.halo.SimulationObjectHandler.html">galyst.core.halo.SimulationObjectHandler</a></li>
-</ul>
-</details></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.input_handler.html">galyst.core.input_handler</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.input_handler.ArepoHDFSubfindInputHandler.html">galyst.core.input_handler.ArepoHDFSubfindInputHandler</a></li>
-</ul>
-</details></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.permissions.html">galyst.core.permissions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.permissions.add_user_with_role.html">galyst.core.permissions.add_user_with_role</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.permissions.delete_user.html">galyst.core.permissions.delete_user</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.permissions.get_current_user.html">galyst.core.permissions.get_current_user</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.permissions.initialize_permissions_system.html">galyst.core.permissions.initialize_permissions_system</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.permissions.Role.html">galyst.core.permissions.Role</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.permissions.User.html">galyst.core.permissions.User</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.permissions.UserRoles.html">galyst.core.permissions.UserRoles</a></li>
-</ul>
-</details></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.simulation.html">galyst.core.simulation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.simulation.get_named_handler_class.html">galyst.core.simulation.get_named_handler_class</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.simulation.Simulation.html">galyst.core.simulation.Simulation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.simulation.SimulationHandler.html">galyst.core.simulation.SimulationHandler</a></li>
-</ul>
-</details></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.timestep.html">galyst.core.timestep</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.timestep.TimeStep.html">galyst.core.timestep.TimeStep</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.timestep.TimeStepHandler.html">galyst.core.timestep.TimeStepHandler</a></li>
-</ul>
-</details></li>
-</ul>
-</details></li>
+<li class="toctree-l2"><a class="reference internal" href="galyst.core.html">galyst.core</a></li>
 <li class="toctree-l2"><a class="reference internal" href="galyst.fitting.html">galyst.fitting</a></li>
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="galyst.properties.html">galyst.properties</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l3 current active has-children"><a class="reference internal" href="galyst.properties.basic.html">galyst.properties.basic</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
@@ -543,40 +476,40 @@ document.write(`
 <p class="rubric">Methods</p>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/galyst.properties.basic.Mvir.html#galyst.properties.basic.Mvir.calculate" title="galyst.properties.basic.Mvir.calculate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">calculate</span></code></a>(particle_data, existing_properties)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#galyst.properties.basic.Mvir.calculate" title="galyst.properties.basic.Mvir.calculate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">calculate</span></code></a>(particle_data, existing_properties)</p></td>
 <td><p>Calculate the properties using the given data</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/galyst.properties.basic.Mvir.html#galyst.properties.basic.Mvir.get_interpolated_value" title="galyst.properties.basic.Mvir.get_interpolated_value"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_interpolated_value</span></code></a>(at_x_position, ...)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#galyst.properties.basic.Mvir.get_interpolated_value" title="galyst.properties.basic.Mvir.get_interpolated_value"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_interpolated_value</span></code></a>(at_x_position, ...)</p></td>
 <td><p>Return the value of the property at the given x position</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/galyst.properties.basic.Mvir.html#galyst.properties.basic.Mvir.get_simulation_property" title="galyst.properties.basic.Mvir.get_simulation_property"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_simulation_property</span></code></a>(name, default)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#galyst.properties.basic.Mvir.get_simulation_property" title="galyst.properties.basic.Mvir.get_simulation_property"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_simulation_property</span></code></a>(name, default)</p></td>
 <td><p>Gets a property of the simulation on which this calculation is being computed</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/galyst.properties.basic.Mvir.html#galyst.properties.basic.Mvir.index_of_name" title="galyst.properties.basic.Mvir.index_of_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">index_of_name</span></code></a>(name)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#galyst.properties.basic.Mvir.index_of_name" title="galyst.properties.basic.Mvir.index_of_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">index_of_name</span></code></a>(name)</p></td>
 <td><p>Returns the index of the named property in the results returned from calculate().</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/galyst.properties.basic.Mvir.html#galyst.properties.basic.Mvir.live_calculate" title="galyst.properties.basic.Mvir.live_calculate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">live_calculate</span></code></a>(halo_entry, *input_values)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#galyst.properties.basic.Mvir.live_calculate" title="galyst.properties.basic.Mvir.live_calculate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">live_calculate</span></code></a>(halo_entry, *input_values)</p></td>
 <td><p>Calculate the result of a function, using the existing data in the database alone</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/galyst.properties.basic.Mvir.html#galyst.properties.basic.Mvir.live_calculate_named" title="galyst.properties.basic.Mvir.live_calculate_named"><code class="xref py py-obj docutils literal notranslate"><span class="pre">live_calculate_named</span></code></a>(name, halo_entry, ...)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#galyst.properties.basic.Mvir.live_calculate_named" title="galyst.properties.basic.Mvir.live_calculate_named"><code class="xref py py-obj docutils literal notranslate"><span class="pre">live_calculate_named</span></code></a>(name, halo_entry, ...)</p></td>
 <td><p>Calculate the result of a function, using the existing data in the database alone</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/galyst.properties.basic.Mvir.html#galyst.properties.basic.Mvir.mark_timer" title="galyst.properties.basic.Mvir.mark_timer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mark_timer</span></code></a>([label])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#galyst.properties.basic.Mvir.mark_timer" title="galyst.properties.basic.Mvir.mark_timer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mark_timer</span></code></a>([label])</p></td>
 <td><p>Called by subfunctions to mark a time</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/galyst.properties.basic.Mvir.html#galyst.properties.basic.Mvir.no_proxies" title="galyst.properties.basic.Mvir.no_proxies"><code class="xref py py-obj docutils literal notranslate"><span class="pre">no_proxies</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#galyst.properties.basic.Mvir.no_proxies" title="galyst.properties.basic.Mvir.no_proxies"><code class="xref py py-obj docutils literal notranslate"><span class="pre">no_proxies</span></code></a>()</p></td>
 <td><p>Returns True if the properties MUST be supplied as an actual Halo object rather than the normal dictionary-like proxy that is supplied.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/galyst.properties.basic.Mvir.html#galyst.properties.basic.Mvir.plot_x_values" title="galyst.properties.basic.Mvir.plot_x_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_x_values</span></code></a>(for_data)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#galyst.properties.basic.Mvir.plot_x_values" title="galyst.properties.basic.Mvir.plot_x_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_x_values</span></code></a>(for_data)</p></td>
 <td><p>Return a suitable array of x values to match the given y values</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/galyst.properties.basic.Mvir.html#galyst.properties.basic.Mvir.preloop" title="galyst.properties.basic.Mvir.preloop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">preloop</span></code></a>(sim, db_timestep)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#galyst.properties.basic.Mvir.preloop" title="galyst.properties.basic.Mvir.preloop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">preloop</span></code></a>(sim, db_timestep)</p></td>
 <td><p>Perform one-per-snapshot calculations, given the loaded simulation data and TimeStep object</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/galyst.properties.basic.Mvir.html#galyst.properties.basic.Mvir.region_specification" title="galyst.properties.basic.Mvir.region_specification"><code class="xref py py-obj docutils literal notranslate"><span class="pre">region_specification</span></code></a>(existing_properties)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#galyst.properties.basic.Mvir.region_specification" title="galyst.properties.basic.Mvir.region_specification"><code class="xref py py-obj docutils literal notranslate"><span class="pre">region_specification</span></code></a>(existing_properties)</p></td>
 <td><p>Returns an abstract specification of the region that this halo property is to be calculated on, or None if we want the halo particles as defined by the finder.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/galyst.properties.basic.Mvir.html#galyst.properties.basic.Mvir.requires_property" title="galyst.properties.basic.Mvir.requires_property"><code class="xref py py-obj docutils literal notranslate"><span class="pre">requires_property</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#galyst.properties.basic.Mvir.requires_property" title="galyst.properties.basic.Mvir.requires_property"><code class="xref py py-obj docutils literal notranslate"><span class="pre">requires_property</span></code></a>()</p></td>
 <td><p>Returns a list of existing properties required to calculate this property</p></td>
 </tr>
 </tbody>
@@ -638,40 +571,40 @@ document.write(`
 <p class="rubric">Methods</p>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/galyst.properties.basic.Mvir.html#galyst.properties.basic.Mvir.calculate" title="galyst.properties.basic.Mvir.calculate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">calculate</span></code></a>(particle_data, existing_properties)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#galyst.properties.basic.Mvir.calculate" title="galyst.properties.basic.Mvir.calculate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">calculate</span></code></a>(particle_data, existing_properties)</p></td>
 <td><p>Calculate the properties using the given data</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/galyst.properties.basic.Mvir.html#galyst.properties.basic.Mvir.get_interpolated_value" title="galyst.properties.basic.Mvir.get_interpolated_value"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_interpolated_value</span></code></a>(at_x_position, ...)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#galyst.properties.basic.Mvir.get_interpolated_value" title="galyst.properties.basic.Mvir.get_interpolated_value"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_interpolated_value</span></code></a>(at_x_position, ...)</p></td>
 <td><p>Return the value of the property at the given x position</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/galyst.properties.basic.Mvir.html#galyst.properties.basic.Mvir.get_simulation_property" title="galyst.properties.basic.Mvir.get_simulation_property"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_simulation_property</span></code></a>(name, default)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#galyst.properties.basic.Mvir.get_simulation_property" title="galyst.properties.basic.Mvir.get_simulation_property"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_simulation_property</span></code></a>(name, default)</p></td>
 <td><p>Gets a property of the simulation on which this calculation is being computed</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/galyst.properties.basic.Mvir.html#galyst.properties.basic.Mvir.index_of_name" title="galyst.properties.basic.Mvir.index_of_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">index_of_name</span></code></a>(name)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#galyst.properties.basic.Mvir.index_of_name" title="galyst.properties.basic.Mvir.index_of_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">index_of_name</span></code></a>(name)</p></td>
 <td><p>Returns the index of the named property in the results returned from calculate().</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/galyst.properties.basic.Mvir.html#galyst.properties.basic.Mvir.live_calculate" title="galyst.properties.basic.Mvir.live_calculate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">live_calculate</span></code></a>(halo_entry, *input_values)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#galyst.properties.basic.Mvir.live_calculate" title="galyst.properties.basic.Mvir.live_calculate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">live_calculate</span></code></a>(halo_entry, *input_values)</p></td>
 <td><p>Calculate the result of a function, using the existing data in the database alone</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/galyst.properties.basic.Mvir.html#galyst.properties.basic.Mvir.live_calculate_named" title="galyst.properties.basic.Mvir.live_calculate_named"><code class="xref py py-obj docutils literal notranslate"><span class="pre">live_calculate_named</span></code></a>(name, halo_entry, ...)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#galyst.properties.basic.Mvir.live_calculate_named" title="galyst.properties.basic.Mvir.live_calculate_named"><code class="xref py py-obj docutils literal notranslate"><span class="pre">live_calculate_named</span></code></a>(name, halo_entry, ...)</p></td>
 <td><p>Calculate the result of a function, using the existing data in the database alone</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/galyst.properties.basic.Mvir.html#galyst.properties.basic.Mvir.mark_timer" title="galyst.properties.basic.Mvir.mark_timer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mark_timer</span></code></a>([label])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#galyst.properties.basic.Mvir.mark_timer" title="galyst.properties.basic.Mvir.mark_timer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mark_timer</span></code></a>([label])</p></td>
 <td><p>Called by subfunctions to mark a time</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/galyst.properties.basic.Mvir.html#galyst.properties.basic.Mvir.no_proxies" title="galyst.properties.basic.Mvir.no_proxies"><code class="xref py py-obj docutils literal notranslate"><span class="pre">no_proxies</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#galyst.properties.basic.Mvir.no_proxies" title="galyst.properties.basic.Mvir.no_proxies"><code class="xref py py-obj docutils literal notranslate"><span class="pre">no_proxies</span></code></a>()</p></td>
 <td><p>Returns True if the properties MUST be supplied as an actual Halo object rather than the normal dictionary-like proxy that is supplied.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/galyst.properties.basic.Mvir.html#galyst.properties.basic.Mvir.plot_x_values" title="galyst.properties.basic.Mvir.plot_x_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_x_values</span></code></a>(for_data)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#galyst.properties.basic.Mvir.plot_x_values" title="galyst.properties.basic.Mvir.plot_x_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_x_values</span></code></a>(for_data)</p></td>
 <td><p>Return a suitable array of x values to match the given y values</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/galyst.properties.basic.Mvir.html#galyst.properties.basic.Mvir.preloop" title="galyst.properties.basic.Mvir.preloop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">preloop</span></code></a>(sim, db_timestep)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#galyst.properties.basic.Mvir.preloop" title="galyst.properties.basic.Mvir.preloop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">preloop</span></code></a>(sim, db_timestep)</p></td>
 <td><p>Perform one-per-snapshot calculations, given the loaded simulation data and TimeStep object</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/galyst.properties.basic.Mvir.html#galyst.properties.basic.Mvir.region_specification" title="galyst.properties.basic.Mvir.region_specification"><code class="xref py py-obj docutils literal notranslate"><span class="pre">region_specification</span></code></a>(existing_properties)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#galyst.properties.basic.Mvir.region_specification" title="galyst.properties.basic.Mvir.region_specification"><code class="xref py py-obj docutils literal notranslate"><span class="pre">region_specification</span></code></a>(existing_properties)</p></td>
 <td><p>Returns an abstract specification of the region that this halo property is to be calculated on, or None if we want the halo particles as defined by the finder.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/galyst.properties.basic.Mvir.html#galyst.properties.basic.Mvir.requires_property" title="galyst.properties.basic.Mvir.requires_property"><code class="xref py py-obj docutils literal notranslate"><span class="pre">requires_property</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#galyst.properties.basic.Mvir.requires_property" title="galyst.properties.basic.Mvir.requires_property"><code class="xref py py-obj docutils literal notranslate"><span class="pre">requires_property</span></code></a>()</p></td>
 <td><p>Returns a list of existing properties required to calculate this property</p></td>
 </tr>
 </tbody>
@@ -951,20 +884,20 @@ given y values</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="galyst.properties.basic.Mass30kpc.requires_property.html"
+       href="galyst.properties.basic.Mass30kpc.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">上一页</p>
-        <p class="prev-next-title">galyst.properties.basic.Mass30kpc.requires_property</p>
+        <p class="prev-next-title">galyst.properties.basic.Mass30kpc</p>
       </div>
     </a>
     <a class="right-next"
-       href="galyst.properties.basic.Mvir.calculate.html"
+       href="galyst.properties.basic.RadiusContainMassFraction2D_star.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">下一页</p>
-        <p class="prev-next-title">galyst.properties.basic.Mvir.calculate</p>
+        <p class="prev-next-title">galyst.properties.basic.RadiusContainMassFraction2D_star</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

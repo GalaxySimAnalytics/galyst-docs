@@ -1,41 +1,6 @@
 ﻿galyst.core
 ===========
 
-.. automodule:: galyst.core
+.. currentmodule:: galyst
 
-   
-   
-   
-
-   
-   
-   
-
-   
-   
-   
-
-   
-   
-   
-
-
-
-.. rubric:: Modules
-
-.. autosummary::
-   :toctree:
-   :recursive:
-
-   data_mapper
-   dbdata
-   dbextract
-   dbobject
-   dboperate
-   dbpatch
-   halo
-   input_handler
-   permissions
-   simulation
-   timestep
-
+.. autodata:: core
