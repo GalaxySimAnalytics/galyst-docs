@@ -1,0 +1,981 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Quick-start &#8212; Galyst 0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/galyst.css?v=5a0ae46b" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=e1a75a79"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=35f41c81"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tutorials/quickstart';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Galyst Installation" href="../installation.html" />
+    <link rel="prev" title="Galyst Tutorials" href="tutorials.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+<aside class="bd-header-announcement" aria-label="Announcement">
+  <div class="bd-header-announcement__content">This documentation is under active development!</div>
+</aside>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Galyst Documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="tutorials.html">Tutorials</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Quick-start</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../reference/index.html">Reference</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../reference/_autosummary/galyst.calculators.html">galyst.calculators</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../reference/_autosummary/galyst.calculators.basic.html">galyst.calculators.basic</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/generated/galyst.calculators.basic.ParameterContain.html">galyst.calculators.basic.ParameterContain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/generated/galyst.calculators.basic.RadiusContain2D.html">galyst.calculators.basic.RadiusContain2D</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/generated/galyst.calculators.basic.RadiusContain3D.html">galyst.calculators.basic.RadiusContain3D</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/generated/galyst.calculators.basic.VolumeDensity.html">galyst.calculators.basic.VolumeDensity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/generated/galyst.calculators.basic.SurfaceDensity.html">galyst.calculators.basic.SurfaceDensity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/generated/galyst.calculators.basic.RotationEnergyFraction.html">galyst.calculators.basic.RotationEnergyFraction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/generated/galyst.calculators.basic.InertiaShape.html">galyst.calculators.basic.InertiaShape</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/generated/galyst.calculators.basic.ParamSum.html">galyst.calculators.basic.ParamSum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/generated/galyst.calculators.basic.PosCenter.html">galyst.calculators.basic.PosCenter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/generated/galyst.calculators.basic.VelCenter.html">galyst.calculators.basic.VelCenter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/generated/galyst.calculators.basic.Center.html">galyst.calculators.basic.Center</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/generated/galyst.calculators.basic.AngularMomentum.html">galyst.calculators.basic.AngularMomentum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/generated/galyst.calculators.basic.SpinParam.html">galyst.calculators.basic.SpinParam</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/generated/galyst.calculators.basic.VirialRadius.html">galyst.calculators.basic.VirialRadius</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.calculators.basic.composition.html">galyst.calculators.basic.composition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.calculators.basic.dynamics.html">galyst.calculators.basic.dynamics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.calculators.basic.fundamental.html">galyst.calculators.basic.fundamental</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.calculators.basic.util.html">galyst.calculators.basic.util</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../reference/_autosummary/galyst.calculators.image.html">galyst.calculators.image</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/generated/galyst.calculators.image.direct_projection.html">galyst.calculators.image.direct_projection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/generated/galyst.calculators.image.sph_projection.html">galyst.calculators.image.sph_projection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/generated/galyst.calculators.image.star_luminosity_image.html">galyst.calculators.image.star_luminosity_image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.calculators.image.direct_image.html">galyst.calculators.image.direct_image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.calculators.image.show_helper.html">galyst.calculators.image.show_helper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.calculators.image.sph_image.html">galyst.calculators.image.sph_image</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../reference/_autosummary/galyst.calculators.profile.html">galyst.calculators.profile</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/generated/galyst.calculators.profile.Profile.html">galyst.calculators.profile.Profile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/generated/galyst.calculators.profile.InclinedProfile.html">galyst.calculators.profile.InclinedProfile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/generated/galyst.calculators.profile.VerticalProfile.html">galyst.calculators.profile.VerticalProfile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/generated/galyst.calculators.profile.AgeProfile.html">galyst.calculators.profile.AgeProfile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/generated/galyst.calculators.profile.simulation_halo_mass_function.html">galyst.calculators.profile.simulation_halo_mass_function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.calculators.profile.plot_helper.html">galyst.calculators.profile.plot_helper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.calculators.profile.spatial.html">galyst.calculators.profile.spatial</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.calculators.profile.statistical.html">galyst.calculators.profile.statistical</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.calculators.profile.temporal.html">galyst.calculators.profile.temporal</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/_autosummary/galyst.calculators.rt.html">galyst.calculators.rt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/_autosummary/galyst.calculators.selector.html">galyst.calculators.selector</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../reference/_autosummary/galyst.calculators.transformator.html">galyst.calculators.transformator</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.calculators.transformator.warp.html">galyst.calculators.transformator.warp</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../reference/_autosummary/galyst.calculators.util.html">galyst.calculators.util</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.calculators.util.WrapTransformation.html">galyst.calculators.util.WrapTransformation</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../reference/_autosummary/galyst.core.html">galyst.core</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../reference/_autosummary/galyst.core.data_mapper.html">galyst.core.data_mapper</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.core.data_mapper.SimArrayAttributeMapper.html">galyst.core.data_mapper.SimArrayAttributeMapper</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../reference/_autosummary/galyst.core.dbdata.html">galyst.core.dbdata</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.core.dbdata.HaloImage.html">galyst.core.dbdata.HaloImage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.core.dbdata.HaloProfile.html">galyst.core.dbdata.HaloProfile</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../reference/_autosummary/galyst.core.dbextract.html">galyst.core.dbextract</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.core.dbextract.HaloImageGetter.html">galyst.core.dbextract.HaloImageGetter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.core.dbextract.HaloImageValueGetter.html">galyst.core.dbextract.HaloImageValueGetter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.core.dbextract.HaloProfileGetter.html">galyst.core.dbextract.HaloProfileGetter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.core.dbextract.HaloProfileValueGetter.html">galyst.core.dbextract.HaloProfileValueGetter</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../reference/_autosummary/galyst.core.dbobject.html">galyst.core.dbobject</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.core.dbobject.Snapshot.html">galyst.core.dbobject.Snapshot</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../reference/_autosummary/galyst.core.dboperate.html">galyst.core.dboperate</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.core.dboperate.remove_duplicated_halos.html">galyst.core.dboperate.remove_duplicated_halos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.core.dboperate.remove_haloproperties.html">galyst.core.dboperate.remove_haloproperties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.core.dboperate.remove_timestep_without_host_simulation.html">galyst.core.dboperate.remove_timestep_without_host_simulation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.core.dboperate.write_property_list.html">galyst.core.dboperate.write_property_list</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../reference/_autosummary/galyst.core.dbpatch.html">galyst.core.dbpatch</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.core.dbpatch.apply.html">galyst.core.dbpatch.apply</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.core.dbpatch.get_image_objects.html">galyst.core.dbpatch.get_image_objects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.core.dbpatch.get_images.html">galyst.core.dbpatch.get_images</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.core.dbpatch.get_profile_objects.html">galyst.core.dbpatch.get_profile_objects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.core.dbpatch.get_profiles.html">galyst.core.dbpatch.get_profiles</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../reference/_autosummary/galyst.core.halo.html">galyst.core.halo</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.core.halo.SimulationObject.html">galyst.core.halo.SimulationObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.core.halo.SimulationObjectHandler.html">galyst.core.halo.SimulationObjectHandler</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../reference/_autosummary/galyst.core.input_handler.html">galyst.core.input_handler</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.core.input_handler.ArepoHDFSubfindInputHandler.html">galyst.core.input_handler.ArepoHDFSubfindInputHandler</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../reference/_autosummary/galyst.core.permissions.html">galyst.core.permissions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.core.permissions.add_user_with_role.html">galyst.core.permissions.add_user_with_role</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.core.permissions.delete_user.html">galyst.core.permissions.delete_user</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.core.permissions.get_current_user.html">galyst.core.permissions.get_current_user</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.core.permissions.initialize_permissions_system.html">galyst.core.permissions.initialize_permissions_system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.core.permissions.Role.html">galyst.core.permissions.Role</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.core.permissions.User.html">galyst.core.permissions.User</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.core.permissions.UserRoles.html">galyst.core.permissions.UserRoles</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../reference/_autosummary/galyst.core.simulation.html">galyst.core.simulation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.core.simulation.get_named_handler_class.html">galyst.core.simulation.get_named_handler_class</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.core.simulation.Simulation.html">galyst.core.simulation.Simulation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.core.simulation.SimulationHandler.html">galyst.core.simulation.SimulationHandler</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../reference/_autosummary/galyst.core.timestep.html">galyst.core.timestep</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.core.timestep.TimeStep.html">galyst.core.timestep.TimeStep</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.core.timestep.TimeStepHandler.html">galyst.core.timestep.TimeStepHandler</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/_autosummary/galyst.fitting.html">galyst.fitting</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../reference/_autosummary/galyst.properties.html">galyst.properties</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../reference/_autosummary/galyst.properties.basic.html">galyst.properties.basic</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.properties.basic.Mass30kpc.html">galyst.properties.basic.Mass30kpc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.properties.basic.Mvir.html">galyst.properties.basic.Mvir</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.properties.basic.RadiusContainMassFraction2D_star.html">galyst.properties.basic.RadiusContainMassFraction2D_star</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.properties.basic.RadiusContainMassFraction3D_star.html">galyst.properties.basic.RadiusContainMassFraction3D_star</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.properties.basic.Rvir.html">galyst.properties.basic.Rvir</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.properties.basic.Spherical30kpcPropertyCalculation.html">galyst.properties.basic.Spherical30kpcPropertyCalculation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.properties.basic.krot30kpc.html">galyst.properties.basic.krot30kpc</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../reference/_autosummary/galyst.util.html">galyst.util</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../reference/_autosummary/galyst.util.ansi_string_format.html">galyst.util.ansi_string_format</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.util.ansi_string_format.background_color.html">galyst.util.ansi_string_format.background_color</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.util.ansi_string_format.color.html">galyst.util.ansi_string_format.color</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.util.ansi_string_format.escape_codes_color_bg.html">galyst.util.ansi_string_format.escape_codes_color_bg</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.util.ansi_string_format.escape_codes_color_fg.html">galyst.util.ansi_string_format.escape_codes_color_fg</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.util.ansi_string_format.fontformat.html">galyst.util.ansi_string_format.fontformat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.util.ansi_string_format.foreground_color.html">galyst.util.ansi_string_format.foreground_color</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.util.ansi_string_format.string_formatter.html">galyst.util.ansi_string_format.string_formatter</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../reference/_autosummary/galyst.util.path_helper.html">galyst.util.path_helper</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.util.path_helper.PathHelper.html">galyst.util.path_helper.PathHelper</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../reference/_autosummary/galyst.util.string_match.html">galyst.util.string_match</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.util.string_match.best_matching_path.html">galyst.util.string_match.best_matching_path</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../reference/_autosummary/galyst.util.tangos_base.html">galyst.util.tangos_base</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/_autosummary/galyst.util.tangos_base.with_tangos_base.html">galyst.util.tangos_base.with_tangos_base</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/GalaxySimAnalytics/Galyst" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/tutorials/quickstart.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Quick-start</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-paths">Setting up Paths</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#connecting-to-the-database">Connecting to the Database</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-simulations">Adding Simulations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-timesteps">Adding TimeSteps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-halos">Adding Halos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-basic-properties">Calculating Basic Properties</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-1d-profiles">Calculating 1D Profiles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-halo-images">Plotting Halo Images</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="quick-start">
+<span id="quickstart"></span><h1>Quick-start<a class="headerlink" href="#quick-start" title="Link to this heading">#</a></h1>
+<div class="margin admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">Galyst</span></code> is built on top of <a class="reference external" href="http://pynbody.readthedocs.io">pynbody</a> and <a class="reference external" href="http://tangos.readthedocs.io">tangos</a>. For advanced usage and deeper understanding, please refer to their documentation.</p>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Galyst</span></code> is designed for the analysis and management of galaxy simulation data, providing a unified framework for multi-dimensional galaxy property calculations, model fitting, and data management.</p>
+<ul>
+<li><p><strong>Data Management</strong> (<a class="reference internal" href="../reference/_autosummary/galyst.core.html#module-galyst.core" title="galyst.core"><code class="xref py py-mod docutils literal notranslate"><span class="pre">galyst.core</span></code></a>):</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>At the simulation level, <a class="reference external" href="http://tangos.readthedocs.io">tangos</a> is used to organize and access data from multiple simulations, as well as to store analysis results.</p></li>
+<li><p>At the raw data level, <a class="reference external" href="http://pynbody.readthedocs.io">pynbody</a> enables reading simulation data files and performing detailed calculations and analyses.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">Galyst</span></code> provides essential tools for calculating galaxy properties across multiple dimensions:</p>
+<ul>
+<li><p><strong>Computation</strong> (<a class="reference internal" href="../reference/_autosummary/galyst.calculators.html#module-galyst.calculators" title="galyst.calculators"><code class="xref py py-mod docutils literal notranslate"><span class="pre">galyst.calculators</span></code></a>):</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>0D</strong>: Global properties such as mass, size, and angular momentum.</p></li>
+<li><p><strong>1D</strong>: Radial profiles, including density, age, and metallicity.</p></li>
+<li><p><strong>2D</strong>: Images, such as surface brightness and velocity fields.</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">Galyst</span></code> also interfaces with external tools like <a class="reference external" href="https://agama.software/">agama</a> and <a class="reference external" href="http://galpy.readthedocs.io">galpy</a> for orbital analysis, and <a class="reference external" href="https://skirt.ugent.be/root/_home.html">skirt</a> for radiative transfer to generate synthetic observations.</p>
+</div></blockquote>
+</li>
+</ul>
+<p>Flexible multi-dimensional model fitting capabilities are available:</p>
+<ul>
+<li><p><strong>Model Fitting</strong> (<a class="reference internal" href="../reference/_autosummary/galyst.fitting.html#module-galyst.fitting" title="galyst.fitting"><code class="xref py py-mod docutils literal notranslate"><span class="pre">galyst.fitting</span></code></a>):</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>1D</strong>: Fit theoretical profiles, probability density functions, radial density profiles, and star formation history templates.</p></li>
+<li><p><strong>2D</strong>: Perform multi-component model fitting with <a class="reference external" href="http://imfit.readthedocs.io">imfit</a>, ellipse fitting with <a class="reference external" href="https://photutils.readthedocs.io">photutils</a>, and Fourier decomposition.</p></li>
+<li><p><strong>3D</strong>: Fit three-dimensional models, such as ellipsoid fitting.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<p>Additionally, <code class="docutils literal notranslate"><span class="pre">Galyst</span></code> offers a collection of pre-defined computed properties and methods in <a class="reference internal" href="../reference/_autosummary/galyst.properties.html#module-galyst.properties" title="galyst.properties"><code class="xref py py-mod docutils literal notranslate"><span class="pre">galyst.properties</span></code></a>.</p>
+<section id="setting-up-paths">
+<h2>Setting up Paths<a class="headerlink" href="#setting-up-paths" title="Link to this heading">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">Galyst</span></code> uses <code class="docutils literal notranslate"><span class="pre">tangos</span></code> to organize and access simulation data. In <code class="docutils literal notranslate"><span class="pre">tangos</span></code>, the <code class="docutils literal notranslate"><span class="pre">TANGOS_SIMULATION_FOLDER</span></code> environment variable should point to your simulation data directory, and <code class="docutils literal notranslate"><span class="pre">TANGOS_DB_CONNECTION</span></code> should point to your tangos database.</p>
+<p>If these two environment variables are not set, the default paths are:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">TANGOS_SIMULATION_FOLDER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>~/
+<span class="nv">TANGOS_DB_CONNECTION</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>~/tangos_data.db
+</pre></div>
+</div>
+<p>Set the environment variables as follows:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">TANGOS_SIMULATION_FOLDER</span><span class="o">=</span>~/Simulation/sims
+<span class="nb">export</span><span class="w"> </span><span class="nv">TANGOS_DB_CONNECTION</span><span class="o">=</span>~/tangos_data.db
+</pre></div>
+</div>
+<p>Alternatively, before running Python, you can set them within your script:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+
+<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;TANGOS_SIMULATION_FOLDER&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s1">&#39;~/Simulation/sims&#39;</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;TANGOS_DB_CONNECTION&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s1">&#39;~/tangos_data.db&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="connecting-to-the-database">
+<h2>Connecting to the Database<a class="headerlink" href="#connecting-to-the-database" title="Link to this heading">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">Galyst</span></code> automatically connects to the database and creates a new one if needed, initializing the permissions management system.</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [1]: </span><span class="kn">from</span><span class="w"> </span><span class="nn">galyst.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">Simulation</span>
+</pre></div>
+</div>
+<p>If you connect to a database that does not exist, the system will automatically create a new database and set the current user as the database author.
+After running <a href="#id3"><span class="problematic" id="id4">:python:`from galyst.core import Simulation`</span></a>, you will see output similar to the following, indicating that a new database has been created and the creator has been set as the author:</p>
+<div class="full-width highlight-text notranslate"><div class="highlight"><pre><span></span>[2025-07-06 14:16:42.024] &lt; galyst.core.permissions &gt; | INFO | First user detected. Setting as Author.
+[2025-07-06 14:16:42.176] &lt; galyst.core.permissions &gt; | INFO |   - User &#39;yxi@yxi&#39; has been set as the Author.
+[2025-07-06 14:16:42.337] &lt; galyst.core.permissions &gt; | INFO | Connection successful. User: &#39;yxi&#39;, Roles: [&#39;author&#39;]
+</pre></div>
+</div>
+<p>If the database already exists, you will see similar output indicating a successful connection:</p>
+<div class="full-width highlight-text notranslate"><div class="highlight"><pre><span></span>[2025-07-06 14:34:47.458] &lt; galyst.core.permissions &gt; | INFO | Connection successful. User: &#39;yxi&#39;, Roles: [&#39;author&#39;]
+</pre></div>
+</div>
+</section>
+<section id="adding-simulations">
+<h2>Adding Simulations<a class="headerlink" href="#adding-simulations" title="Link to this heading">#</a></h2>
+<p>Before analyzing your data, you need to add your simulation to <code class="docutils literal notranslate"><span class="pre">Galyst</span></code>. Initially, there are no simulations present.</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [2]: </span><span class="nb">print</span><span class="p">(</span><span class="n">Simulation</span><span class="o">.</span><span class="n">all_simulations</span><span class="p">())</span>
+<span class="go">[]</span>
+</pre></div>
+</div>
+<p>Here, we add a high-resolution zoom-in simulation. When you use the <code class="docutils literal notranslate"><span class="pre">Simulation</span></code> class, it first checks the <code class="docutils literal notranslate"><span class="pre">tangos_data.db</span></code> database to see if the simulation already exists. If it does not, it parses the specified path, creates a new simulation instance, and adds it to the database.</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [3]: </span><span class="n">sim</span> <span class="o">=</span> <span class="n">Simulation</span><span class="p">(</span><span class="s2">&quot;~/Simulation/sims/TNG50_l7_Halo274_l11&quot;</span><span class="p">)</span>
+
+<span class="gp">In [4]: </span><span class="nb">print</span><span class="p">(</span><span class="n">sim</span><span class="p">)</span>
+<span class="go">Simulation(name=TNG50_l7_Halo274_l11, path=/home/yxi/Simulation/sims/TNG50_l7_Halo274_l11)</span>
+
+<span class="gp">In [5]: </span><span class="nb">print</span><span class="p">(</span><span class="n">Simulation</span><span class="o">.</span><span class="n">all_simulations</span><span class="p">())</span>
+<span class="go">[&lt;Simulation(&quot;TNG50_l7_Halo274_l11&quot;)&gt;]</span>
+</pre></div>
+</div>
+<p>The folder structure is as follows:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>TNG50_l7_Halo274_l11/
+└── output/
+    ├── groups_000/
+    ├── ...
+    ├── groups_099/
+    │   ├── fof_subhalo_tab_099.0.hdf5
+    │   ├── ...
+    │   └── fof_subhalo_tab_099.10.hdf5
+    ├── snapdir_000/
+    ├── ...
+    └── snapdir_099/
+        ├── snapshot_099.0.hdf5
+        ├── ...
+        └── snapshot_099.10.hdf5
+</pre></div>
+</div>
+<p>When adding a simulation, Galyst will automatically extract some basic properties and store them in the database. You can view these properties with the following code:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [6]: </span><span class="nb">print</span><span class="p">(</span><span class="n">sim</span><span class="o">.</span><span class="n">properties</span><span class="p">)</span>
+<span class="go">{&#39;approx_resolution_kpc&#39;: 0.29524657089737566, &#39;approx_resolution_Msol&#39;: 532431.5564841477, &#39;boxsize&#39;: 51668.149907040715, &#39;h&#39;: 0.6774, &#39;handler&#39;: &#39;galyst.core.input_handler.ArepoHDFSubfindInputHandler&#39;, &#39;object_renumber&#39;: 1}</span>
+</pre></div>
+</div>
+</section>
+<section id="adding-timesteps">
+<h2>Adding TimeSteps<a class="headerlink" href="#adding-timesteps" title="Link to this heading">#</a></h2>
+<p>You can access all timestep files with the following code:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [7]: </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number of timestep files:&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">sim</span><span class="o">.</span><span class="n">all_timestep_files</span><span class="p">))</span>
+<span class="go">Number of timestep files: 100</span>
+
+<span class="gp">In [8]: </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Last timestep file:&#39;</span><span class="p">,</span> <span class="n">sim</span><span class="o">.</span><span class="n">all_timestep_files</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="go">Last timestep file: /home/yxi/Simulation/sims/TNG50_l7_Halo274_l11/output/snapdir_099/snap_099</span>
+</pre></div>
+</div>
+<p>You can view the timesteps currently stored in the database. The following code displays the timesteps for this simulation that are not yet stored in the database, so it returns an empty list.</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [9]: </span><span class="nb">print</span><span class="p">(</span><span class="n">sim</span><span class="o">.</span><span class="n">timesteps</span><span class="p">)</span>
+<span class="go">[]</span>
+</pre></div>
+</div>
+<p>However, you can still access a <code class="docutils literal notranslate"><span class="pre">TimeStep</span></code> that has not yet been stored in the database by using a numerical index:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [10]: </span><span class="n">timestep</span> <span class="o">=</span> <span class="n">sim</span><span class="p">[</span><span class="mi">99</span><span class="p">]</span>
+
+<span class="gp">In [11]: </span><span class="nb">print</span><span class="p">(</span><span class="n">timestep</span><span class="p">)</span>
+<span class="go">&lt;TimeStep &#39;TNG50_l7_Halo274_l11/output/snapdir_099/snap_099&#39; z=0.00 t=13.80 Gyr&gt;</span>
+</pre></div>
+</div>
+<p>Alternatively, you can access a specific time step using its unique string identifier from the timestep files. In some cases, this method may be more precise.</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [12]: </span><span class="n">timestep</span> <span class="o">=</span> <span class="n">sim</span><span class="p">[</span><span class="s1">&#39;snap_099&#39;</span><span class="p">]</span>  <span class="c1"># or &#39;099&#39;</span>
+
+<span class="gp">In [13]: </span><span class="nb">print</span><span class="p">(</span><span class="n">timestep</span><span class="p">)</span>
+<span class="go">&lt;TimeStep &#39;TNG50_l7_Halo274_l11/output/snapdir_099/snap_099&#39; z=0.00 t=13.80 Gyr&gt;</span>
+</pre></div>
+</div>
+<p>After accessing a <code class="docutils literal notranslate"><span class="pre">TimeStep</span></code> in this way, it will automatically be added to the simulation in the database.</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [14]: </span><span class="nb">print</span><span class="p">(</span><span class="n">sim</span><span class="o">.</span><span class="n">timesteps</span><span class="p">)</span>
+<span class="go">[&lt;TimeStep &#39;TNG50_l7_Halo274_l11/output/snapdir_099/snap_099&#39; z=0.00 t=13.80 Gyr&gt;]</span>
+</pre></div>
+</div>
+<div class="margin admonition note">
+<p class="admonition-title">Note</p>
+<p>Note that “halos” here typically refer to objects identified by the Subfind algorithm, while “groups” represent larger structures usually found by the FOF algorithm.</p>
+</div>
+</section>
+<section id="adding-halos">
+<h2>Adding Halos<a class="headerlink" href="#adding-halos" title="Link to this heading">#</a></h2>
+<p>Within a <code class="docutils literal notranslate"><span class="pre">TimeStep</span></code>, you can inspect information about objects at that particular snapshot.
+For example, you can view the halos at this time step. Since no objects have been added yet, this will return an empty list.</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [15]: </span><span class="nb">print</span><span class="p">(</span><span class="n">timestep</span><span class="o">.</span><span class="n">halos</span><span class="p">())</span>
+<span class="go">[]</span>
+</pre></div>
+</div>
+<p>Next, let’s add a halo to this time step.</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [16]: </span><span class="n">timestep</span><span class="o">.</span><span class="n">add_halos</span><span class="p">(</span><span class="n">max_object</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="gp">In [17]: </span><span class="nb">print</span><span class="p">(</span><span class="n">timestep</span><span class="o">.</span><span class="n">halos</span><span class="p">())</span>
+<span class="go">[&lt;Halo &#39;TNG50_l7_Halo274_l11/output/snapdir_099/snap_099/halo_1&#39; | NDM=1838428 Nstar=750955 Ngas=613128&gt;]</span>
+</pre></div>
+</div>
+<p>Now, <code class="docutils literal notranslate"><span class="pre">timestep.halos()</span></code> contains a halo object. You can access it by index:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [18]: </span><span class="n">halo</span> <span class="o">=</span> <span class="n">timestep</span><span class="o">.</span><span class="n">halos</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="gp">In [19]: </span><span class="nb">print</span><span class="p">(</span><span class="n">halo</span><span class="p">)</span>
+<span class="go">&lt;Halo &#39;TNG50_l7_Halo274_l11/output/snapdir_099/snap_099/halo_1&#39; | NDM=1838428 Nstar=750955 Ngas=613128&gt;</span>
+</pre></div>
+</div>
+<p>Alternatively, you can access a halo by specifying the <code class="docutils literal notranslate"><span class="pre">finder_id</span></code>:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [20]: </span><span class="nb">print</span><span class="p">(</span><span class="n">timestep</span><span class="o">.</span><span class="n">halos</span><span class="p">(</span><span class="n">finder_id</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span>
+<span class="go">[&lt;Halo &#39;TNG50_l7_Halo274_l11/output/snapdir_099/snap_099/halo_1&#39; | NDM=1838428 Nstar=750955 Ngas=613128&gt;]</span>
+
+<span class="gp">In [21]: </span><span class="n">halo</span> <span class="o">=</span> <span class="n">timestep</span><span class="o">.</span><span class="n">halos</span><span class="p">(</span><span class="n">finder_id</span><span class="o">=</span><span class="mi">0</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>The halo object is a <code class="xref py py-class docutils literal notranslate"><span class="pre">galyst.core.SimulationObject</span></code> that contains all the properties of the halo at this time step. You can view all the properties stored in the database for this object. Since nothing has been stored yet, the list will be empty:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [22]: </span><span class="nb">print</span><span class="p">(</span><span class="n">halo</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<span class="go">[]</span>
+</pre></div>
+</div>
+<p>Next, you need to load the particle data for this halo into memory to perform further calculations and analyses.
+The variable <code class="docutils literal notranslate"><span class="pre">halo_particles</span></code> is a <code class="docutils literal notranslate"><span class="pre">SimSnap</span></code> class from <code class="docutils literal notranslate"><span class="pre">pynbody</span></code>.</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [23]: </span><span class="n">halo_particles</span> <span class="o">=</span> <span class="n">halo</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
+
+<span class="gp">In [24]: </span><span class="nb">print</span><span class="p">(</span><span class="n">halo_particles</span><span class="p">)</span>
+<span class="go">&lt;ArepoHDFSnap &quot;/home/yxi/Simulation/sims/TNG50_l7_Halo274_l11/output/snapdir_099/snap_099&quot; len=3202512&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="calculating-basic-properties">
+<h2>Calculating Basic Properties<a class="headerlink" href="#calculating-basic-properties" title="Link to this heading">#</a></h2>
+<p>A suite of tools for processing particle data is provided in <a class="reference internal" href="../reference/_autosummary/galyst.calculators.html#module-galyst.calculators" title="galyst.calculators"><code class="xref py py-mod docutils literal notranslate"><span class="pre">galyst.calculators</span></code></a>. Before performing analysis, it is recommended to orient <code class="docutils literal notranslate"><span class="pre">halo_particles</span></code> face-on.</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [25]: </span><span class="kn">from</span><span class="w"> </span><span class="nn">galyst</span><span class="w"> </span><span class="kn">import</span> <span class="n">calculators</span>
+
+<span class="gp">In [26]: </span><span class="n">trans</span> <span class="o">=</span> <span class="n">calculators</span><span class="o">.</span><span class="n">transformator</span><span class="o">.</span><span class="n">faceon</span><span class="p">(</span><span class="n">halo_particles</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You can then use other tools in <a class="reference internal" href="../reference/_autosummary/galyst.calculators.html#module-galyst.calculators" title="galyst.calculators"><code class="xref py py-mod docutils literal notranslate"><span class="pre">galyst.calculators</span></code></a> for further calculations and analysis. For example, <a class="reference internal" href="../reference/_autosummary/generated/galyst.calculators.basic.html#module-galyst.calculators.basic" title="galyst.calculators.basic"><code class="xref py py-mod docutils literal notranslate"><span class="pre">galyst.calculators.basic</span></code></a> provides functions for computing fundamental galaxy properties.
+For example, to compute the half-mass radius:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [27]: </span><span class="n">Re</span> <span class="o">=</span> <span class="n">calculators</span><span class="o">.</span><span class="n">basic</span><span class="o">.</span><span class="n">RadiusContain2D</span><span class="p">(</span><span class="n">frac</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+
+<span class="gp">In [28]: </span><span class="nb">print</span><span class="p">(</span>
+<span class="gp">   ....: </span>    <span class="s2">&quot;Half-mass radius (total):&quot;</span><span class="p">,</span> <span class="n">Re</span><span class="p">(</span><span class="n">halo_particles</span><span class="p">),</span>
+<span class="gp">   ....: </span>    <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Half-mass radius (DM):&quot;</span><span class="p">,</span> <span class="n">Re</span><span class="p">(</span><span class="n">halo_particles</span><span class="o">.</span><span class="n">dm</span><span class="p">),</span>
+<span class="gp">   ....: </span>    <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Half-mass radius (stars):&quot;</span><span class="p">,</span> <span class="n">Re</span><span class="p">(</span><span class="n">halo_particles</span><span class="o">.</span><span class="n">s</span><span class="p">),</span>
+<span class="gp">   ....: </span>    <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Half-mass radius (gas):&quot;</span><span class="p">,</span> <span class="n">Re</span><span class="p">(</span><span class="n">halo_particles</span><span class="o">.</span><span class="n">g</span><span class="p">),</span>
+<span class="gp">   ....: </span><span class="p">)</span>
+<span class="gp">   ....: </span>
+<span class="go">Half-mass radius (total): 62.9724720596586 </span>
+<span class="go">Half-mass radius (DM): 67.59941239234715 </span>
+<span class="go">Half-mass radius (stars): 5.850830467864327 </span>
+<span class="go">Half-mass radius (gas): 64.86895606235284</span>
+</pre></div>
+</div>
+<p>Here, the <code class="docutils literal notranslate"><span class="pre">frac</span></code> parameter specifies the mass fraction used to compute the radius.
+Setting <code class="docutils literal notranslate"><span class="pre">frac=0.5</span></code> returns the radius containing half of the total mass (i.e., the half-mass radius).</p>
+<p>To compute the rotational energy fraction:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [29]: </span><span class="n">krot</span> <span class="o">=</span> <span class="n">calculators</span><span class="o">.</span><span class="n">basic</span><span class="o">.</span><span class="n">RotationEnergyFraction</span><span class="p">()</span>
+
+<span class="gp">In [30]: </span><span class="nb">print</span><span class="p">(</span>
+<span class="gp">   ....: </span>    <span class="s2">&quot;Rotation energy fraction (total):&quot;</span><span class="p">,</span> <span class="n">krot</span><span class="p">(</span><span class="n">halo_particles</span><span class="p">),</span>
+<span class="gp">   ....: </span>    <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Rotation energy fraction (DM):&quot;</span><span class="p">,</span> <span class="n">krot</span><span class="p">(</span><span class="n">halo_particles</span><span class="o">.</span><span class="n">dm</span><span class="p">),</span>
+<span class="gp">   ....: </span>    <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Rotation energy fraction (stars):&quot;</span><span class="p">,</span> <span class="n">krot</span><span class="p">(</span><span class="n">halo_particles</span><span class="o">.</span><span class="n">s</span><span class="p">),</span>
+<span class="gp">   ....: </span>    <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Rotation energy fraction (gas):&quot;</span><span class="p">,</span> <span class="n">krot</span><span class="p">(</span><span class="n">halo_particles</span><span class="o">.</span><span class="n">g</span><span class="p">),</span>
+<span class="gp">   ....: </span><span class="p">)</span>
+<span class="gp">   ....: </span>
+<span class="go">Rotation energy fraction (total): 0.35872570255796943 </span>
+<span class="go">Rotation energy fraction (DM): 0.32376409351966806 </span>
+<span class="go">Rotation energy fraction (stars): 0.6905072443781521 </span>
+<span class="go">Rotation energy fraction (gas): 0.722732837582208</span>
+</pre></div>
+</div>
+</section>
+<section id="calculating-1d-profiles">
+<h2>Calculating 1D Profiles<a class="headerlink" href="#calculating-1d-profiles" title="Link to this heading">#</a></h2>
+<p>The <a class="reference internal" href="../reference/_autosummary/generated/galyst.calculators.profile.html#module-galyst.calculators.profile" title="galyst.calculators.profile"><code class="xref py py-mod docutils literal notranslate"><span class="pre">galyst.calculators.profile</span></code></a> module provides tools for calculating 1D profiles. For example, you can use the basic <a class="reference internal" href="../reference/_autosummary/generated/generated/galyst.calculators.profile.Profile.html#galyst.calculators.profile.Profile" title="galyst.calculators.profile.Profile"><code class="xref py py-class docutils literal notranslate"><span class="pre">galyst.calculators.profile.Profile</span></code></a> class:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [31]: </span><span class="n">pr</span> <span class="o">=</span> <span class="n">calculators</span><span class="o">.</span><span class="n">profile</span><span class="o">.</span><span class="n">Profile</span><span class="p">(</span><span class="n">halo_particles</span><span class="p">,</span> <span class="n">ndim</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">rmax</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">qweights</span><span class="o">=</span><span class="s1">&#39;mass&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">ndim</span></code> parameter specifies the dimensionality; here, <code class="docutils literal notranslate"><span class="pre">2</span></code> indicates that the profile is computed in projection. <code class="docutils literal notranslate"><span class="pre">rmax</span></code> sets the maximum radius for the profile, and <code class="docutils literal notranslate"><span class="pre">qweights</span></code> determines the weighting used when calculating percentiles.</p>
+<p>Let’s examine the density profiles for different components:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [32]: </span><span class="kn">import</span><span class="w"> </span><span class="nn">pylab</span>
+
+<span class="gp">In [33]: </span><span class="n">pylab</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pr</span><span class="p">[</span><span class="s1">&#39;rbins&#39;</span><span class="p">],</span> <span class="n">pr</span><span class="p">[</span><span class="s1">&#39;density&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Total&#39;</span><span class="p">)</span>
+<span class="gh">Out[33]: </span><span class="go">[&lt;matplotlib.lines.Line2D at 0x7dca75570b90&gt;]</span>
+
+<span class="gp">In [34]: </span><span class="n">pylab</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pr</span><span class="p">[</span><span class="s1">&#39;rbins&#39;</span><span class="p">],</span> <span class="n">pr</span><span class="p">[</span><span class="s1">&#39;star-density&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Stars&#39;</span><span class="p">)</span>
+<span class="gh">Out[34]: </span><span class="go">[&lt;matplotlib.lines.Line2D at 0x7dca7841db50&gt;]</span>
+
+<span class="gp">In [35]: </span><span class="n">pylab</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pr</span><span class="p">[</span><span class="s1">&#39;rbins&#39;</span><span class="p">],</span> <span class="n">pr</span><span class="p">[</span><span class="s1">&#39;gas-density&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Gas&#39;</span><span class="p">)</span>
+<span class="gh">Out[35]: </span><span class="go">[&lt;matplotlib.lines.Line2D at 0x7dca7841fb10&gt;]</span>
+
+<span class="gp">In [36]: </span><span class="n">pylab</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pr</span><span class="p">[</span><span class="s1">&#39;rbins&#39;</span><span class="p">],</span> <span class="n">pr</span><span class="p">[</span><span class="s1">&#39;dm-density&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Dark Matter&#39;</span><span class="p">)</span>
+<span class="gh">Out[36]: </span><span class="go">[&lt;matplotlib.lines.Line2D at 0x7dca78424410&gt;]</span>
+
+<span class="gp">In [37]: </span><span class="n">pylab</span><span class="o">.</span><span class="n">yscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+
+<span class="gp">In [38]: </span><span class="n">pylab</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Radius &#39;</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;$[</span><span class="si">{</span><span class="n">pr</span><span class="p">[</span><span class="s1">&#39;rbins&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">units</span><span class="o">.</span><span class="n">latex</span><span class="p">()</span><span class="si">}</span><span class="s2">]$&quot;</span><span class="p">)</span>
+<span class="gh">Out[38]: </span><span class="go">Text(0.5, 0, &#39;Radius $[\\mathrm{kpc}]$&#39;)</span>
+
+<span class="gp">In [39]: </span><span class="n">pylab</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Density &#39;</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;$[</span><span class="si">{</span><span class="n">pr</span><span class="p">[</span><span class="s1">&#39;density&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">units</span><span class="o">.</span><span class="n">latex</span><span class="p">()</span><span class="si">}</span><span class="s2">]$&quot;</span><span class="p">)</span>
+<span class="gh">Out[39]: </span><span class="go">Text(0, 0.5, &#39;Density $[M_{\\odot}\\,\\mathrm{kpc}^{-2}]$&#39;)</span>
+
+<span class="gp">In [40]: </span><span class="n">pylab</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+<span class="gh">Out[40]: </span><span class="go">(0.0, 30.0)</span>
+
+<span class="gp">In [41]: </span><span class="n">pylab</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="gh">Out[41]: </span><span class="go">&lt;matplotlib.legend.Legend at 0x7dca7942a6d0&gt;</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/halo_manipulation_denpro.png"><img alt="../_images/halo_manipulation_denpro.png" src="../_images/halo_manipulation_denpro.png" style="width: 8in;" />
+</a>
+<p>Here, the prefixes <code class="docutils literal notranslate"><span class="pre">star-</span></code>, <code class="docutils literal notranslate"><span class="pre">gas-</span></code>, and <code class="docutils literal notranslate"><span class="pre">dm-</span></code> specify different matter components.</p>
+<p>Let’s also look at the distribution of gas temperature:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [42]: </span><span class="n">pylab</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pr</span><span class="p">[</span><span class="s1">&#39;rbins&#39;</span><span class="p">],</span><span class="n">pr</span><span class="p">[</span><span class="s1">&#39;gas-temp_50&#39;</span><span class="p">],</span><span class="n">c</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
+<span class="gh">Out[42]: </span><span class="go">[&lt;matplotlib.lines.Line2D at 0x7dca7807ef50&gt;]</span>
+
+<span class="gp">In [43]: </span><span class="n">pylab</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">pr</span><span class="p">[</span><span class="s1">&#39;rbins&#39;</span><span class="p">],</span> <span class="n">pr</span><span class="p">[</span><span class="s1">&#39;gas-temp_30&#39;</span><span class="p">],</span> <span class="n">pr</span><span class="p">[</span><span class="s1">&#39;gas-temp_70&#39;</span><span class="p">],</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;grey&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;30-70th percentile&#39;</span><span class="p">)</span>
+<span class="gh">Out[43]: </span><span class="go">&lt;matplotlib.collections.FillBetweenPolyCollection at 0x7dca78540410&gt;</span>
+
+<span class="gp">In [44]: </span><span class="n">pylab</span><span class="o">.</span><span class="n">yscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+
+<span class="gp">In [45]: </span><span class="n">pylab</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Radius &#39;</span><span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;$[</span><span class="si">{</span><span class="n">pr</span><span class="p">[</span><span class="s1">&#39;rbins&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">units</span><span class="o">.</span><span class="n">latex</span><span class="p">()</span><span class="si">}</span><span class="s2">]$&quot;</span><span class="p">)</span>
+<span class="gh">Out[45]: </span><span class="go">Text(0.5, 0, &#39;Radius $[\\mathrm{kpc}]$&#39;)</span>
+
+<span class="gp">In [46]: </span><span class="n">pylab</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Temp &#39;</span><span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;$[</span><span class="si">{</span><span class="n">pr</span><span class="p">[</span><span class="s1">&#39;gas-temp_50&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">units</span><span class="o">.</span><span class="n">latex</span><span class="p">()</span><span class="si">}</span><span class="s2">]$&quot;</span><span class="p">)</span>
+<span class="gh">Out[46]: </span><span class="go">Text(0, 0.5, &#39;Temp $[\\mathrm{K}]$&#39;)</span>
+
+<span class="gp">In [47]: </span><span class="n">pylab</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">30</span><span class="p">)</span>
+<span class="gh">Out[47]: </span><span class="go">(0.0, 30.0)</span>
+
+<span class="gp">In [48]: </span><span class="n">pylab</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="gh">Out[48]: </span><span class="go">&lt;matplotlib.legend.Legend at 0x7dca7803f9d0&gt;</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/halo_gas_temp_profile.png"><img alt="../_images/halo_gas_temp_profile.png" src="../_images/halo_gas_temp_profile.png" style="width: 8in;" />
+</a>
+<p>Here, <code class="docutils literal notranslate"><span class="pre">gas-temp_50</span></code>, <code class="docutils literal notranslate"><span class="pre">gas-temp_30</span></code>, and <code class="docutils literal notranslate"><span class="pre">gas-temp_70</span></code> represent the 50th, 30th, and 70th percentiles of the gas temperature, respectively.</p>
+</section>
+<section id="plotting-halo-images">
+<h2>Plotting Halo Images<a class="headerlink" href="#plotting-halo-images" title="Link to this heading">#</a></h2>
+<p>The <a class="reference internal" href="../reference/_autosummary/generated/galyst.calculators.image.html#module-galyst.calculators.image" title="galyst.calculators.image"><code class="xref py py-mod docutils literal notranslate"><span class="pre">galyst.calculators.image</span></code></a> module provides tools for generating images of halos.</p>
+<p>For example, to plot the gas surface density distribution:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [49]: </span><span class="kn">from</span><span class="w"> </span><span class="nn">galyst.calculators</span><span class="w"> </span><span class="kn">import</span> <span class="n">image</span> <span class="k">as</span> <span class="n">im</span>
+
+<span class="gp">In [50]: </span><span class="n">im_g</span> <span class="o">=</span> <span class="n">im</span><span class="o">.</span><span class="n">sph_projection</span><span class="p">(</span><span class="n">halo_particles</span><span class="o">.</span><span class="n">g</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="s1">&#39;60 kpc&#39;</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;Msol kpc^-2&#39;</span><span class="p">)</span>
+
+<span class="gp">In [51]: </span><span class="n">im_g</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="gh">Out[51]: </span><span class="go">&lt;matplotlib.image.AxesImage at 0x7dca77d44910&gt;</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/halo_gas_surface_density.png"><img alt="../_images/halo_gas_surface_density.png" src="../_images/halo_gas_surface_density.png" style="width: 8in;" />
+</a>
+<p>Gas Metallicity</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [52]: </span><span class="n">im_g_metals</span> <span class="o">=</span> <span class="n">im</span><span class="o">.</span><span class="n">sph_projection</span><span class="p">(</span><span class="n">halo_particles</span><span class="o">.</span><span class="n">g</span><span class="p">,</span> <span class="n">quantity</span><span class="o">=</span><span class="s1">&#39;metals&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="s1">&#39;60 kpc&#39;</span><span class="p">)</span>
+
+<span class="gp">In [53]: </span><span class="n">im_g_metals</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="gh">Out[53]: </span><span class="go">&lt;matplotlib.image.AxesImage at 0x7dca77d09a50&gt;</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/halo_gas_metallicity.png"><img alt="../_images/halo_gas_metallicity.png" src="../_images/halo_gas_metallicity.png" style="width: 8in;" />
+</a>
+<p>To plot the stellar luminosity image:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [54]: </span><span class="n">im_s</span> <span class="o">=</span> <span class="n">im</span><span class="o">.</span><span class="n">star_luminosity_image</span><span class="p">(</span><span class="n">halo_particles</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="s1">&#39;60 kpc&#39;</span><span class="p">)</span>
+
+<span class="gp">In [55]: </span><span class="n">im_s</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="gh">Out[55]: </span><span class="go">&lt;matplotlib.image.AxesImage at 0x7dca77b06750&gt;</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/halo_star_luminosity.png"><img alt="../_images/halo_star_luminosity.png" src="../_images/halo_star_luminosity.png" style="width: 8in;" />
+</a>
+<p>You can see a short bar in the center. Let’s examine its kinematic features:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [56]: </span><span class="n">im_s_m</span> <span class="o">=</span> <span class="n">im</span><span class="o">.</span><span class="n">sph_projection</span><span class="p">(</span><span class="n">halo_particles</span><span class="o">.</span><span class="n">s</span><span class="p">,</span> <span class="n">smooth_floor</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;Msol kpc^-2&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="s1">&#39;5 kpc&#39;</span><span class="p">)</span>
+
+<span class="gp">In [57]: </span><span class="n">im_s_v</span> <span class="o">=</span> <span class="n">im</span><span class="o">.</span><span class="n">sph_projection</span><span class="p">(</span><span class="n">halo_particles</span><span class="o">.</span><span class="n">s</span><span class="p">,</span> <span class="n">smooth_floor</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">quantity</span><span class="o">=</span><span class="s1">&#39;vrxy&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="s1">&#39;5 kpc&#39;</span><span class="p">)</span>
+
+<span class="gp">In [58]: </span><span class="n">image</span> <span class="o">=</span> <span class="n">im_s_v</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="gp">In [59]: </span><span class="n">im_s_m</span><span class="o">.</span><span class="n">show_contour</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+<span class="gh">Out[59]: </span><span class="go">&lt;matplotlib.contour.QuadContourSet at 0x7dca77f4a550&gt;</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/halo_star_velocity.png"><img alt="../_images/halo_star_velocity.png" src="../_images/halo_star_velocity.png" style="width: 8in;" />
+</a>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="tutorials.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Galyst Tutorials</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../installation.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Galyst Installation</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-paths">Setting up Paths</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#connecting-to-the-database">Connecting to the Database</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-simulations">Adding Simulations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-timesteps">Adding TimeSteps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-halos">Adding Halos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-basic-properties">Calculating Basic Properties</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-1d-profiles">Calculating 1D Profiles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-halo-images">Plotting Halo Images</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Shuai Lu
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
