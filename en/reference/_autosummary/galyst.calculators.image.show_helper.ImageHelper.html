@@ -1,0 +1,990 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>galyst.calculators.image.show_helper.ImageHelper &#8212; Galyst 0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/galyst.css?v=5a0ae46b" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=e1a75a79"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=35f41c81"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'reference/_autosummary/galyst.calculators.image.show_helper.ImageHelper';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="galyst.calculators.image.sph_image" href="galyst.calculators.image.sph_image.html" />
+    <link rel="prev" title="galyst.calculators.image.show_helper.DictProperty" href="galyst.calculators.image.show_helper.DictProperty.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+<aside class="bd-header-announcement" aria-label="Announcement">
+  <div class="bd-header-announcement__content">This documentation is under active development!</div>
+</aside>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Galyst Documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials/tutorials.html">Tutorials</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/quickstart.html">Quick-start</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Reference</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="galyst.calculators.html">galyst.calculators</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.calculators.basic.html">galyst.calculators.basic</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/galyst.calculators.basic.ParameterContain.html">galyst.calculators.basic.ParameterContain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/galyst.calculators.basic.RadiusContain2D.html">galyst.calculators.basic.RadiusContain2D</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/galyst.calculators.basic.RadiusContain3D.html">galyst.calculators.basic.RadiusContain3D</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/galyst.calculators.basic.VolumeDensity.html">galyst.calculators.basic.VolumeDensity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/galyst.calculators.basic.SurfaceDensity.html">galyst.calculators.basic.SurfaceDensity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/galyst.calculators.basic.RotationEnergyFraction.html">galyst.calculators.basic.RotationEnergyFraction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/galyst.calculators.basic.InertiaShape.html">galyst.calculators.basic.InertiaShape</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/galyst.calculators.basic.ParamSum.html">galyst.calculators.basic.ParamSum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/galyst.calculators.basic.PosCenter.html">galyst.calculators.basic.PosCenter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/galyst.calculators.basic.VelCenter.html">galyst.calculators.basic.VelCenter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/galyst.calculators.basic.Center.html">galyst.calculators.basic.Center</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/galyst.calculators.basic.AngularMomentum.html">galyst.calculators.basic.AngularMomentum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/galyst.calculators.basic.SpinParam.html">galyst.calculators.basic.SpinParam</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/galyst.calculators.basic.VirialRadius.html">galyst.calculators.basic.VirialRadius</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.calculators.basic.composition.html">galyst.calculators.basic.composition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.calculators.basic.dynamics.html">galyst.calculators.basic.dynamics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.calculators.basic.fundamental.html">galyst.calculators.basic.fundamental</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.calculators.basic.util.html">galyst.calculators.basic.util</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 current active has-children"><a class="reference internal" href="galyst.calculators.image.html">galyst.calculators.image</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="generated/galyst.calculators.image.direct_projection.html">galyst.calculators.image.direct_projection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/galyst.calculators.image.sph_projection.html">galyst.calculators.image.sph_projection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/galyst.calculators.image.star_luminosity_image.html">galyst.calculators.image.star_luminosity_image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.calculators.image.direct_image.html">galyst.calculators.image.direct_image</a></li>
+<li class="toctree-l4 current active"><a class="reference internal" href="galyst.calculators.image.show_helper.html">galyst.calculators.image.show_helper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.calculators.image.sph_image.html">galyst.calculators.image.sph_image</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.calculators.profile.html">galyst.calculators.profile</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/galyst.calculators.profile.Profile.html">galyst.calculators.profile.Profile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/galyst.calculators.profile.InclinedProfile.html">galyst.calculators.profile.InclinedProfile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/galyst.calculators.profile.VerticalProfile.html">galyst.calculators.profile.VerticalProfile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/galyst.calculators.profile.AgeProfile.html">galyst.calculators.profile.AgeProfile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/galyst.calculators.profile.simulation_halo_mass_function.html">galyst.calculators.profile.simulation_halo_mass_function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.calculators.profile.plot_helper.html">galyst.calculators.profile.plot_helper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.calculators.profile.spatial.html">galyst.calculators.profile.spatial</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.calculators.profile.statistical.html">galyst.calculators.profile.statistical</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.calculators.profile.temporal.html">galyst.calculators.profile.temporal</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="galyst.calculators.rt.html">galyst.calculators.rt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="galyst.calculators.selector.html">galyst.calculators.selector</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.calculators.transformator.html">galyst.calculators.transformator</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="galyst.calculators.transformator.warp.html">galyst.calculators.transformator.warp</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.calculators.util.html">galyst.calculators.util</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="galyst.calculators.util.WrapTransformation.html">galyst.calculators.util.WrapTransformation</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="galyst.core.html">galyst.core</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.data_mapper.html">galyst.core.data_mapper</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.data_mapper.SimArrayAttributeMapper.html">galyst.core.data_mapper.SimArrayAttributeMapper</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.dbdata.html">galyst.core.dbdata</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbdata.HaloImage.html">galyst.core.dbdata.HaloImage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbdata.HaloProfile.html">galyst.core.dbdata.HaloProfile</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.dbextract.html">galyst.core.dbextract</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbextract.HaloImageGetter.html">galyst.core.dbextract.HaloImageGetter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbextract.HaloImageValueGetter.html">galyst.core.dbextract.HaloImageValueGetter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbextract.HaloProfileGetter.html">galyst.core.dbextract.HaloProfileGetter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbextract.HaloProfileValueGetter.html">galyst.core.dbextract.HaloProfileValueGetter</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.dbobject.html">galyst.core.dbobject</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbobject.Snapshot.html">galyst.core.dbobject.Snapshot</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.dboperate.html">galyst.core.dboperate</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.dboperate.remove_duplicated_halos.html">galyst.core.dboperate.remove_duplicated_halos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.dboperate.remove_haloproperties.html">galyst.core.dboperate.remove_haloproperties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.dboperate.remove_timestep_without_host_simulation.html">galyst.core.dboperate.remove_timestep_without_host_simulation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.dboperate.write_property_list.html">galyst.core.dboperate.write_property_list</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.dbpatch.html">galyst.core.dbpatch</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbpatch.apply.html">galyst.core.dbpatch.apply</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbpatch.get_image_objects.html">galyst.core.dbpatch.get_image_objects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbpatch.get_images.html">galyst.core.dbpatch.get_images</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbpatch.get_profile_objects.html">galyst.core.dbpatch.get_profile_objects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbpatch.get_profiles.html">galyst.core.dbpatch.get_profiles</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.halo.html">galyst.core.halo</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.halo.SimulationObject.html">galyst.core.halo.SimulationObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.halo.SimulationObjectHandler.html">galyst.core.halo.SimulationObjectHandler</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.input_handler.html">galyst.core.input_handler</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.input_handler.ArepoHDFSubfindInputHandler.html">galyst.core.input_handler.ArepoHDFSubfindInputHandler</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.permissions.html">galyst.core.permissions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.permissions.add_user_with_role.html">galyst.core.permissions.add_user_with_role</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.permissions.delete_user.html">galyst.core.permissions.delete_user</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.permissions.get_current_user.html">galyst.core.permissions.get_current_user</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.permissions.initialize_permissions_system.html">galyst.core.permissions.initialize_permissions_system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.permissions.Role.html">galyst.core.permissions.Role</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.permissions.User.html">galyst.core.permissions.User</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.permissions.UserRoles.html">galyst.core.permissions.UserRoles</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.simulation.html">galyst.core.simulation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.simulation.get_named_handler_class.html">galyst.core.simulation.get_named_handler_class</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.simulation.Simulation.html">galyst.core.simulation.Simulation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.simulation.SimulationHandler.html">galyst.core.simulation.SimulationHandler</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.timestep.html">galyst.core.timestep</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.timestep.TimeStep.html">galyst.core.timestep.TimeStep</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.timestep.TimeStepHandler.html">galyst.core.timestep.TimeStepHandler</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="galyst.fitting.html">galyst.fitting</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="galyst.properties.html">galyst.properties</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.properties.basic.html">galyst.properties.basic</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="galyst.properties.basic.Mass30kpc.html">galyst.properties.basic.Mass30kpc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.properties.basic.Mvir.html">galyst.properties.basic.Mvir</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.properties.basic.RadiusContainMassFraction2D_star.html">galyst.properties.basic.RadiusContainMassFraction2D_star</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.properties.basic.RadiusContainMassFraction3D_star.html">galyst.properties.basic.RadiusContainMassFraction3D_star</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.properties.basic.Rvir.html">galyst.properties.basic.Rvir</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.properties.basic.Spherical30kpcPropertyCalculation.html">galyst.properties.basic.Spherical30kpcPropertyCalculation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.properties.basic.krot30kpc.html">galyst.properties.basic.krot30kpc</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="galyst.util.html">galyst.util</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.util.ansi_string_format.html">galyst.util.ansi_string_format</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="galyst.util.ansi_string_format.background_color.html">galyst.util.ansi_string_format.background_color</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.util.ansi_string_format.color.html">galyst.util.ansi_string_format.color</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.util.ansi_string_format.escape_codes_color_bg.html">galyst.util.ansi_string_format.escape_codes_color_bg</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.util.ansi_string_format.escape_codes_color_fg.html">galyst.util.ansi_string_format.escape_codes_color_fg</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.util.ansi_string_format.fontformat.html">galyst.util.ansi_string_format.fontformat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.util.ansi_string_format.foreground_color.html">galyst.util.ansi_string_format.foreground_color</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.util.ansi_string_format.string_formatter.html">galyst.util.ansi_string_format.string_formatter</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.util.path_helper.html">galyst.util.path_helper</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="galyst.util.path_helper.PathHelper.html">galyst.util.path_helper.PathHelper</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.util.string_match.html">galyst.util.string_match</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="galyst.util.string_match.best_matching_path.html">galyst.util.string_match.best_matching_path</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.util.tangos_base.html">galyst.util.tangos_base</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="galyst.util.tangos_base.with_tangos_base.html">galyst.util.tangos_base.with_tangos_base</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/GalaxySimAnalytics/Galyst" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/reference/_autosummary/galyst.calculators.image.show_helper.ImageHelper.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>galyst.calculators.image.show_helper.ImageHelper</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.calculators.image.show_helper.ImageHelper"><code class="docutils literal notranslate"><span class="pre">ImageHelper</span></code></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.calculators.image.show_helper.ImageHelper.x_width"><code class="docutils literal notranslate"><span class="pre">ImageHelper.x_width</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.calculators.image.show_helper.ImageHelper.y_width"><code class="docutils literal notranslate"><span class="pre">ImageHelper.y_width</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.calculators.image.show_helper.ImageHelper.x_name"><code class="docutils literal notranslate"><span class="pre">ImageHelper.x_name</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.calculators.image.show_helper.ImageHelper.x_units"><code class="docutils literal notranslate"><span class="pre">ImageHelper.x_units</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.calculators.image.show_helper.ImageHelper.y_name"><code class="docutils literal notranslate"><span class="pre">ImageHelper.y_name</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.calculators.image.show_helper.ImageHelper.y_units"><code class="docutils literal notranslate"><span class="pre">ImageHelper.y_units</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.calculators.image.show_helper.ImageHelper.cb_name"><code class="docutils literal notranslate"><span class="pre">ImageHelper.cb_name</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.calculators.image.show_helper.ImageHelper.cb_units"><code class="docutils literal notranslate"><span class="pre">ImageHelper.cb_units</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.calculators.image.show_helper.ImageHelper.im_name"><code class="docutils literal notranslate"><span class="pre">ImageHelper.im_name</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.calculators.image.show_helper.ImageHelper.norm"><code class="docutils literal notranslate"><span class="pre">ImageHelper.norm</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.calculators.image.show_helper.ImageHelper.show"><code class="docutils literal notranslate"><span class="pre">ImageHelper.show()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.calculators.image.show_helper.ImageHelper.add_colorbar"><code class="docutils literal notranslate"><span class="pre">ImageHelper.add_colorbar()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.calculators.image.show_helper.ImageHelper.show_contour"><code class="docutils literal notranslate"><span class="pre">ImageHelper.show_contour()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.calculators.image.show_helper.ImageHelper.get_levels"><code class="docutils literal notranslate"><span class="pre">ImageHelper.get_levels()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.calculators.image.show_helper.ImageHelper.extent"><code class="docutils literal notranslate"><span class="pre">ImageHelper.extent</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.calculators.image.show_helper.ImageHelper.cmap"><code class="docutils literal notranslate"><span class="pre">ImageHelper.cmap</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.calculators.image.show_helper.ImageHelper.candidate_cmaps"><code class="docutils literal notranslate"><span class="pre">ImageHelper.candidate_cmaps()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.calculators.image.show_helper.ImageHelper.candidate_norms"><code class="docutils literal notranslate"><span class="pre">ImageHelper.candidate_norms()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.calculators.image.show_helper.ImageHelper.infer_cmap"><code class="docutils literal notranslate"><span class="pre">ImageHelper.infer_cmap()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.calculators.image.show_helper.ImageHelper.infer_norm"><code class="docutils literal notranslate"><span class="pre">ImageHelper.infer_norm()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.calculators.image.show_helper.ImageHelper.x_label"><code class="docutils literal notranslate"><span class="pre">ImageHelper.x_label</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.calculators.image.show_helper.ImageHelper.y_label"><code class="docutils literal notranslate"><span class="pre">ImageHelper.y_label</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.calculators.image.show_helper.ImageHelper.cb_label"><code class="docutils literal notranslate"><span class="pre">ImageHelper.cb_label</span></code></a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="galyst-calculators-image-show-helper-imagehelper">
+<h1>galyst.calculators.image.show_helper.ImageHelper<a class="headerlink" href="#galyst-calculators-image-show-helper-imagehelper" title="Link to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="galyst.calculators.image.show_helper.ImageHelper">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">galyst.calculators.image.show_helper.</span></span><span class="sig-name descname"><span class="pre">ImageHelper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#galyst.calculators.image.show_helper.ImageHelper" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A helper class for displaying images using matplotlib.</p>
+<p>It records the image data,
+includes its values, title, labels, widths, and other display parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>cb_label</strong></dt><dd></dd>
+<dt><a class="reference internal" href="#galyst.calculators.image.show_helper.ImageHelper.cmap" title="galyst.calculators.image.show_helper.ImageHelper.cmap"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cmap</span></code></a></dt><dd><p>Get the colormap used for the image display.</p>
+</dd>
+<dt><a class="reference internal" href="#galyst.calculators.image.show_helper.ImageHelper.extent" title="galyst.calculators.image.show_helper.ImageHelper.extent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extent</span></code></a></dt><dd><p>Get the extent of the image display.</p>
+</dd>
+<dt><strong>x_label</strong></dt><dd></dd>
+<dt><strong>y_label</strong></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#galyst.calculators.image.show_helper.ImageHelper.add_colorbar" title="galyst.calculators.image.show_helper.ImageHelper.add_colorbar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_colorbar</span></code></a>(mappable[, ax, loc, size, ...])</p></td>
+<td><p>Function which adds a colorbar to a &quot;mappable&quot; object (e.g., the result of calling plt.imshow).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#galyst.calculators.image.show_helper.ImageHelper.candidate_cmaps" title="galyst.calculators.image.show_helper.ImageHelper.candidate_cmaps"><code class="xref py py-obj docutils literal notranslate"><span class="pre">candidate_cmaps</span></code></a>()</p></td>
+<td><p>Returns a list of available colormaps in matplotlib.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#galyst.calculators.image.show_helper.ImageHelper.candidate_norms" title="galyst.calculators.image.show_helper.ImageHelper.candidate_norms"><code class="xref py py-obj docutils literal notranslate"><span class="pre">candidate_norms</span></code></a>()</p></td>
+<td><p>Returns a list of available normalization methods in matplotlib.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#galyst.calculators.image.show_helper.ImageHelper.get_levels" title="galyst.calculators.image.show_helper.ImageHelper.get_levels"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_levels</span></code></a>(nlevels)</p></td>
+<td><p>Generate contour levels that are evenly spaced in the normalized data space.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#galyst.calculators.image.show_helper.ImageHelper.infer_cmap" title="galyst.calculators.image.show_helper.ImageHelper.infer_cmap"><code class="xref py py-obj docutils literal notranslate"><span class="pre">infer_cmap</span></code></a>()</p></td>
+<td><p>Infers a suitable colormap from a wide candidate list based on a detailed analysis of the data's statistical properties.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#galyst.calculators.image.show_helper.ImageHelper.infer_norm" title="galyst.calculators.image.show_helper.ImageHelper.infer_norm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">infer_norm</span></code></a>()</p></td>
+<td><p>Infers the best normalization based on the statistical properties of the data.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#galyst.calculators.image.show_helper.ImageHelper.show_contour" title="galyst.calculators.image.show_helper.ImageHelper.show_contour"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show_contour</span></code></a>([axesObj, nlevels, withfilter, ...])</p></td>
+<td><p>Function which contour-plots an image.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p><strong>show</strong></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>values</strong> (<em>np.ndarray</em>) – (M, N) or (M, N, 3) or (M, N, 4)
+A numpy array representing the image data to be displayed.
+used in plt.imshow()</p>
+</dd>
+<dt class="field-even">Attributes<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>cb_label</strong></dt><dd></dd>
+<dt><a class="reference internal" href="#galyst.calculators.image.show_helper.ImageHelper.cmap" title="galyst.calculators.image.show_helper.ImageHelper.cmap"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cmap</span></code></a></dt><dd><p>Get the colormap used for the image display.</p>
+</dd>
+<dt><a class="reference internal" href="#galyst.calculators.image.show_helper.ImageHelper.extent" title="galyst.calculators.image.show_helper.ImageHelper.extent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extent</span></code></a></dt><dd><p>Get the extent of the image display.</p>
+</dd>
+<dt><strong>x_label</strong></dt><dd></dd>
+<dt><strong>y_label</strong></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#galyst.calculators.image.show_helper.ImageHelper.add_colorbar" title="galyst.calculators.image.show_helper.ImageHelper.add_colorbar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_colorbar</span></code></a>(mappable[, ax, loc, size, ...])</p></td>
+<td><p>Function which adds a colorbar to a &quot;mappable&quot; object (e.g., the result of calling plt.imshow).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#galyst.calculators.image.show_helper.ImageHelper.candidate_cmaps" title="galyst.calculators.image.show_helper.ImageHelper.candidate_cmaps"><code class="xref py py-obj docutils literal notranslate"><span class="pre">candidate_cmaps</span></code></a>()</p></td>
+<td><p>Returns a list of available colormaps in matplotlib.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#galyst.calculators.image.show_helper.ImageHelper.candidate_norms" title="galyst.calculators.image.show_helper.ImageHelper.candidate_norms"><code class="xref py py-obj docutils literal notranslate"><span class="pre">candidate_norms</span></code></a>()</p></td>
+<td><p>Returns a list of available normalization methods in matplotlib.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#galyst.calculators.image.show_helper.ImageHelper.get_levels" title="galyst.calculators.image.show_helper.ImageHelper.get_levels"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_levels</span></code></a>(nlevels)</p></td>
+<td><p>Generate contour levels that are evenly spaced in the normalized data space.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#galyst.calculators.image.show_helper.ImageHelper.infer_cmap" title="galyst.calculators.image.show_helper.ImageHelper.infer_cmap"><code class="xref py py-obj docutils literal notranslate"><span class="pre">infer_cmap</span></code></a>()</p></td>
+<td><p>Infers a suitable colormap from a wide candidate list based on a detailed analysis of the data's statistical properties.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#galyst.calculators.image.show_helper.ImageHelper.infer_norm" title="galyst.calculators.image.show_helper.ImageHelper.infer_norm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">infer_norm</span></code></a>()</p></td>
+<td><p>Infers the best normalization based on the statistical properties of the data.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#galyst.calculators.image.show_helper.ImageHelper.show_contour" title="galyst.calculators.image.show_helper.ImageHelper.show_contour"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show_contour</span></code></a>([axesObj, nlevels, withfilter, ...])</p></td>
+<td><p>Function which contour-plots an image.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p><strong>show</strong></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="galyst.calculators.image.show_helper.ImageHelper.x_width">
+<span class="sig-name descname"><span class="pre">x_width</span></span><a class="headerlink" href="#galyst.calculators.image.show_helper.ImageHelper.x_width" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="galyst.calculators.image.show_helper.ImageHelper.y_width">
+<span class="sig-name descname"><span class="pre">y_width</span></span><a class="headerlink" href="#galyst.calculators.image.show_helper.ImageHelper.y_width" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="galyst.calculators.image.show_helper.ImageHelper.x_name">
+<span class="sig-name descname"><span class="pre">x_name</span></span><a class="headerlink" href="#galyst.calculators.image.show_helper.ImageHelper.x_name" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="galyst.calculators.image.show_helper.ImageHelper.x_units">
+<span class="sig-name descname"><span class="pre">x_units</span></span><a class="headerlink" href="#galyst.calculators.image.show_helper.ImageHelper.x_units" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="galyst.calculators.image.show_helper.ImageHelper.y_name">
+<span class="sig-name descname"><span class="pre">y_name</span></span><a class="headerlink" href="#galyst.calculators.image.show_helper.ImageHelper.y_name" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="galyst.calculators.image.show_helper.ImageHelper.y_units">
+<span class="sig-name descname"><span class="pre">y_units</span></span><a class="headerlink" href="#galyst.calculators.image.show_helper.ImageHelper.y_units" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="galyst.calculators.image.show_helper.ImageHelper.cb_name">
+<span class="sig-name descname"><span class="pre">cb_name</span></span><a class="headerlink" href="#galyst.calculators.image.show_helper.ImageHelper.cb_name" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="galyst.calculators.image.show_helper.ImageHelper.cb_units">
+<span class="sig-name descname"><span class="pre">cb_units</span></span><a class="headerlink" href="#galyst.calculators.image.show_helper.ImageHelper.cb_units" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="galyst.calculators.image.show_helper.ImageHelper.im_name">
+<span class="sig-name descname"><span class="pre">im_name</span></span><a class="headerlink" href="#galyst.calculators.image.show_helper.ImageHelper.im_name" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="galyst.calculators.image.show_helper.ImageHelper.norm">
+<span class="sig-name descname"><span class="pre">norm</span></span><a class="headerlink" href="#galyst.calculators.image.show_helper.ImageHelper.norm" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="galyst.calculators.image.show_helper.ImageHelper.show">
+<span class="sig-name descname"><span class="pre">show</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axesObj</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_colorbar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">noErase</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#galyst.calculators.image.show_helper.ImageHelper.show" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="galyst.calculators.image.show_helper.ImageHelper.add_colorbar">
+<span class="sig-name descname"><span class="pre">add_colorbar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mappable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'right'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'5%'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pad</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_pad</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tick_label_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#galyst.calculators.image.show_helper.ImageHelper.add_colorbar" title="Link to this definition">#</a></dt>
+<dd><p>Function which adds a colorbar to a “mappable” object (e.g., the result of
+calling plt.imshow).</p>
+<p class="rubric">Example</p>
+<p>img = plt.imshow(somedata, …)
+add_colorbar(img, …)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mappable</strong> (<em>instance</em><em> of </em><em>object implementing &quot;mappable&quot; interface</em>) – E.g., instance of Image, ContourSet, etc. – basically any Artist subclass that
+inherits from the ScalarMappable mixin
+<a class="reference external" href="https://matplotlib.org/api/cm_api.html">https://matplotlib.org/api/cm_api.html</a></p></li>
+<li><p><strong>loc</strong> (<em>str</em><em>, </em><em>optional</em>) – location for colorbar – one of “right”, “left”, “top”, “bottom”</p></li>
+<li><p><strong>size</strong> (<em>str</em><em>, </em><em>optional</em>) – relative size for colorbar as fraction of main plot, as a percentage (e.g. “2%”)</p></li>
+<li><p><strong>pad</strong> (<em>float</em><em>, </em><em>optional</em>) – padding between colorbar and main plot</p></li>
+<li><p><strong>label_pad</strong> (<em>str</em><em>, </em><em>optional</em>) – padding between colorbar and its tick labels</p></li>
+<li><p><strong>tick_label_size</strong> (<em>float</em><em>, </em><em>optional</em>) – font size for tick labels</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>cbar</strong> – The generated colorbar</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>instance of matplotlib.colorbar.Colorbar</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="galyst.calculators.image.show_helper.ImageHelper.show_contour">
+<span class="sig-name descname"><span class="pre">show_contour</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axesObj</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nlevels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">15</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">withfilter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">levels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">noErase</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'k'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">linewidth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">linestyle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'-'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#galyst.calculators.image.show_helper.ImageHelper.show_contour" title="Link to this definition">#</a></dt>
+<dd><p>Function which contour-plots an image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>axesObj</strong> (<em>instance</em><em> of </em><em>matplotlib.axes.Axes</em><em>, </em><em>optional</em>) – Axes instance to receive the plotting commands</p></li>
+<li><p><strong>withfilter</strong> (<em>boolean</em><em>, </em><em>optional</em>) – If True, use gaussian_filter. Default is False.</p></li>
+<li><p><strong>sigma</strong> (<em>float</em><em>, </em><em>optional</em>) – Used in gaussian_filter</p></li>
+<li><p><strong>nlevels</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of levels to use for contours. Default is 10.</p></li>
+<li><p><strong>levels</strong> (<em>sequence</em><em> (</em><em>tuple</em><em>, </em><em>list</em><em>, or </em><em>Numpy array</em><em>) of </em><em>float</em><em> or </em><em>None</em><em>, </em><em>optional</em>) – contour intensity levels to be plotted (if log=True, then these should be
+log10 of the original values)</p></li>
+<li><p><strong>noErase</strong> (<em>bool</em><em>, </em><em>optional</em>) – If True, draws the contours into an existing plot window without erasing
+existing content. Default is False.</p></li>
+<li><p><strong>contours</strong> (<em>color = color for the</em>)</p></li>
+<li><p><strong>float</strong> (<em>linewidth =</em>)</p></li>
+<li><p><strong>'solid'</strong> (<em>linestyle = one of</em>)</p></li>
+<li><p><strong>'dashed'</strong></p></li>
+<li><p><strong>'dashdot'</strong></p></li>
+<li><p><strong>'dotted'</strong></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="galyst.calculators.image.show_helper.ImageHelper.get_levels">
+<span class="sig-name descname"><span class="pre">get_levels</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nlevels</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#galyst.calculators.image.show_helper.ImageHelper.get_levels" title="Link to this definition">#</a></dt>
+<dd><p>Generate contour levels that are evenly spaced in the normalized data space.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>nlevels</strong> (<em>int</em>) – The number of contour levels to generate.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>levels</strong> – The contour levels mapped back to the original data space.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="galyst.calculators.image.show_helper.ImageHelper.extent">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">extent</span></span><a class="headerlink" href="#galyst.calculators.image.show_helper.ImageHelper.extent" title="Link to this definition">#</a></dt>
+<dd><p>Get the extent of the image display.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="galyst.calculators.image.show_helper.ImageHelper.cmap">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cmap</span></span><a class="headerlink" href="#galyst.calculators.image.show_helper.ImageHelper.cmap" title="Link to this definition">#</a></dt>
+<dd><p>Get the colormap used for the image display.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The name of the colormap.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="galyst.calculators.image.show_helper.ImageHelper.candidate_cmaps">
+<span class="sig-name descname"><span class="pre">candidate_cmaps</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#galyst.calculators.image.show_helper.ImageHelper.candidate_cmaps" title="Link to this definition">#</a></dt>
+<dd><p>Returns a list of available colormaps in matplotlib.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="galyst.calculators.image.show_helper.ImageHelper.candidate_norms">
+<span class="sig-name descname"><span class="pre">candidate_norms</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#galyst.calculators.image.show_helper.ImageHelper.candidate_norms" title="Link to this definition">#</a></dt>
+<dd><p>Returns a list of available normalization methods in matplotlib.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="galyst.calculators.image.show_helper.ImageHelper.infer_cmap">
+<span class="sig-name descname"><span class="pre">infer_cmap</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#galyst.calculators.image.show_helper.ImageHelper.infer_cmap" title="Link to this definition">#</a></dt>
+<dd><p>Infers a suitable colormap from a wide candidate list based on a
+detailed analysis of the data’s statistical properties.
+Now, for each case, cycles through several candidate colormaps.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="galyst.calculators.image.show_helper.ImageHelper.infer_norm">
+<span class="sig-name descname"><span class="pre">infer_norm</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#galyst.calculators.image.show_helper.ImageHelper.infer_norm" title="Link to this definition">#</a></dt>
+<dd><p>Infers the best normalization based on the statistical properties of the data.</p>
+<dl class="simple">
+<dt>TwoSlopeNorm: vcenter, vmin, vmax,</dt><dd><p>Useful when mapping data with an unequal rates of change around a
+conceptual center, e.g., data that range from -2 to 4, with 0 as
+the midpoint.</p>
+</dd>
+<dt>CenteredNorm: vcenter, halfrange, clip</dt><dd><p>Useful when mapping symmetrical data around a conceptual center
+e.g., data that range from -2 to 4, with 0 as the midpoint, and
+with equal rates of change around that midpoint.</p>
+</dd>
+</dl>
+<p>LogNorm: vmin, vmax, clip</p>
+<dl class="simple">
+<dt>SymLogNorm: vmin, vmax, clip</dt><dd><p>setter linthresh
+Since the values close to zero tend toward infinity, there is a
+need to have a range around zero that is linear.  The parameter
+<em>linthresh</em> allows the user to specify the size of this range
+(-<em>linthresh</em>, <em>linthresh</em>).</p>
+</dd>
+<dt>AsinhNorm: vmin, vmax, clip</dt><dd><p>setter linear_width
+The inverse hyperbolic sine scale is approximately linear near
+the origin, but becomes logarithmic for larger positive
+or negative values. Unlike the <cite>SymLogNorm</cite>, the transition between
+these linear and logarithmic regions is smooth, which may reduce
+the risk of visual artifacts.</p>
+</dd>
+<dt>PowerNorm: gamma, vmin, vmax, clip</dt><dd><p>Linearly map a given value to the 0-1 range and then apply
+a power-law normalization over that range.</p>
+</dd>
+<dt>BoundaryNorm: boundaries, ncolors, clip=False, <a href="#id1"><span class="problematic" id="id2">*</span></a>, extend=’neither</dt><dd><p>Unlike <cite>Normalize</cite> or <cite>LogNorm</cite>, <cite>BoundaryNorm</cite> maps values to integers
+instead of to the interval 0-1.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="galyst.calculators.image.show_helper.ImageHelper.x_label">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">x_label</span></span><a class="headerlink" href="#galyst.calculators.image.show_helper.ImageHelper.x_label" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="galyst.calculators.image.show_helper.ImageHelper.y_label">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">y_label</span></span><a class="headerlink" href="#galyst.calculators.image.show_helper.ImageHelper.y_label" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="galyst.calculators.image.show_helper.ImageHelper.cb_label">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cb_label</span></span><a class="headerlink" href="#galyst.calculators.image.show_helper.ImageHelper.cb_label" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="galyst.calculators.image.show_helper.DictProperty.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">galyst.calculators.image.show_helper.DictProperty</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="galyst.calculators.image.sph_image.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">galyst.calculators.image.sph_image</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.calculators.image.show_helper.ImageHelper"><code class="docutils literal notranslate"><span class="pre">ImageHelper</span></code></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.calculators.image.show_helper.ImageHelper.x_width"><code class="docutils literal notranslate"><span class="pre">ImageHelper.x_width</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.calculators.image.show_helper.ImageHelper.y_width"><code class="docutils literal notranslate"><span class="pre">ImageHelper.y_width</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.calculators.image.show_helper.ImageHelper.x_name"><code class="docutils literal notranslate"><span class="pre">ImageHelper.x_name</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.calculators.image.show_helper.ImageHelper.x_units"><code class="docutils literal notranslate"><span class="pre">ImageHelper.x_units</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.calculators.image.show_helper.ImageHelper.y_name"><code class="docutils literal notranslate"><span class="pre">ImageHelper.y_name</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.calculators.image.show_helper.ImageHelper.y_units"><code class="docutils literal notranslate"><span class="pre">ImageHelper.y_units</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.calculators.image.show_helper.ImageHelper.cb_name"><code class="docutils literal notranslate"><span class="pre">ImageHelper.cb_name</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.calculators.image.show_helper.ImageHelper.cb_units"><code class="docutils literal notranslate"><span class="pre">ImageHelper.cb_units</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.calculators.image.show_helper.ImageHelper.im_name"><code class="docutils literal notranslate"><span class="pre">ImageHelper.im_name</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.calculators.image.show_helper.ImageHelper.norm"><code class="docutils literal notranslate"><span class="pre">ImageHelper.norm</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.calculators.image.show_helper.ImageHelper.show"><code class="docutils literal notranslate"><span class="pre">ImageHelper.show()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.calculators.image.show_helper.ImageHelper.add_colorbar"><code class="docutils literal notranslate"><span class="pre">ImageHelper.add_colorbar()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.calculators.image.show_helper.ImageHelper.show_contour"><code class="docutils literal notranslate"><span class="pre">ImageHelper.show_contour()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.calculators.image.show_helper.ImageHelper.get_levels"><code class="docutils literal notranslate"><span class="pre">ImageHelper.get_levels()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.calculators.image.show_helper.ImageHelper.extent"><code class="docutils literal notranslate"><span class="pre">ImageHelper.extent</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.calculators.image.show_helper.ImageHelper.cmap"><code class="docutils literal notranslate"><span class="pre">ImageHelper.cmap</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.calculators.image.show_helper.ImageHelper.candidate_cmaps"><code class="docutils literal notranslate"><span class="pre">ImageHelper.candidate_cmaps()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.calculators.image.show_helper.ImageHelper.candidate_norms"><code class="docutils literal notranslate"><span class="pre">ImageHelper.candidate_norms()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.calculators.image.show_helper.ImageHelper.infer_cmap"><code class="docutils literal notranslate"><span class="pre">ImageHelper.infer_cmap()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.calculators.image.show_helper.ImageHelper.infer_norm"><code class="docutils literal notranslate"><span class="pre">ImageHelper.infer_norm()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.calculators.image.show_helper.ImageHelper.x_label"><code class="docutils literal notranslate"><span class="pre">ImageHelper.x_label</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.calculators.image.show_helper.ImageHelper.y_label"><code class="docutils literal notranslate"><span class="pre">ImageHelper.y_label</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.calculators.image.show_helper.ImageHelper.cb_label"><code class="docutils literal notranslate"><span class="pre">ImageHelper.cb_label</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Shuai Lu
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

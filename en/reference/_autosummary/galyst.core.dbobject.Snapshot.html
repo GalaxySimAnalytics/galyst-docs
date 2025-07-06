@@ -1,0 +1,1181 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>galyst.core.dbobject.Snapshot &#8212; Galyst 0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/galyst.css?v=5a0ae46b" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=e1a75a79"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=35f41c81"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'reference/_autosummary/galyst.core.dbobject.Snapshot';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="galyst.core.dbobject.Snapshot.calculate" href="galyst.core.dbobject.Snapshot.calculate.html" />
+    <link rel="prev" title="galyst.core.dbobject" href="galyst.core.dbobject.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+<aside class="bd-header-announcement" aria-label="Announcement">
+  <div class="bd-header-announcement__content">This documentation is under active development!</div>
+</aside>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Galyst Documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials/tutorials.html">Tutorials</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/quickstart.html">Quick-start</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Reference</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="galyst.calculators.html">galyst.calculators</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.calculators.basic.html">galyst.calculators.basic</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/galyst.calculators.basic.ParameterContain.html">galyst.calculators.basic.ParameterContain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/galyst.calculators.basic.RadiusContain2D.html">galyst.calculators.basic.RadiusContain2D</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/galyst.calculators.basic.RadiusContain3D.html">galyst.calculators.basic.RadiusContain3D</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/galyst.calculators.basic.VolumeDensity.html">galyst.calculators.basic.VolumeDensity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/galyst.calculators.basic.SurfaceDensity.html">galyst.calculators.basic.SurfaceDensity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/galyst.calculators.basic.RotationEnergyFraction.html">galyst.calculators.basic.RotationEnergyFraction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/galyst.calculators.basic.InertiaShape.html">galyst.calculators.basic.InertiaShape</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/galyst.calculators.basic.ParamSum.html">galyst.calculators.basic.ParamSum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/galyst.calculators.basic.PosCenter.html">galyst.calculators.basic.PosCenter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/galyst.calculators.basic.VelCenter.html">galyst.calculators.basic.VelCenter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/galyst.calculators.basic.Center.html">galyst.calculators.basic.Center</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/galyst.calculators.basic.AngularMomentum.html">galyst.calculators.basic.AngularMomentum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/galyst.calculators.basic.SpinParam.html">galyst.calculators.basic.SpinParam</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/galyst.calculators.basic.VirialRadius.html">galyst.calculators.basic.VirialRadius</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.calculators.basic.composition.html">galyst.calculators.basic.composition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.calculators.basic.dynamics.html">galyst.calculators.basic.dynamics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.calculators.basic.fundamental.html">galyst.calculators.basic.fundamental</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.calculators.basic.util.html">galyst.calculators.basic.util</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.calculators.image.html">galyst.calculators.image</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/galyst.calculators.image.direct_projection.html">galyst.calculators.image.direct_projection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/galyst.calculators.image.sph_projection.html">galyst.calculators.image.sph_projection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/galyst.calculators.image.star_luminosity_image.html">galyst.calculators.image.star_luminosity_image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.calculators.image.direct_image.html">galyst.calculators.image.direct_image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.calculators.image.show_helper.html">galyst.calculators.image.show_helper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.calculators.image.sph_image.html">galyst.calculators.image.sph_image</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.calculators.profile.html">galyst.calculators.profile</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/galyst.calculators.profile.Profile.html">galyst.calculators.profile.Profile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/galyst.calculators.profile.InclinedProfile.html">galyst.calculators.profile.InclinedProfile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/galyst.calculators.profile.VerticalProfile.html">galyst.calculators.profile.VerticalProfile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/galyst.calculators.profile.AgeProfile.html">galyst.calculators.profile.AgeProfile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/galyst.calculators.profile.simulation_halo_mass_function.html">galyst.calculators.profile.simulation_halo_mass_function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.calculators.profile.plot_helper.html">galyst.calculators.profile.plot_helper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.calculators.profile.spatial.html">galyst.calculators.profile.spatial</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.calculators.profile.statistical.html">galyst.calculators.profile.statistical</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.calculators.profile.temporal.html">galyst.calculators.profile.temporal</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="galyst.calculators.rt.html">galyst.calculators.rt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="galyst.calculators.selector.html">galyst.calculators.selector</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.calculators.transformator.html">galyst.calculators.transformator</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="galyst.calculators.transformator.warp.html">galyst.calculators.transformator.warp</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.calculators.util.html">galyst.calculators.util</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="galyst.calculators.util.WrapTransformation.html">galyst.calculators.util.WrapTransformation</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="galyst.core.html">galyst.core</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.data_mapper.html">galyst.core.data_mapper</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.data_mapper.SimArrayAttributeMapper.html">galyst.core.data_mapper.SimArrayAttributeMapper</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.dbdata.html">galyst.core.dbdata</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbdata.HaloImage.html">galyst.core.dbdata.HaloImage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbdata.HaloProfile.html">galyst.core.dbdata.HaloProfile</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.dbextract.html">galyst.core.dbextract</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbextract.HaloImageGetter.html">galyst.core.dbextract.HaloImageGetter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbextract.HaloImageValueGetter.html">galyst.core.dbextract.HaloImageValueGetter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbextract.HaloProfileGetter.html">galyst.core.dbextract.HaloProfileGetter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbextract.HaloProfileValueGetter.html">galyst.core.dbextract.HaloProfileValueGetter</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 current active has-children"><a class="reference internal" href="galyst.core.dbobject.html">galyst.core.dbobject</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l4 current active"><a class="current reference internal" href="#">galyst.core.dbobject.Snapshot</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.dboperate.html">galyst.core.dboperate</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.dboperate.remove_duplicated_halos.html">galyst.core.dboperate.remove_duplicated_halos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.dboperate.remove_haloproperties.html">galyst.core.dboperate.remove_haloproperties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.dboperate.remove_timestep_without_host_simulation.html">galyst.core.dboperate.remove_timestep_without_host_simulation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.dboperate.write_property_list.html">galyst.core.dboperate.write_property_list</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.dbpatch.html">galyst.core.dbpatch</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbpatch.apply.html">galyst.core.dbpatch.apply</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbpatch.get_image_objects.html">galyst.core.dbpatch.get_image_objects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbpatch.get_images.html">galyst.core.dbpatch.get_images</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbpatch.get_profile_objects.html">galyst.core.dbpatch.get_profile_objects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbpatch.get_profiles.html">galyst.core.dbpatch.get_profiles</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.halo.html">galyst.core.halo</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.halo.SimulationObject.html">galyst.core.halo.SimulationObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.halo.SimulationObjectHandler.html">galyst.core.halo.SimulationObjectHandler</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.input_handler.html">galyst.core.input_handler</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.input_handler.ArepoHDFSubfindInputHandler.html">galyst.core.input_handler.ArepoHDFSubfindInputHandler</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.permissions.html">galyst.core.permissions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.permissions.add_user_with_role.html">galyst.core.permissions.add_user_with_role</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.permissions.delete_user.html">galyst.core.permissions.delete_user</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.permissions.get_current_user.html">galyst.core.permissions.get_current_user</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.permissions.initialize_permissions_system.html">galyst.core.permissions.initialize_permissions_system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.permissions.Role.html">galyst.core.permissions.Role</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.permissions.User.html">galyst.core.permissions.User</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.permissions.UserRoles.html">galyst.core.permissions.UserRoles</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.simulation.html">galyst.core.simulation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.simulation.get_named_handler_class.html">galyst.core.simulation.get_named_handler_class</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.simulation.Simulation.html">galyst.core.simulation.Simulation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.simulation.SimulationHandler.html">galyst.core.simulation.SimulationHandler</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.timestep.html">galyst.core.timestep</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.timestep.TimeStep.html">galyst.core.timestep.TimeStep</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.timestep.TimeStepHandler.html">galyst.core.timestep.TimeStepHandler</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="galyst.fitting.html">galyst.fitting</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="galyst.properties.html">galyst.properties</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.properties.basic.html">galyst.properties.basic</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="galyst.properties.basic.Mass30kpc.html">galyst.properties.basic.Mass30kpc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.properties.basic.Mvir.html">galyst.properties.basic.Mvir</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.properties.basic.RadiusContainMassFraction2D_star.html">galyst.properties.basic.RadiusContainMassFraction2D_star</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.properties.basic.RadiusContainMassFraction3D_star.html">galyst.properties.basic.RadiusContainMassFraction3D_star</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.properties.basic.Rvir.html">galyst.properties.basic.Rvir</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.properties.basic.Spherical30kpcPropertyCalculation.html">galyst.properties.basic.Spherical30kpcPropertyCalculation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.properties.basic.krot30kpc.html">galyst.properties.basic.krot30kpc</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="galyst.util.html">galyst.util</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.util.ansi_string_format.html">galyst.util.ansi_string_format</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="galyst.util.ansi_string_format.background_color.html">galyst.util.ansi_string_format.background_color</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.util.ansi_string_format.color.html">galyst.util.ansi_string_format.color</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.util.ansi_string_format.escape_codes_color_bg.html">galyst.util.ansi_string_format.escape_codes_color_bg</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.util.ansi_string_format.escape_codes_color_fg.html">galyst.util.ansi_string_format.escape_codes_color_fg</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.util.ansi_string_format.fontformat.html">galyst.util.ansi_string_format.fontformat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.util.ansi_string_format.foreground_color.html">galyst.util.ansi_string_format.foreground_color</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.util.ansi_string_format.string_formatter.html">galyst.util.ansi_string_format.string_formatter</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.util.path_helper.html">galyst.util.path_helper</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="galyst.util.path_helper.PathHelper.html">galyst.util.path_helper.PathHelper</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.util.string_match.html">galyst.util.string_match</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="galyst.util.string_match.best_matching_path.html">galyst.util.string_match.best_matching_path</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.util.tangos_base.html">galyst.util.tangos_base</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="galyst.util.tangos_base.with_tangos_base.html">galyst.util.tangos_base.with_tangos_base</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/GalaxySimAnalytics/Galyst" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/reference/_autosummary/galyst.core.dbobject.Snapshot.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>galyst.core.dbobject.Snapshot</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot"><code class="docutils literal notranslate"><span class="pre">Snapshot</span></code></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.tag"><code class="docutils literal notranslate"><span class="pre">Snapshot.tag</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.load"><code class="docutils literal notranslate"><span class="pre">Snapshot.load()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.basename"><code class="docutils literal notranslate"><span class="pre">Snapshot.basename</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.NDM"><code class="docutils literal notranslate"><span class="pre">Snapshot.NDM</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.NGas"><code class="docutils literal notranslate"><span class="pre">Snapshot.NGas</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.NStar"><code class="docutils literal notranslate"><span class="pre">Snapshot.NStar</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.all_links"><code class="docutils literal notranslate"><span class="pre">Snapshot.all_links</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.all_properties"><code class="docutils literal notranslate"><span class="pre">Snapshot.all_properties</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.all_reverse_links"><code class="docutils literal notranslate"><span class="pre">Snapshot.all_reverse_links</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.calculate"><code class="docutils literal notranslate"><span class="pre">Snapshot.calculate()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.calculate_for_descendants"><code class="docutils literal notranslate"><span class="pre">Snapshot.calculate_for_descendants()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.calculate_for_progenitors"><code class="docutils literal notranslate"><span class="pre">Snapshot.calculate_for_progenitors()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.class_from_tag"><code class="docutils literal notranslate"><span class="pre">Snapshot.class_from_tag()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.creator"><code class="docutils literal notranslate"><span class="pre">Snapshot.creator</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.creator_id"><code class="docutils literal notranslate"><span class="pre">Snapshot.creator_id</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.deprecated_properties"><code class="docutils literal notranslate"><span class="pre">Snapshot.deprecated_properties</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.earliest"><code class="docutils literal notranslate"><span class="pre">Snapshot.earliest</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.finder_id"><code class="docutils literal notranslate"><span class="pre">Snapshot.finder_id</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.finder_offset"><code class="docutils literal notranslate"><span class="pre">Snapshot.finder_offset</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.get"><code class="docutils literal notranslate"><span class="pre">Snapshot.get()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.get_data"><code class="docutils literal notranslate"><span class="pre">Snapshot.get_data()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.get_description"><code class="docutils literal notranslate"><span class="pre">Snapshot.get_description()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.get_image_objects"><code class="docutils literal notranslate"><span class="pre">Snapshot.get_image_objects()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.get_images"><code class="docutils literal notranslate"><span class="pre">Snapshot.get_images()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.get_objects"><code class="docutils literal notranslate"><span class="pre">Snapshot.get_objects()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.get_profile_objects"><code class="docutils literal notranslate"><span class="pre">Snapshot.get_profile_objects()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.get_profiles"><code class="docutils literal notranslate"><span class="pre">Snapshot.get_profiles()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.halo_number"><code class="docutils literal notranslate"><span class="pre">Snapshot.halo_number</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.handler"><code class="docutils literal notranslate"><span class="pre">Snapshot.handler</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.handler_class"><code class="docutils literal notranslate"><span class="pre">Snapshot.handler_class</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.id"><code class="docutils literal notranslate"><span class="pre">Snapshot.id</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.images"><code class="docutils literal notranslate"><span class="pre">Snapshot.images</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.init_on_load"><code class="docutils literal notranslate"><span class="pre">Snapshot.init_on_load()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.keys"><code class="docutils literal notranslate"><span class="pre">Snapshot.keys()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.latest"><code class="docutils literal notranslate"><span class="pre">Snapshot.latest</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.links"><code class="docutils literal notranslate"><span class="pre">Snapshot.links</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.metadata"><code class="docutils literal notranslate"><span class="pre">Snapshot.metadata</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.next"><code class="docutils literal notranslate"><span class="pre">Snapshot.next</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.object_typecode"><code class="docutils literal notranslate"><span class="pre">Snapshot.object_typecode</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.object_typecode_from_tag"><code class="docutils literal notranslate"><span class="pre">Snapshot.object_typecode_from_tag()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.object_typetag_from_code"><code class="docutils literal notranslate"><span class="pre">Snapshot.object_typetag_from_code()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.path"><code class="docutils literal notranslate"><span class="pre">Snapshot.path</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.plot"><code class="docutils literal notranslate"><span class="pre">Snapshot.plot()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.previous"><code class="docutils literal notranslate"><span class="pre">Snapshot.previous</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.profiles"><code class="docutils literal notranslate"><span class="pre">Snapshot.profiles</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.properties"><code class="docutils literal notranslate"><span class="pre">Snapshot.properties</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.property_cascade"><code class="docutils literal notranslate"><span class="pre">Snapshot.property_cascade()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.registry"><code class="docutils literal notranslate"><span class="pre">Snapshot.registry</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.reverse_links"><code class="docutils literal notranslate"><span class="pre">Snapshot.reverse_links</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.reverse_property_cascade"><code class="docutils literal notranslate"><span class="pre">Snapshot.reverse_property_cascade()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.short"><code class="docutils literal notranslate"><span class="pre">Snapshot.short()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.timestep"><code class="docutils literal notranslate"><span class="pre">Snapshot.timestep</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.timestep_id"><code class="docutils literal notranslate"><span class="pre">Snapshot.timestep_id</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.typecode_and_number_from_human_identifier"><code class="docutils literal notranslate"><span class="pre">Snapshot.typecode_and_number_from_human_identifier()</span></code></a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="galyst-core-dbobject-snapshot">
+<h1>galyst.core.dbobject.Snapshot<a class="headerlink" href="#galyst-core-dbobject-snapshot" title="Link to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">galyst.core.dbobject.</span></span><span class="sig-name descname"><span class="pre">Snapshot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timestep</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#galyst.core.dbobject.Snapshot" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">SimulationObjectBase</span></code></p>
+<p>A simple constructor that allows initialization from kwargs.</p>
+<p>Sets attributes on the constructed instance using the names and
+values in <code class="docutils literal notranslate"><span class="pre">kwargs</span></code>.</p>
+<p>Only keys that are present as
+attributes of the instance’s class are allowed. These could be,
+for example, any mapped columns or relationships.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>NDM</strong></dt><dd></dd>
+<dt><strong>NGas</strong></dt><dd></dd>
+<dt><strong>NStar</strong></dt><dd></dd>
+<dt><strong>all_links</strong></dt><dd></dd>
+<dt><strong>all_properties</strong></dt><dd></dd>
+<dt><strong>all_reverse_links</strong></dt><dd></dd>
+<dt><strong>basename</strong></dt><dd></dd>
+<dt><strong>creator</strong></dt><dd></dd>
+<dt><strong>creator_id</strong></dt><dd></dd>
+<dt><strong>deprecated_properties</strong></dt><dd></dd>
+<dt><strong>earliest</strong></dt><dd></dd>
+<dt><strong>finder_id</strong></dt><dd></dd>
+<dt><strong>finder_offset</strong></dt><dd></dd>
+<dt><strong>halo_number</strong></dt><dd></dd>
+<dt><strong>handler</strong></dt><dd></dd>
+<dt><strong>handler_class</strong></dt><dd></dd>
+<dt><strong>id</strong></dt><dd></dd>
+<dt><strong>images</strong></dt><dd></dd>
+<dt><strong>latest</strong></dt><dd></dd>
+<dt><strong>links</strong></dt><dd></dd>
+<dt><strong>next</strong></dt><dd></dd>
+<dt><strong>object_typecode</strong></dt><dd></dd>
+<dt><strong>path</strong></dt><dd></dd>
+<dt><strong>previous</strong></dt><dd></dd>
+<dt><strong>profiles</strong></dt><dd></dd>
+<dt><strong>properties</strong></dt><dd></dd>
+<dt><strong>reverse_links</strong></dt><dd></dd>
+<dt><strong>timestep</strong></dt><dd></dd>
+<dt><strong>timestep_id</strong></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="galyst.core.dbobject.Snapshot.calculate.html#galyst.core.dbobject.Snapshot.calculate" title="galyst.core.dbobject.Snapshot.calculate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">calculate</span></code></a>(calculation[, return_description])</p></td>
+<td><p>Use the live-calculation system to calculate a user-specified function of the stored data.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="galyst.core.dbobject.Snapshot.calculate_for_descendants.html#galyst.core.dbobject.Snapshot.calculate_for_descendants" title="galyst.core.dbobject.Snapshot.calculate_for_descendants"><code class="xref py py-obj docutils literal notranslate"><span class="pre">calculate_for_descendants</span></code></a>(*plist, **kwargs)</p></td>
+<td><p>Run the specified calculations on this halo and its descendants</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="galyst.core.dbobject.Snapshot.calculate_for_progenitors.html#galyst.core.dbobject.Snapshot.calculate_for_progenitors" title="galyst.core.dbobject.Snapshot.calculate_for_progenitors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">calculate_for_progenitors</span></code></a>(*plist, **kwargs)</p></td>
+<td><p>Run the specified calculations on the progenitors of this halo</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="galyst.core.dbobject.Snapshot.get.html#galyst.core.dbobject.Snapshot.get" title="galyst.core.dbobject.Snapshot.get"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get</span></code></a>(key[, default])</p></td>
+<td><p>Highest-level method for retrieving data or link, with default return value if no data is found under the specified key</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="galyst.core.dbobject.Snapshot.get_data.html#galyst.core.dbobject.Snapshot.get_data" title="galyst.core.dbobject.Snapshot.get_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_data</span></code></a>(key[, raw, always_return_array])</p></td>
+<td><p>High-level data access to the property or linked halo named by key.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="galyst.core.dbobject.Snapshot.get_description.html#galyst.core.dbobject.Snapshot.get_description" title="galyst.core.dbobject.Snapshot.get_description"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_description</span></code></a>(key[, getters])</p></td>
+<td><p>Get a description of a named property or link, in the form of an object capable of calculating it.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#galyst.core.dbobject.Snapshot.get_image_objects" title="galyst.core.dbobject.Snapshot.get_image_objects"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_image_objects</span></code></a>(key)</p></td>
+<td><p>Get HaloImage objects belonging to this halo named by the specified key.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#galyst.core.dbobject.Snapshot.get_images" title="galyst.core.dbobject.Snapshot.get_images"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_images</span></code></a>(key[, always_return_array])</p></td>
+<td><p>High-level data access for the image named by key.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="galyst.core.dbobject.Snapshot.get_objects.html#galyst.core.dbobject.Snapshot.get_objects" title="galyst.core.dbobject.Snapshot.get_objects"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_objects</span></code></a>(key[, getters])</p></td>
+<td><p>Get objects belonging to this halo named by the specified key.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#galyst.core.dbobject.Snapshot.get_profile_objects" title="galyst.core.dbobject.Snapshot.get_profile_objects"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_profile_objects</span></code></a>(key)</p></td>
+<td><p>Get HaloProfile objects belonging to this halo named by the specified key.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#galyst.core.dbobject.Snapshot.get_profiles" title="galyst.core.dbobject.Snapshot.get_profiles"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_profiles</span></code></a>(key[, always_return_array])</p></td>
+<td><p>High-level data access for the profile named by key.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="galyst.core.dbobject.Snapshot.load.html#galyst.core.dbobject.Snapshot.load" title="galyst.core.dbobject.Snapshot.load"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load</span></code></a>([mode])</p></td>
+<td><p>Load the data for this halo, if it is present on this computer's filesystem.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="galyst.core.dbobject.Snapshot.property_cascade.html#galyst.core.dbobject.Snapshot.property_cascade" title="galyst.core.dbobject.Snapshot.property_cascade"><code class="xref py py-obj docutils literal notranslate"><span class="pre">property_cascade</span></code></a>(*args, **kwargs)</p></td>
+<td><p>The old alias for calculate_for_descendants, retained for compatibility</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="galyst.core.dbobject.Snapshot.reverse_property_cascade.html#galyst.core.dbobject.Snapshot.reverse_property_cascade" title="galyst.core.dbobject.Snapshot.reverse_property_cascade"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reverse_property_cascade</span></code></a>(*args, **kwargs)</p></td>
+<td><p>The old alias for calculate_for_progenitors, retained for compatibility</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="galyst.core.dbobject.Snapshot.typecode_and_number_from_human_identifier.html#galyst.core.dbobject.Snapshot.typecode_and_number_from_human_identifier" title="galyst.core.dbobject.Snapshot.typecode_and_number_from_human_identifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">typecode_and_number_from_human_identifier</span></code></a>(...)</p></td>
+<td><p>Return object typecode and halo number given a human identification string or number</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p><strong>class_from_tag</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><strong>init_on_load</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><strong>keys</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><strong>object_typecode_from_tag</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><strong>object_typetag_from_code</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><strong>plot</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><strong>short</strong></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot.tag">
+<span class="sig-name descname"><span class="pre">tag</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'snapshot'</span></em><a class="headerlink" href="#galyst.core.dbobject.Snapshot.tag" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot.load">
+<span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#galyst.core.dbobject.Snapshot.load" title="Link to this definition">#</a></dt>
+<dd><p>Load the data for this halo, if it is present on this computer’s filesystem.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>mode</strong> – the load mode to pass to the relevant input handler. For example with the pynbody input</p>
+</dd>
+</dl>
+<p>handler this can be None or ‘partial’ (in a normal session) and, when running inside an MPI session,
+‘server’ or ‘server-partial’. See <a class="reference external" href="https://pynbody.github.io/tangos/mpi.html">https://pynbody.github.io/tangos/mpi.html</a>.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot.basename">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">basename</span></span><a class="headerlink" href="#galyst.core.dbobject.Snapshot.basename" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot.NDM">
+<span class="sig-name descname"><span class="pre">NDM</span></span><a class="headerlink" href="#galyst.core.dbobject.Snapshot.NDM" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot.NGas">
+<span class="sig-name descname"><span class="pre">NGas</span></span><a class="headerlink" href="#galyst.core.dbobject.Snapshot.NGas" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot.NStar">
+<span class="sig-name descname"><span class="pre">NStar</span></span><a class="headerlink" href="#galyst.core.dbobject.Snapshot.NStar" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot.all_links">
+<span class="sig-name descname"><span class="pre">all_links</span></span><a class="headerlink" href="#galyst.core.dbobject.Snapshot.all_links" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot.all_properties">
+<span class="sig-name descname"><span class="pre">all_properties</span></span><a class="headerlink" href="#galyst.core.dbobject.Snapshot.all_properties" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot.all_reverse_links">
+<span class="sig-name descname"><span class="pre">all_reverse_links</span></span><a class="headerlink" href="#galyst.core.dbobject.Snapshot.all_reverse_links" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot.calculate">
+<span class="sig-name descname"><span class="pre">calculate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">calculation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_description</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#galyst.core.dbobject.Snapshot.calculate" title="Link to this definition">#</a></dt>
+<dd><p>Use the live-calculation system to calculate a user-specified function of the stored data.</p>
+<p>See the data exploration tutorials at <a class="reference external" href="https://pynbody.github.io/tangos/data_exploration.html">https://pynbody.github.io/tangos/data_exploration.html</a>
+for an introduction to the system.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>calculation</strong> – the calculation (or a string representation of it to be parsed)</p></li>
+<li><p><strong>return_description</strong> – if True, return both the value and the PropertyCalculation class describing it.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The result of the calculation, or a tuple containing the result and the description if
+return_description is True.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot.calculate_for_descendants">
+<span class="sig-name descname"><span class="pre">calculate_for_descendants</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">plist</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#galyst.core.dbobject.Snapshot.calculate_for_descendants" title="Link to this definition">#</a></dt>
+<dd><p>Run the specified calculations on this halo and its descendants</p>
+<p>Each argument is a string (or an instance of live_calculation.Calculation), following the syntax
+described in live_calculation.md.</p>
+<p><em>kwargs</em>:</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nmax</strong> – The maximum number of descendants to consider (default 1000)</p></li>
+<li><p><strong>strategy</strong> – The class to use to find the descendants (default relation_finding.MultiHopMajorDescendantsStrategy)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot.calculate_for_progenitors">
+<span class="sig-name descname"><span class="pre">calculate_for_progenitors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">plist</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#galyst.core.dbobject.Snapshot.calculate_for_progenitors" title="Link to this definition">#</a></dt>
+<dd><p>Run the specified calculations on the progenitors of this halo</p>
+<p>For more information see calculate_for_descendants.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot.class_from_tag">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">class_from_tag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">match_tag</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#galyst.core.dbobject.Snapshot.class_from_tag" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot.creator">
+<span class="sig-name descname"><span class="pre">creator</span></span><a class="headerlink" href="#galyst.core.dbobject.Snapshot.creator" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot.creator_id">
+<span class="sig-name descname"><span class="pre">creator_id</span></span><a class="headerlink" href="#galyst.core.dbobject.Snapshot.creator_id" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot.deprecated_properties">
+<span class="sig-name descname"><span class="pre">deprecated_properties</span></span><a class="headerlink" href="#galyst.core.dbobject.Snapshot.deprecated_properties" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot.earliest">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">earliest</span></span><a class="headerlink" href="#galyst.core.dbobject.Snapshot.earliest" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot.finder_id">
+<span class="sig-name descname"><span class="pre">finder_id</span></span><a class="headerlink" href="#galyst.core.dbobject.Snapshot.finder_id" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot.finder_offset">
+<span class="sig-name descname"><span class="pre">finder_offset</span></span><a class="headerlink" href="#galyst.core.dbobject.Snapshot.finder_offset" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot.get">
+<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#galyst.core.dbobject.Snapshot.get" title="Link to this definition">#</a></dt>
+<dd><p>Highest-level method for retrieving data or link, with default return value if no data is found
+under the specified key</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot.get_data">
+<span class="sig-name descname"><span class="pre">get_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raw</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">always_return_array</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#galyst.core.dbobject.Snapshot.get_data" title="Link to this definition">#</a></dt>
+<dd><p>High-level data access to the property or linked halo named by key.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> – string with the name of the property or link</p></li>
+<li><p><strong>raw</strong> – if True, get the raw data rather than attempt to reassemble the data into a science-ready form</p></li>
+<li><p><strong>always_return_array</strong> – if True, always return the data as a list of values, even if there is only one
+stored property with the specified name</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot.get_description">
+<span class="sig-name descname"><span class="pre">get_description</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">getters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#galyst.core.dbobject.Snapshot.get_description" title="Link to this definition">#</a></dt>
+<dd><p>Get a description of a named property or link, in the form of an object capable of calculating it.</p>
+<p>This can be helpful to extract meta-data such as the size of an image or steps of an array.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot.get_image_objects">
+<span class="sig-name descname"><span class="pre">get_image_objects</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#galyst.core.dbobject.Snapshot.get_image_objects" title="Link to this definition">#</a></dt>
+<dd><p>Get HaloImage objects belonging to this halo named by the specified key.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot.get_images">
+<span class="sig-name descname"><span class="pre">get_images</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">always_return_array</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#galyst.core.dbobject.Snapshot.get_images" title="Link to this definition">#</a></dt>
+<dd><p>High-level data access for the image named by key.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot.get_objects">
+<span class="sig-name descname"><span class="pre">get_objects</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">getters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#galyst.core.dbobject.Snapshot.get_objects" title="Link to this definition">#</a></dt>
+<dd><p>Get objects belonging to this halo named by the specified key.</p>
+<p>Compared to get_data, this allows access to the underlying HaloProperty or HaloLink objects, or to perform
+custom processing of the data by specifying particular extraction patterns to getters. For more information,
+see halo_data_extraction_patterns.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot.get_profile_objects">
+<span class="sig-name descname"><span class="pre">get_profile_objects</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#galyst.core.dbobject.Snapshot.get_profile_objects" title="Link to this definition">#</a></dt>
+<dd><p>Get HaloProfile objects belonging to this halo named by the specified key.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot.get_profiles">
+<span class="sig-name descname"><span class="pre">get_profiles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">always_return_array</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#galyst.core.dbobject.Snapshot.get_profiles" title="Link to this definition">#</a></dt>
+<dd><p>High-level data access for the profile named by key.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot.halo_number">
+<span class="sig-name descname"><span class="pre">halo_number</span></span><a class="headerlink" href="#galyst.core.dbobject.Snapshot.halo_number" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot.handler">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">handler</span></span><a class="headerlink" href="#galyst.core.dbobject.Snapshot.handler" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot.handler_class">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">handler_class</span></span><a class="headerlink" href="#galyst.core.dbobject.Snapshot.handler_class" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#galyst.core.dbobject.Snapshot.id" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot.images">
+<span class="sig-name descname"><span class="pre">images</span></span><a class="headerlink" href="#galyst.core.dbobject.Snapshot.images" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot.init_on_load">
+<span class="sig-name descname"><span class="pre">init_on_load</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#galyst.core.dbobject.Snapshot.init_on_load" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot.keys">
+<span class="sig-name descname"><span class="pre">keys</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">getters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#galyst.core.dbobject.Snapshot.keys" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot.latest">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">latest</span></span><a class="headerlink" href="#galyst.core.dbobject.Snapshot.latest" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot.links">
+<span class="sig-name descname"><span class="pre">links</span></span><a class="headerlink" href="#galyst.core.dbobject.Snapshot.links" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot.metadata">
+<span class="sig-name descname"><span class="pre">metadata</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">MetaData</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">MetaData()</span></em><a class="headerlink" href="#galyst.core.dbobject.Snapshot.metadata" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot.next">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">next</span></span><a class="headerlink" href="#galyst.core.dbobject.Snapshot.next" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot.object_typecode">
+<span class="sig-name descname"><span class="pre">object_typecode</span></span><a class="headerlink" href="#galyst.core.dbobject.Snapshot.object_typecode" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot.object_typecode_from_tag">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">object_typecode_from_tag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">match_tag</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#galyst.core.dbobject.Snapshot.object_typecode_from_tag" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot.object_typetag_from_code">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">object_typetag_from_code</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">typecode</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#galyst.core.dbobject.Snapshot.object_typetag_from_code" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot.path">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">path</span></span><a class="headerlink" href="#galyst.core.dbobject.Snapshot.path" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot.plot">
+<span class="sig-name descname"><span class="pre">plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#galyst.core.dbobject.Snapshot.plot" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot.previous">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">previous</span></span><a class="headerlink" href="#galyst.core.dbobject.Snapshot.previous" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot.profiles">
+<span class="sig-name descname"><span class="pre">profiles</span></span><a class="headerlink" href="#galyst.core.dbobject.Snapshot.profiles" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot.properties">
+<span class="sig-name descname"><span class="pre">properties</span></span><a class="headerlink" href="#galyst.core.dbobject.Snapshot.properties" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot.property_cascade">
+<span class="sig-name descname"><span class="pre">property_cascade</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#galyst.core.dbobject.Snapshot.property_cascade" title="Link to this definition">#</a></dt>
+<dd><p>The old alias for calculate_for_descendants, retained for compatibility</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot.registry">
+<span class="sig-name descname"><span class="pre">registry</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">RegistryType</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;sqlalchemy.orm.decl_api.registry</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#galyst.core.dbobject.Snapshot.registry" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot.reverse_links">
+<span class="sig-name descname"><span class="pre">reverse_links</span></span><a class="headerlink" href="#galyst.core.dbobject.Snapshot.reverse_links" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot.reverse_property_cascade">
+<span class="sig-name descname"><span class="pre">reverse_property_cascade</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#galyst.core.dbobject.Snapshot.reverse_property_cascade" title="Link to this definition">#</a></dt>
+<dd><p>The old alias for calculate_for_progenitors, retained for compatibility</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot.short">
+<span class="sig-name descname"><span class="pre">short</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#galyst.core.dbobject.Snapshot.short" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot.timestep">
+<span class="sig-name descname"><span class="pre">timestep</span></span><a class="headerlink" href="#galyst.core.dbobject.Snapshot.timestep" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot.timestep_id">
+<span class="sig-name descname"><span class="pre">timestep_id</span></span><a class="headerlink" href="#galyst.core.dbobject.Snapshot.timestep_id" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="galyst.core.dbobject.Snapshot.typecode_and_number_from_human_identifier">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">typecode_and_number_from_human_identifier</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#galyst.core.dbobject.Snapshot.typecode_and_number_from_human_identifier" title="Link to this definition">#</a></dt>
+<dd><p>Return object typecode and halo number given a human identification string or number</p>
+<p>E.g. identifier = 5 -&gt; typecode=0,
+identifier = ‘1.5’ -&gt; typecode=1, number = 5
+identifier = ‘bh_5’ -&gt; typecode=1, number = 5</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="galyst.core.dbobject.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">galyst.core.dbobject</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="galyst.core.dbobject.Snapshot.calculate.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">galyst.core.dbobject.Snapshot.calculate</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot"><code class="docutils literal notranslate"><span class="pre">Snapshot</span></code></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.tag"><code class="docutils literal notranslate"><span class="pre">Snapshot.tag</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.load"><code class="docutils literal notranslate"><span class="pre">Snapshot.load()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.basename"><code class="docutils literal notranslate"><span class="pre">Snapshot.basename</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.NDM"><code class="docutils literal notranslate"><span class="pre">Snapshot.NDM</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.NGas"><code class="docutils literal notranslate"><span class="pre">Snapshot.NGas</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.NStar"><code class="docutils literal notranslate"><span class="pre">Snapshot.NStar</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.all_links"><code class="docutils literal notranslate"><span class="pre">Snapshot.all_links</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.all_properties"><code class="docutils literal notranslate"><span class="pre">Snapshot.all_properties</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.all_reverse_links"><code class="docutils literal notranslate"><span class="pre">Snapshot.all_reverse_links</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.calculate"><code class="docutils literal notranslate"><span class="pre">Snapshot.calculate()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.calculate_for_descendants"><code class="docutils literal notranslate"><span class="pre">Snapshot.calculate_for_descendants()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.calculate_for_progenitors"><code class="docutils literal notranslate"><span class="pre">Snapshot.calculate_for_progenitors()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.class_from_tag"><code class="docutils literal notranslate"><span class="pre">Snapshot.class_from_tag()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.creator"><code class="docutils literal notranslate"><span class="pre">Snapshot.creator</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.creator_id"><code class="docutils literal notranslate"><span class="pre">Snapshot.creator_id</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.deprecated_properties"><code class="docutils literal notranslate"><span class="pre">Snapshot.deprecated_properties</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.earliest"><code class="docutils literal notranslate"><span class="pre">Snapshot.earliest</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.finder_id"><code class="docutils literal notranslate"><span class="pre">Snapshot.finder_id</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.finder_offset"><code class="docutils literal notranslate"><span class="pre">Snapshot.finder_offset</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.get"><code class="docutils literal notranslate"><span class="pre">Snapshot.get()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.get_data"><code class="docutils literal notranslate"><span class="pre">Snapshot.get_data()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.get_description"><code class="docutils literal notranslate"><span class="pre">Snapshot.get_description()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.get_image_objects"><code class="docutils literal notranslate"><span class="pre">Snapshot.get_image_objects()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.get_images"><code class="docutils literal notranslate"><span class="pre">Snapshot.get_images()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.get_objects"><code class="docutils literal notranslate"><span class="pre">Snapshot.get_objects()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.get_profile_objects"><code class="docutils literal notranslate"><span class="pre">Snapshot.get_profile_objects()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.get_profiles"><code class="docutils literal notranslate"><span class="pre">Snapshot.get_profiles()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.halo_number"><code class="docutils literal notranslate"><span class="pre">Snapshot.halo_number</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.handler"><code class="docutils literal notranslate"><span class="pre">Snapshot.handler</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.handler_class"><code class="docutils literal notranslate"><span class="pre">Snapshot.handler_class</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.id"><code class="docutils literal notranslate"><span class="pre">Snapshot.id</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.images"><code class="docutils literal notranslate"><span class="pre">Snapshot.images</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.init_on_load"><code class="docutils literal notranslate"><span class="pre">Snapshot.init_on_load()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.keys"><code class="docutils literal notranslate"><span class="pre">Snapshot.keys()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.latest"><code class="docutils literal notranslate"><span class="pre">Snapshot.latest</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.links"><code class="docutils literal notranslate"><span class="pre">Snapshot.links</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.metadata"><code class="docutils literal notranslate"><span class="pre">Snapshot.metadata</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.next"><code class="docutils literal notranslate"><span class="pre">Snapshot.next</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.object_typecode"><code class="docutils literal notranslate"><span class="pre">Snapshot.object_typecode</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.object_typecode_from_tag"><code class="docutils literal notranslate"><span class="pre">Snapshot.object_typecode_from_tag()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.object_typetag_from_code"><code class="docutils literal notranslate"><span class="pre">Snapshot.object_typetag_from_code()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.path"><code class="docutils literal notranslate"><span class="pre">Snapshot.path</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.plot"><code class="docutils literal notranslate"><span class="pre">Snapshot.plot()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.previous"><code class="docutils literal notranslate"><span class="pre">Snapshot.previous</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.profiles"><code class="docutils literal notranslate"><span class="pre">Snapshot.profiles</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.properties"><code class="docutils literal notranslate"><span class="pre">Snapshot.properties</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.property_cascade"><code class="docutils literal notranslate"><span class="pre">Snapshot.property_cascade()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.registry"><code class="docutils literal notranslate"><span class="pre">Snapshot.registry</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.reverse_links"><code class="docutils literal notranslate"><span class="pre">Snapshot.reverse_links</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.reverse_property_cascade"><code class="docutils literal notranslate"><span class="pre">Snapshot.reverse_property_cascade()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.short"><code class="docutils literal notranslate"><span class="pre">Snapshot.short()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.timestep"><code class="docutils literal notranslate"><span class="pre">Snapshot.timestep</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.timestep_id"><code class="docutils literal notranslate"><span class="pre">Snapshot.timestep_id</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.dbobject.Snapshot.typecode_and_number_from_human_identifier"><code class="docutils literal notranslate"><span class="pre">Snapshot.typecode_and_number_from_human_identifier()</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Shuai Lu
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
