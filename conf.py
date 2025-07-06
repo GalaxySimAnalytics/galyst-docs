@@ -1,16 +1,25 @@
-# Minimal Sphinx configuration file for Read the Docs
-# Since we use pre-built HTML, this file is just to satisfy Read the Docs requirements
+# Minimal configuration for static HTML
 
 project = 'Galyst'
 copyright = '2025, Shuai Lu'
 author = 'Shuai Lu'
+version = '0.1.0'
+release = '0.1.0'
 
-# Minimal extension configuration
+# Do not use any extensions
 extensions = []
 
-# HTML output configuration
-html_theme = 'sphinx_book_theme'
-html_static_path = ['_static']
+# Simplest HTML theme
+html_theme = 'basic'
 
-# Tell Sphinx to use our already built HTML
-html_build_dir = '.'
+# No static file paths needed
+html_static_path = []
+
+# Disable various automatic generation features
+html_use_index = False
+html_use_modindex = False
+html_copy_source = False
+html_show_sourcelink = False
+
+# Main document
+master_doc = 'index'
