@@ -432,6 +432,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-basic-properties">计算基本性质</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-1d-profiles">计算一维径向分布</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-halo-images">绘制 Halo 图像</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#storing-data-to-the-database">Storing Data to the Database</a></li>
 </ul>
             </nav>
         </div>
@@ -662,10 +663,10 @@ document.write(`
 <span class="gp">   ....: </span>    <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Half-mass radius (gas):&quot;</span><span class="p">,</span> <span class="n">Re</span><span class="p">(</span><span class="n">halo_particles</span><span class="o">.</span><span class="n">g</span><span class="p">),</span>
 <span class="gp">   ....: </span><span class="p">)</span>
 <span class="gp">   ....: </span>
-<span class="go">Half-mass radius (total): 62.972472059575416 </span>
-<span class="go">Half-mass radius (DM): 67.59941239236483 </span>
-<span class="go">Half-mass radius (stars): 5.8508304678219965 </span>
-<span class="go">Half-mass radius (gas): 64.86895606231306</span>
+<span class="go">Half-mass radius (total): 62.9724720596586 </span>
+<span class="go">Half-mass radius (DM): 67.59941239234715 </span>
+<span class="go">Half-mass radius (stars): 5.850830467864327 </span>
+<span class="go">Half-mass radius (gas): 64.86895606235284</span>
 </pre></div>
 </div>
 <p>在这里，<code class="docutils literal notranslate"><span class="pre">frac</span></code> 参数指定用于计算半径的质量分数。设置 <code class="docutils literal notranslate"><span class="pre">frac=0.5</span></code> 将返回包含一半总质量的半径（即半质量半径）。</p>
@@ -679,10 +680,10 @@ document.write(`
 <span class="gp">   ....: </span>    <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Rotation energy fraction (gas):&quot;</span><span class="p">,</span> <span class="n">krot</span><span class="p">(</span><span class="n">halo_particles</span><span class="o">.</span><span class="n">g</span><span class="p">),</span>
 <span class="gp">   ....: </span><span class="p">)</span>
 <span class="gp">   ....: </span>
-<span class="go">Rotation energy fraction (total): 0.35872570255879616 </span>
-<span class="go">Rotation energy fraction (DM): 0.32376409352040364 </span>
-<span class="go">Rotation energy fraction (stars): 0.6905072443795279 </span>
-<span class="go">Rotation energy fraction (gas): 0.7227328375828906</span>
+<span class="go">Rotation energy fraction (total): 0.35872570255796943 </span>
+<span class="go">Rotation energy fraction (DM): 0.32376409351966806 </span>
+<span class="go">Rotation energy fraction (stars): 0.6905072443781521 </span>
+<span class="go">Rotation energy fraction (gas): 0.722732837582208</span>
 </pre></div>
 </div>
 </section>
@@ -697,16 +698,16 @@ document.write(`
 <div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [32]: </span><span class="kn">import</span><span class="w"> </span><span class="nn">pylab</span>
 
 <span class="gp">In [33]: </span><span class="n">pylab</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pr</span><span class="p">[</span><span class="s1">&#39;rbins&#39;</span><span class="p">],</span> <span class="n">pr</span><span class="p">[</span><span class="s1">&#39;density&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Total&#39;</span><span class="p">)</span>
-<span class="gh">Out[33]: </span><span class="go">[&lt;matplotlib.lines.Line2D at 0x7ec5bcafe050&gt;]</span>
+<span class="gh">Out[33]: </span><span class="go">[&lt;matplotlib.lines.Line2D at 0x7db2e6a63810&gt;]</span>
 
 <span class="gp">In [34]: </span><span class="n">pylab</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pr</span><span class="p">[</span><span class="s1">&#39;rbins&#39;</span><span class="p">],</span> <span class="n">pr</span><span class="p">[</span><span class="s1">&#39;star-density&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Stars&#39;</span><span class="p">)</span>
-<span class="gh">Out[34]: </span><span class="go">[&lt;matplotlib.lines.Line2D at 0x7ec5837d9410&gt;]</span>
+<span class="gh">Out[34]: </span><span class="go">[&lt;matplotlib.lines.Line2D at 0x7db2e6ac2950&gt;]</span>
 
 <span class="gp">In [35]: </span><span class="n">pylab</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pr</span><span class="p">[</span><span class="s1">&#39;rbins&#39;</span><span class="p">],</span> <span class="n">pr</span><span class="p">[</span><span class="s1">&#39;gas-density&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Gas&#39;</span><span class="p">)</span>
-<span class="gh">Out[35]: </span><span class="go">[&lt;matplotlib.lines.Line2D at 0x7ec5837da950&gt;]</span>
+<span class="gh">Out[35]: </span><span class="go">[&lt;matplotlib.lines.Line2D at 0x7db2e6ac3ed0&gt;]</span>
 
 <span class="gp">In [36]: </span><span class="n">pylab</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pr</span><span class="p">[</span><span class="s1">&#39;rbins&#39;</span><span class="p">],</span> <span class="n">pr</span><span class="p">[</span><span class="s1">&#39;dm-density&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Dark Matter&#39;</span><span class="p">)</span>
-<span class="gh">Out[36]: </span><span class="go">[&lt;matplotlib.lines.Line2D at 0x7ec5837dbc90&gt;]</span>
+<span class="gh">Out[36]: </span><span class="go">[&lt;matplotlib.lines.Line2D at 0x7db2e6a81490&gt;]</span>
 
 <span class="gp">In [37]: </span><span class="n">pylab</span><span class="o">.</span><span class="n">yscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
 
@@ -720,7 +721,7 @@ document.write(`
 <span class="gh">Out[40]: </span><span class="go">(0.0, 30.0)</span>
 
 <span class="gp">In [41]: </span><span class="n">pylab</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="gh">Out[41]: </span><span class="go">&lt;matplotlib.legend.Legend at 0x7ec5837b8ed0&gt;</span>
+<span class="gh">Out[41]: </span><span class="go">&lt;matplotlib.legend.Legend at 0x7db2e6a80590&gt;</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../_images/halo_manipulation_denpro.png"><img alt="../_images/halo_manipulation_denpro.png" src="../_images/halo_manipulation_denpro.png" style="width: 8in;" />
@@ -728,10 +729,10 @@ document.write(`
 <p>这里，前缀 <code class="docutils literal notranslate"><span class="pre">star-</span></code>, <code class="docutils literal notranslate"><span class="pre">gas-</span></code>, 和 <code class="docutils literal notranslate"><span class="pre">dm-</span></code> 指定了不同的物质成分。</p>
 <p>让我们看看气体温度的分布：</p>
 <div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [42]: </span><span class="n">pylab</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pr</span><span class="p">[</span><span class="s1">&#39;rbins&#39;</span><span class="p">],</span><span class="n">pr</span><span class="p">[</span><span class="s1">&#39;gas-temp_50&#39;</span><span class="p">],</span><span class="n">c</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
-<span class="gh">Out[42]: </span><span class="go">[&lt;matplotlib.lines.Line2D at 0x7ec582607e90&gt;]</span>
+<span class="gh">Out[42]: </span><span class="go">[&lt;matplotlib.lines.Line2D at 0x7db2e63cc190&gt;]</span>
 
 <span class="gp">In [43]: </span><span class="n">pylab</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">pr</span><span class="p">[</span><span class="s1">&#39;rbins&#39;</span><span class="p">],</span> <span class="n">pr</span><span class="p">[</span><span class="s1">&#39;gas-temp_30&#39;</span><span class="p">],</span> <span class="n">pr</span><span class="p">[</span><span class="s1">&#39;gas-temp_70&#39;</span><span class="p">],</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;grey&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;30-70th percentile&#39;</span><span class="p">)</span>
-<span class="gh">Out[43]: </span><span class="go">&lt;matplotlib.collections.FillBetweenPolyCollection at 0x7ec5823f3b50&gt;</span>
+<span class="gh">Out[43]: </span><span class="go">&lt;matplotlib.collections.FillBetweenPolyCollection at 0x7db2e643f190&gt;</span>
 
 <span class="gp">In [44]: </span><span class="n">pylab</span><span class="o">.</span><span class="n">yscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
 
@@ -745,7 +746,7 @@ document.write(`
 <span class="gh">Out[47]: </span><span class="go">(0.0, 30.0)</span>
 
 <span class="gp">In [48]: </span><span class="n">pylab</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="gh">Out[48]: </span><span class="go">&lt;matplotlib.legend.Legend at 0x7ec5826079d0&gt;</span>
+<span class="gh">Out[48]: </span><span class="go">&lt;matplotlib.legend.Legend at 0x7db2e6c679d0&gt;</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../_images/halo_gas_temp_profile.png"><img alt="../_images/halo_gas_temp_profile.png" src="../_images/halo_gas_temp_profile.png" style="width: 8in;" />
@@ -761,7 +762,7 @@ document.write(`
 <span class="gp">In [50]: </span><span class="n">im_g</span> <span class="o">=</span> <span class="n">im</span><span class="o">.</span><span class="n">sph_projection</span><span class="p">(</span><span class="n">halo_particles</span><span class="o">.</span><span class="n">g</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="s1">&#39;60 kpc&#39;</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;Msol kpc^-2&#39;</span><span class="p">)</span>
 
 <span class="gp">In [51]: </span><span class="n">im_g</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-<span class="gh">Out[51]: </span><span class="go">&lt;matplotlib.image.AxesImage at 0x7ec589433890&gt;</span>
+<span class="gh">Out[51]: </span><span class="go">&lt;matplotlib.image.AxesImage at 0x7db2e6379a90&gt;</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../_images/halo_gas_surface_density.png"><img alt="../_images/halo_gas_surface_density.png" src="../_images/halo_gas_surface_density.png" style="width: 8in;" />
@@ -770,7 +771,7 @@ document.write(`
 <div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [52]: </span><span class="n">im_g_metals</span> <span class="o">=</span> <span class="n">im</span><span class="o">.</span><span class="n">sph_projection</span><span class="p">(</span><span class="n">halo_particles</span><span class="o">.</span><span class="n">g</span><span class="p">,</span> <span class="n">quantity</span><span class="o">=</span><span class="s1">&#39;metals&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="s1">&#39;60 kpc&#39;</span><span class="p">)</span>
 
 <span class="gp">In [53]: </span><span class="n">im_g_metals</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-<span class="gh">Out[53]: </span><span class="go">&lt;matplotlib.image.AxesImage at 0x7ec582395950&gt;</span>
+<span class="gh">Out[53]: </span><span class="go">&lt;matplotlib.image.AxesImage at 0x7db2e6dcb2d0&gt;</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../_images/halo_gas_metallicity.png"><img alt="../_images/halo_gas_metallicity.png" src="../_images/halo_gas_metallicity.png" style="width: 8in;" />
@@ -779,7 +780,7 @@ document.write(`
 <div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [54]: </span><span class="n">im_s</span> <span class="o">=</span> <span class="n">im</span><span class="o">.</span><span class="n">star_luminosity_image</span><span class="p">(</span><span class="n">halo_particles</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="s1">&#39;60 kpc&#39;</span><span class="p">)</span>
 
 <span class="gp">In [55]: </span><span class="n">im_s</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-<span class="gh">Out[55]: </span><span class="go">&lt;matplotlib.image.AxesImage at 0x7ec565225890&gt;</span>
+<span class="gh">Out[55]: </span><span class="go">&lt;matplotlib.image.AxesImage at 0x7db2b4680ed0&gt;</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../_images/halo_star_luminosity.png"><img alt="../_images/halo_star_luminosity.png" src="../_images/halo_star_luminosity.png" style="width: 8in;" />
@@ -792,11 +793,61 @@ document.write(`
 <span class="gp">In [58]: </span><span class="n">image</span> <span class="o">=</span> <span class="n">im_s_v</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
 <span class="gp">In [59]: </span><span class="n">im_s_m</span><span class="o">.</span><span class="n">show_contour</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
-<span class="gh">Out[59]: </span><span class="go">&lt;matplotlib.contour.QuadContourSet at 0x7ec56501ee90&gt;</span>
+<span class="gh">Out[59]: </span><span class="go">&lt;matplotlib.contour.QuadContourSet at 0x7db2b47e46d0&gt;</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../_images/halo_star_velocity.png"><img alt="../_images/halo_star_velocity.png" src="../_images/halo_star_velocity.png" style="width: 8in;" />
 </a>
+</section>
+<section id="storing-data-to-the-database">
+<h2>Storing Data to the Database<a class="headerlink" href="#storing-data-to-the-database" title="Link to this heading">#</a></h2>
+<p>在分析完一些数据后，我们需要将结果存储到数据库中。首先我们存基本的属性：</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [60]: </span><span class="n">halo</span><span class="o">.</span><span class="n">add_pending_property</span><span class="p">(</span><span class="s2">&quot;krot_star&quot;</span><span class="p">,</span> <span class="n">krot</span><span class="p">(</span><span class="n">halo_particles</span><span class="o">.</span><span class="n">s</span><span class="p">))</span>
+
+<span class="gp">In [61]: </span><span class="n">halo</span><span class="o">.</span><span class="n">add_pending_property</span><span class="p">(</span><span class="n">Re_star_kpc</span><span class="o">=</span><span class="n">Re</span><span class="p">(</span><span class="n">halo_particles</span><span class="o">.</span><span class="n">s</span><span class="p">),</span> <span class="n">Re_gas_kpc</span><span class="o">=</span><span class="n">Re</span><span class="p">(</span><span class="n">halo_particles</span><span class="o">.</span><span class="n">g</span><span class="p">))</span>
+
+<span class="gp">In [62]: </span><span class="n">halo</span><span class="o">.</span><span class="n">write_properties_to_database</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>现在，你可以看到这些属性已经被添加到数据库中：</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [63]: </span><span class="nb">print</span><span class="p">(</span><span class="n">halo</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<span class="go">[&#39;krot_star&#39;, &#39;Re_star_kpc&#39;, &#39;Re_gas_kpc&#39;]</span>
+
+<span class="gp">In [64]: </span><span class="nb">print</span><span class="p">(</span><span class="n">halo</span><span class="p">[</span><span class="s1">&#39;krot_star&#39;</span><span class="p">])</span>
+<span class="go">[&lt;HaloProperty krot_star=6.91e-01 of &lt;Halo 1 of ...&gt;&gt;]</span>
+</pre></div>
+</div>
+<p>你还可以存储一维的分布数据。首先，保存基本的轴：</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [65]: </span><span class="n">halo</span><span class="o">.</span><span class="n">write_profile_to_database</span><span class="p">(</span><span class="s2">&quot;rbins_faceon_30kpc&quot;</span><span class="p">,</span> <span class="n">pr</span><span class="p">[</span><span class="s1">&#39;rbins&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+<span class="gp">In [66]: </span><span class="nb">print</span><span class="p">(</span><span class="n">halo</span><span class="p">[</span><span class="s1">&#39;rbins_faceon_30kpc&#39;</span><span class="p">])</span>
+<span class="go">[&lt;HaloProfile &#39;rbins_faceon_30kpc&#39; for &lt;Halo 1 of ...&gt; (is axis)&gt;]</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">write_profile_to_database</span></code> 方法将此 Halo 的分布数据写入数据库。设置 <code class="docutils literal notranslate"><span class="pre">axis=None</span></code> 表示这是轴。</p>
+<p>接下来，存储依赖于此轴的分布：</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [67]: </span><span class="n">halo</span><span class="o">.</span><span class="n">write_profile_to_database</span><span class="p">(</span><span class="s2">&quot;mass_density_star&quot;</span><span class="p">,</span> <span class="n">pr</span><span class="p">[</span><span class="s1">&#39;star-density&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="s2">&quot;rbins_faceon_30kpc&quot;</span><span class="p">)</span>
+
+<span class="gp">In [68]: </span><span class="n">halo</span><span class="o">.</span><span class="n">write_profile_to_database</span><span class="p">(</span><span class="s2">&quot;mass_density_gas&quot;</span><span class="p">,</span> <span class="n">pr</span><span class="p">[</span><span class="s1">&#39;gas-density&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="s2">&quot;rbins_faceon_30kpc&quot;</span><span class="p">)</span>
+
+<span class="gp">In [69]: </span><span class="nb">print</span><span class="p">(</span><span class="n">halo</span><span class="p">[</span><span class="s1">&#39;mass_density_star&#39;</span><span class="p">])</span>
+<span class="go">[&lt;HaloProfile &#39;mass_density_star&#39; for &lt;Halo 1 of ...&gt; (axis: rbins_faceon_30kpc)&gt;]</span>
+
+<span class="gp">In [70]: </span><span class="nb">print</span><span class="p">(</span><span class="n">halo</span><span class="p">[</span><span class="s1">&#39;mass_density_gas&#39;</span><span class="p">])</span>
+<span class="go">[&lt;HaloProfile &#39;mass_density_gas&#39; for &lt;Halo 1 of ...&gt; (axis: rbins_faceon_30kpc)&gt;]</span>
+</pre></div>
+</div>
+<p>你可以看到这些属性已经成功添加到数据库中。</p>
+<p>最后，让我们在数据库中存储一张图像：</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [71]: </span><span class="n">im_g</span><span class="o">.</span><span class="n">cb_name</span> <span class="o">=</span> <span class="s1">&#39;$\Sigma_g$&#39;</span>
+
+<span class="gp">In [72]: </span><span class="n">halo</span><span class="o">.</span><span class="n">write_image_to_database</span><span class="p">(</span><span class="s2">&quot;sph_projection_gas&quot;</span><span class="p">,</span> <span class="n">im_g</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">im_g</span><span class="o">.</span><span class="n">extent</span><span class="p">,</span> <span class="n">im_g</span><span class="o">.</span><span class="n">x_label</span><span class="p">,</span> <span class="n">im_g</span><span class="o">.</span><span class="n">y_label</span><span class="p">,</span> <span class="n">im_g</span><span class="o">.</span><span class="n">cb_label</span><span class="p">)</span>
+
+<span class="gp">In [73]: </span><span class="nb">print</span><span class="p">(</span><span class="n">halo</span><span class="p">[</span><span class="s1">&#39;sph_projection_gas&#39;</span><span class="p">])</span>
+<span class="go">[&lt;HaloImage &#39;sph_projection_gas&#39; for &lt;Halo 1 of ...&gt;&gt;]</span>
+</pre></div>
+</div>
+<p>图像已经成功添加到数据库中！</p>
 </section>
 </section>
 
@@ -853,6 +904,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-basic-properties">计算基本性质</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-1d-profiles">计算一维径向分布</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-halo-images">绘制 Halo 图像</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#storing-data-to-the-database">Storing Data to the Database</a></li>
 </ul>
   </nav></div>
 

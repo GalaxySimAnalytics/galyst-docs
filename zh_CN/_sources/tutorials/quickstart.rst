@@ -389,3 +389,60 @@ You can see a short bar in the center. Let's examine its kinematic features:
 
     @savefig halo_star_velocity.png width=8in
     im_s_m.show_contour(image)
+
+Storing Data to the Database
+----------------------------
+
+After analyzing some data, you may want to store the results in the database. Let's start by saving some basic properties:
+
+.. ipython:: python
+
+    halo.add_pending_property("krot_star", krot(halo_particles.s))
+
+    halo.add_pending_property(Re_star_kpc=Re(halo_particles.s), Re_gas_kpc=Re(halo_particles.g))
+
+    halo.write_properties_to_database()
+
+You can now see these properties have been added to the database:
+
+.. ipython:: python
+
+    print(halo.keys())
+
+    print(halo['krot_star'])
+
+You can also store profile data. First, save the basic axis:
+
+.. ipython:: python
+
+    halo.write_profile_to_database("rbins_faceon_30kpc", pr['rbins'], axis=None)
+
+    print(halo['rbins_faceon_30kpc'])
+
+The ``write_profile_to_database`` method writes the profile data for this halo to the database. Setting ``axis=None`` indicates this is the axis.
+
+Next, store the profiles that depend on this axis:
+
+.. ipython:: python
+
+    halo.write_profile_to_database("mass_density_star", pr['star-density'], axis="rbins_faceon_30kpc")
+
+    halo.write_profile_to_database("mass_density_gas", pr['gas-density'], axis="rbins_faceon_30kpc")
+
+    print(halo['mass_density_star'])
+
+    print(halo['mass_density_gas'])
+
+You can see these properties have been successfully added to the database.
+
+Finally, let's store an image in the database:
+
+.. ipython:: python
+
+    im_g.cb_name = '$\Sigma_g$'
+
+    halo.write_image_to_database("sph_projection_gas", im_g.values, im_g.extent, im_g.x_label, im_g.y_label, im_g.cb_label)
+
+    print(halo['sph_projection_gas'])
+
+The image has been successfully added to the database!
