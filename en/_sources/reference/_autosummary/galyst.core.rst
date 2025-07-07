@@ -1,6 +1,35 @@
 ﻿galyst.core
 ===========
 
-.. currentmodule:: galyst
+.. automodule:: galyst.core
 
-.. autodata:: core
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   db
+   halo
+   input_handler
+   simulation
+   timestep
+

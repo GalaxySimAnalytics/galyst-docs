@@ -31,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/galyst.css?v=5a0ae46b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/galyst.css?v=0907f922" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -49,7 +49,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'reference/_autosummary/galyst.core.halo.SimulationObject';</script>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="galyst.core.halo.SimulationObject.add_pending_property" href="galyst.core.halo.SimulationObject.add_pending_property.html" />
+    <link rel="next" title="galyst.core.halo.SimulationObjectHandler" href="galyst.core.halo.SimulationObjectHandler.html" />
     <link rel="prev" title="galyst.core.halo" href="galyst.core.halo.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="zh-CN"/>
@@ -220,39 +220,14 @@
 </ul>
 </details></li>
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="galyst.core.html">galyst.core</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.data_mapper.html">galyst.core.data_mapper</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.data_mapper.SimArrayAttributeMapper.html">galyst.core.data_mapper.SimArrayAttributeMapper</a></li>
-</ul>
-</details></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.dbdata.html">galyst.core.dbdata</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbdata.HaloImage.html">galyst.core.dbdata.HaloImage</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbdata.HaloProfile.html">galyst.core.dbdata.HaloProfile</a></li>
-</ul>
-</details></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.dbextract.html">galyst.core.dbextract</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbextract.HaloImageGetter.html">galyst.core.dbextract.HaloImageGetter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbextract.HaloImageValueGetter.html">galyst.core.dbextract.HaloImageValueGetter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbextract.HaloProfileGetter.html">galyst.core.dbextract.HaloProfileGetter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbextract.HaloProfileValueGetter.html">galyst.core.dbextract.HaloProfileValueGetter</a></li>
-</ul>
-</details></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.dbobject.html">galyst.core.dbobject</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbobject.Snapshot.html">galyst.core.dbobject.Snapshot</a></li>
-</ul>
-</details></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.dboperate.html">galyst.core.dboperate</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dboperate.remove_duplicated_halos.html">galyst.core.dboperate.remove_duplicated_halos</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dboperate.remove_haloproperties.html">galyst.core.dboperate.remove_haloproperties</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dboperate.remove_timestep_without_host_simulation.html">galyst.core.dboperate.remove_timestep_without_host_simulation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dboperate.write_property_list.html">galyst.core.dboperate.write_property_list</a></li>
-</ul>
-</details></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.dbpatch.html">galyst.core.dbpatch</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbpatch.apply.html">galyst.core.dbpatch.apply</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbpatch.get_image_objects.html">galyst.core.dbpatch.get_image_objects</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbpatch.get_images.html">galyst.core.dbpatch.get_images</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbpatch.get_profile_objects.html">galyst.core.dbpatch.get_profile_objects</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbpatch.get_profiles.html">galyst.core.dbpatch.get_profiles</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.db.html">galyst.core.db</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.db.data_mapper.html">galyst.core.db.data_mapper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.db.dbdata.html">galyst.core.db.dbdata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.db.dbextract.html">galyst.core.db.dbextract</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.db.dbobject.html">galyst.core.db.dbobject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.db.dboperate.html">galyst.core.db.dboperate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.db.dbpatch.html">galyst.core.db.dbpatch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.db.permissions.html">galyst.core.db.permissions</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 current active has-children"><a class="reference internal" href="galyst.core.halo.html">galyst.core.halo</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
@@ -262,16 +237,6 @@
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.input_handler.html">galyst.core.input_handler</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l4"><a class="reference internal" href="galyst.core.input_handler.ArepoHDFSubfindInputHandler.html">galyst.core.input_handler.ArepoHDFSubfindInputHandler</a></li>
-</ul>
-</details></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.permissions.html">galyst.core.permissions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.permissions.add_user_with_role.html">galyst.core.permissions.add_user_with_role</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.permissions.delete_user.html">galyst.core.permissions.delete_user</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.permissions.get_current_user.html">galyst.core.permissions.get_current_user</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.permissions.initialize_permissions_system.html">galyst.core.permissions.initialize_permissions_system</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.permissions.Role.html">galyst.core.permissions.Role</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.permissions.User.html">galyst.core.permissions.User</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.permissions.UserRoles.html">galyst.core.permissions.UserRoles</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.simulation.html">galyst.core.simulation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -493,6 +458,14 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.halo.SimulationObject"><code class="docutils literal notranslate"><span class="pre">SimulationObject</span></code></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.halo.SimulationObject.keys"><code class="docutils literal notranslate"><span class="pre">SimulationObject.keys()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.halo.SimulationObject.link_keys"><code class="docutils literal notranslate"><span class="pre">SimulationObject.link_keys()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.halo.SimulationObject.property_keys"><code class="docutils literal notranslate"><span class="pre">SimulationObject.property_keys()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.halo.SimulationObject.profile_keys"><code class="docutils literal notranslate"><span class="pre">SimulationObject.profile_keys()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.halo.SimulationObject.image_keys"><code class="docutils literal notranslate"><span class="pre">SimulationObject.image_keys()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.halo.SimulationObject.get_link"><code class="docutils literal notranslate"><span class="pre">SimulationObject.get_link()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.halo.SimulationObject.get_property"><code class="docutils literal notranslate"><span class="pre">SimulationObject.get_property()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.halo.SimulationObject.get_profile"><code class="docutils literal notranslate"><span class="pre">SimulationObject.get_profile()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.halo.SimulationObject.get_image"><code class="docutils literal notranslate"><span class="pre">SimulationObject.get_image()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.halo.SimulationObject.load"><code class="docutils literal notranslate"><span class="pre">SimulationObject.load()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.halo.SimulationObject.add_pending_property"><code class="docutils literal notranslate"><span class="pre">SimulationObject.add_pending_property()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.halo.SimulationObject.write_properties_to_database"><code class="docutils literal notranslate"><span class="pre">SimulationObject.write_properties_to_database()</span></code></a></li>
@@ -530,7 +503,7 @@ access its properties from the database.</p>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>all_properties</strong></dt><dd></dd>
 <dt><strong>finder_id</strong></dt><dd></dd>
-<dt><a class="reference internal" href="galyst.core.halo.SimulationObject.pending_properties.html#galyst.core.halo.SimulationObject.pending_properties" title="galyst.core.halo.SimulationObject.pending_properties"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pending_properties</span></code></a></dt><dd><p>Get the pending properties for the current simulation object.</p>
+<dt><a class="reference internal" href="#galyst.core.halo.SimulationObject.pending_properties" title="galyst.core.halo.SimulationObject.pending_properties"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pending_properties</span></code></a></dt><dd><p>Get the pending properties for the current simulation object.</p>
 </dd>
 <dt><strong>workspace</strong></dt><dd></dd>
 </dl>
@@ -545,10 +518,22 @@ access its properties from the database.</p>
 <p class="rubric">Methods</p>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="galyst.core.halo.SimulationObject.add_pending_property.html#galyst.core.halo.SimulationObject.add_pending_property" title="galyst.core.halo.SimulationObject.add_pending_property"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_pending_property</span></code></a>(*args, **kwargs)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#galyst.core.halo.SimulationObject.add_pending_property" title="galyst.core.halo.SimulationObject.add_pending_property"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_pending_property</span></code></a>(*args, **kwargs)</p></td>
 <td><p>Add one or more pending properties for the current simulation object.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="galyst.core.halo.SimulationObject.remove_properties_from_database.html#galyst.core.halo.SimulationObject.remove_properties_from_database" title="galyst.core.halo.SimulationObject.remove_properties_from_database"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_properties_from_database</span></code></a>(property_name)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#galyst.core.halo.SimulationObject.get_image" title="galyst.core.halo.SimulationObject.get_image"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_image</span></code></a>(key)</p></td>
+<td><p>Get an image by its key.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#galyst.core.halo.SimulationObject.get_link" title="galyst.core.halo.SimulationObject.get_link"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_link</span></code></a>(key)</p></td>
+<td><p>Get a link by its key.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#galyst.core.halo.SimulationObject.get_profile" title="galyst.core.halo.SimulationObject.get_profile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_profile</span></code></a>(key)</p></td>
+<td><p>Get a profile by its key.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#galyst.core.halo.SimulationObject.get_property" title="galyst.core.halo.SimulationObject.get_property"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_property</span></code></a>(key)</p></td>
+<td><p>Get a property by its key.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#galyst.core.halo.SimulationObject.remove_properties_from_database" title="galyst.core.halo.SimulationObject.remove_properties_from_database"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_properties_from_database</span></code></a>(property_name)</p></td>
 <td><p>Remove the specified properties, profiles, or images from the database.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#galyst.core.halo.SimulationObject.write_image_to_database" title="galyst.core.halo.SimulationObject.write_image_to_database"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_image_to_database</span></code></a>(name, values, ...)</p></td>
@@ -557,7 +542,7 @@ access its properties from the database.</p>
 <tr class="row-even"><td><p><a class="reference internal" href="#galyst.core.halo.SimulationObject.write_profile_to_database" title="galyst.core.halo.SimulationObject.write_profile_to_database"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_profile_to_database</span></code></a>(name, values, axis)</p></td>
 <td><p>Write a profile to the database.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="galyst.core.halo.SimulationObject.write_properties_to_database.html#galyst.core.halo.SimulationObject.write_properties_to_database" title="galyst.core.halo.SimulationObject.write_properties_to_database"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_properties_to_database</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#galyst.core.halo.SimulationObject.write_properties_to_database" title="galyst.core.halo.SimulationObject.write_properties_to_database"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_properties_to_database</span></code></a>()</p></td>
 <td><p>Write the cached properties to the database and clear them from pending_properties.</p></td>
 </tr>
 </tbody>
@@ -565,10 +550,22 @@ access its properties from the database.</p>
 </div>
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
-<tr class="row-odd"><td><p><strong>keys</strong></p></td>
+<tr class="row-odd"><td><p><strong>image_keys</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><strong>keys</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><strong>link_keys</strong></p></td>
 <td></td>
 </tr>
 <tr class="row-even"><td><p><strong>load</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><strong>profile_keys</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><strong>property_keys</strong></p></td>
 <td></td>
 </tr>
 </tbody>
@@ -585,7 +582,7 @@ access its properties from the database.</p>
 <dd class="field-even"><dl class="simple">
 <dt><strong>all_properties</strong></dt><dd></dd>
 <dt><strong>finder_id</strong></dt><dd></dd>
-<dt><a class="reference internal" href="galyst.core.halo.SimulationObject.pending_properties.html#galyst.core.halo.SimulationObject.pending_properties" title="galyst.core.halo.SimulationObject.pending_properties"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pending_properties</span></code></a></dt><dd><p>Get the pending properties for the current simulation object.</p>
+<dt><a class="reference internal" href="#galyst.core.halo.SimulationObject.pending_properties" title="galyst.core.halo.SimulationObject.pending_properties"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pending_properties</span></code></a></dt><dd><p>Get the pending properties for the current simulation object.</p>
 </dd>
 <dt><strong>workspace</strong></dt><dd></dd>
 </dl>
@@ -594,10 +591,22 @@ access its properties from the database.</p>
 <p class="rubric">Methods</p>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="galyst.core.halo.SimulationObject.add_pending_property.html#galyst.core.halo.SimulationObject.add_pending_property" title="galyst.core.halo.SimulationObject.add_pending_property"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_pending_property</span></code></a>(*args, **kwargs)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#galyst.core.halo.SimulationObject.add_pending_property" title="galyst.core.halo.SimulationObject.add_pending_property"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_pending_property</span></code></a>(*args, **kwargs)</p></td>
 <td><p>Add one or more pending properties for the current simulation object.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="galyst.core.halo.SimulationObject.remove_properties_from_database.html#galyst.core.halo.SimulationObject.remove_properties_from_database" title="galyst.core.halo.SimulationObject.remove_properties_from_database"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_properties_from_database</span></code></a>(property_name)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#galyst.core.halo.SimulationObject.get_image" title="galyst.core.halo.SimulationObject.get_image"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_image</span></code></a>(key)</p></td>
+<td><p>Get an image by its key.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#galyst.core.halo.SimulationObject.get_link" title="galyst.core.halo.SimulationObject.get_link"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_link</span></code></a>(key)</p></td>
+<td><p>Get a link by its key.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#galyst.core.halo.SimulationObject.get_profile" title="galyst.core.halo.SimulationObject.get_profile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_profile</span></code></a>(key)</p></td>
+<td><p>Get a profile by its key.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#galyst.core.halo.SimulationObject.get_property" title="galyst.core.halo.SimulationObject.get_property"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_property</span></code></a>(key)</p></td>
+<td><p>Get a property by its key.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#galyst.core.halo.SimulationObject.remove_properties_from_database" title="galyst.core.halo.SimulationObject.remove_properties_from_database"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_properties_from_database</span></code></a>(property_name)</p></td>
 <td><p>Remove the specified properties, profiles, or images from the database.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#galyst.core.halo.SimulationObject.write_image_to_database" title="galyst.core.halo.SimulationObject.write_image_to_database"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_image_to_database</span></code></a>(name, values, ...)</p></td>
@@ -606,7 +615,7 @@ access its properties from the database.</p>
 <tr class="row-even"><td><p><a class="reference internal" href="#galyst.core.halo.SimulationObject.write_profile_to_database" title="galyst.core.halo.SimulationObject.write_profile_to_database"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_profile_to_database</span></code></a>(name, values, axis)</p></td>
 <td><p>Write a profile to the database.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="galyst.core.halo.SimulationObject.write_properties_to_database.html#galyst.core.halo.SimulationObject.write_properties_to_database" title="galyst.core.halo.SimulationObject.write_properties_to_database"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_properties_to_database</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#galyst.core.halo.SimulationObject.write_properties_to_database" title="galyst.core.halo.SimulationObject.write_properties_to_database"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_properties_to_database</span></code></a>()</p></td>
 <td><p>Write the cached properties to the database and clear them from pending_properties.</p></td>
 </tr>
 </tbody>
@@ -614,10 +623,22 @@ access its properties from the database.</p>
 </div>
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
-<tr class="row-odd"><td><p><strong>keys</strong></p></td>
+<tr class="row-odd"><td><p><strong>image_keys</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><strong>keys</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><strong>link_keys</strong></p></td>
 <td></td>
 </tr>
 <tr class="row-even"><td><p><strong>load</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><strong>profile_keys</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><strong>property_keys</strong></p></td>
 <td></td>
 </tr>
 </tbody>
@@ -627,6 +648,70 @@ access its properties from the database.</p>
 <dt class="sig sig-object py" id="galyst.core.halo.SimulationObject.keys">
 <span class="sig-name descname"><span class="pre">keys</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#galyst.core.halo.SimulationObject.keys" title="Link to this definition">#</a></dt>
 <dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="galyst.core.halo.SimulationObject.link_keys">
+<span class="sig-name descname"><span class="pre">link_keys</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#galyst.core.halo.SimulationObject.link_keys" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="galyst.core.halo.SimulationObject.property_keys">
+<span class="sig-name descname"><span class="pre">property_keys</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#galyst.core.halo.SimulationObject.property_keys" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="galyst.core.halo.SimulationObject.profile_keys">
+<span class="sig-name descname"><span class="pre">profile_keys</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axis_only</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#galyst.core.halo.SimulationObject.profile_keys" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="galyst.core.halo.SimulationObject.image_keys">
+<span class="sig-name descname"><span class="pre">image_keys</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#galyst.core.halo.SimulationObject.image_keys" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="galyst.core.halo.SimulationObject.get_link">
+<span class="sig-name descname"><span class="pre">get_link</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#galyst.core.halo.SimulationObject.get_link" title="Link to this definition">#</a></dt>
+<dd><p>Get a link by its key.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>key</strong> (<em>str</em>)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="galyst.core.halo.SimulationObject.get_property">
+<span class="sig-name descname"><span class="pre">get_property</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#galyst.core.halo.SimulationObject.get_property" title="Link to this definition">#</a></dt>
+<dd><p>Get a property by its key.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>key</strong> (<em>str</em>)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="galyst.core.halo.SimulationObject.get_profile">
+<span class="sig-name descname"><span class="pre">get_profile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#galyst.core.halo.SimulationObject.get_profile" title="Link to this definition">#</a></dt>
+<dd><p>Get a profile by its key.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>key</strong> (<em>str</em>)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="galyst.core.halo.SimulationObject.get_image">
+<span class="sig-name descname"><span class="pre">get_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#galyst.core.halo.SimulationObject.get_image" title="Link to this definition">#</a></dt>
+<dd><p>Get an image by its key.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>key</strong> (<em>str</em>)</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="galyst.core.halo.SimulationObject.load">
@@ -726,11 +811,11 @@ access its properties from the database.</p>
       </div>
     </a>
     <a class="right-next"
-       href="galyst.core.halo.SimulationObject.add_pending_property.html"
+       href="galyst.core.halo.SimulationObjectHandler.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">下一页</p>
-        <p class="prev-next-title">galyst.core.halo.SimulationObject.add_pending_property</p>
+        <p class="prev-next-title">galyst.core.halo.SimulationObjectHandler</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -752,6 +837,14 @@ access its properties from the database.</p>
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.halo.SimulationObject"><code class="docutils literal notranslate"><span class="pre">SimulationObject</span></code></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.halo.SimulationObject.keys"><code class="docutils literal notranslate"><span class="pre">SimulationObject.keys()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.halo.SimulationObject.link_keys"><code class="docutils literal notranslate"><span class="pre">SimulationObject.link_keys()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.halo.SimulationObject.property_keys"><code class="docutils literal notranslate"><span class="pre">SimulationObject.property_keys()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.halo.SimulationObject.profile_keys"><code class="docutils literal notranslate"><span class="pre">SimulationObject.profile_keys()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.halo.SimulationObject.image_keys"><code class="docutils literal notranslate"><span class="pre">SimulationObject.image_keys()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.halo.SimulationObject.get_link"><code class="docutils literal notranslate"><span class="pre">SimulationObject.get_link()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.halo.SimulationObject.get_property"><code class="docutils literal notranslate"><span class="pre">SimulationObject.get_property()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.halo.SimulationObject.get_profile"><code class="docutils literal notranslate"><span class="pre">SimulationObject.get_profile()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.halo.SimulationObject.get_image"><code class="docutils literal notranslate"><span class="pre">SimulationObject.get_image()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.halo.SimulationObject.load"><code class="docutils literal notranslate"><span class="pre">SimulationObject.load()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.halo.SimulationObject.add_pending_property"><code class="docutils literal notranslate"><span class="pre">SimulationObject.add_pending_property()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galyst.core.halo.SimulationObject.write_properties_to_database"><code class="docutils literal notranslate"><span class="pre">SimulationObject.write_properties_to_database()</span></code></a></li>

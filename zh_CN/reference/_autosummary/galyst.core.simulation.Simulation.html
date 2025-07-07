@@ -31,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/galyst.css?v=5a0ae46b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/galyst.css?v=0907f922" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -49,7 +49,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'reference/_autosummary/galyst.core.simulation.Simulation';</script>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="galyst.core.simulation.Simulation.get_candidate_timestep" href="galyst.core.simulation.Simulation.get_candidate_timestep.html" />
+    <link rel="next" title="galyst.core.simulation.SimulationHandler" href="galyst.core.simulation.SimulationHandler.html" />
     <link rel="prev" title="galyst.core.simulation.get_named_handler_class" href="galyst.core.simulation.get_named_handler_class.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="zh-CN"/>
@@ -220,39 +220,14 @@
 </ul>
 </details></li>
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="galyst.core.html">galyst.core</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.data_mapper.html">galyst.core.data_mapper</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.data_mapper.SimArrayAttributeMapper.html">galyst.core.data_mapper.SimArrayAttributeMapper</a></li>
-</ul>
-</details></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.dbdata.html">galyst.core.dbdata</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbdata.HaloImage.html">galyst.core.dbdata.HaloImage</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbdata.HaloProfile.html">galyst.core.dbdata.HaloProfile</a></li>
-</ul>
-</details></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.dbextract.html">galyst.core.dbextract</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbextract.HaloImageGetter.html">galyst.core.dbextract.HaloImageGetter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbextract.HaloImageValueGetter.html">galyst.core.dbextract.HaloImageValueGetter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbextract.HaloProfileGetter.html">galyst.core.dbextract.HaloProfileGetter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbextract.HaloProfileValueGetter.html">galyst.core.dbextract.HaloProfileValueGetter</a></li>
-</ul>
-</details></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.dbobject.html">galyst.core.dbobject</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbobject.Snapshot.html">galyst.core.dbobject.Snapshot</a></li>
-</ul>
-</details></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.dboperate.html">galyst.core.dboperate</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dboperate.remove_duplicated_halos.html">galyst.core.dboperate.remove_duplicated_halos</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dboperate.remove_haloproperties.html">galyst.core.dboperate.remove_haloproperties</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dboperate.remove_timestep_without_host_simulation.html">galyst.core.dboperate.remove_timestep_without_host_simulation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dboperate.write_property_list.html">galyst.core.dboperate.write_property_list</a></li>
-</ul>
-</details></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.dbpatch.html">galyst.core.dbpatch</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbpatch.apply.html">galyst.core.dbpatch.apply</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbpatch.get_image_objects.html">galyst.core.dbpatch.get_image_objects</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbpatch.get_images.html">galyst.core.dbpatch.get_images</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbpatch.get_profile_objects.html">galyst.core.dbpatch.get_profile_objects</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbpatch.get_profiles.html">galyst.core.dbpatch.get_profiles</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.db.html">galyst.core.db</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.db.data_mapper.html">galyst.core.db.data_mapper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.db.dbdata.html">galyst.core.db.dbdata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.db.dbextract.html">galyst.core.db.dbextract</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.db.dbobject.html">galyst.core.db.dbobject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.db.dboperate.html">galyst.core.db.dboperate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.db.dbpatch.html">galyst.core.db.dbpatch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.db.permissions.html">galyst.core.db.permissions</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.halo.html">galyst.core.halo</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -262,16 +237,6 @@
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.input_handler.html">galyst.core.input_handler</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l4"><a class="reference internal" href="galyst.core.input_handler.ArepoHDFSubfindInputHandler.html">galyst.core.input_handler.ArepoHDFSubfindInputHandler</a></li>
-</ul>
-</details></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.permissions.html">galyst.core.permissions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.permissions.add_user_with_role.html">galyst.core.permissions.add_user_with_role</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.permissions.delete_user.html">galyst.core.permissions.delete_user</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.permissions.get_current_user.html">galyst.core.permissions.get_current_user</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.permissions.initialize_permissions_system.html">galyst.core.permissions.initialize_permissions_system</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.permissions.Role.html">galyst.core.permissions.Role</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.permissions.User.html">galyst.core.permissions.User</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.permissions.UserRoles.html">galyst.core.permissions.UserRoles</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 current active has-children"><a class="reference internal" href="galyst.core.simulation.html">galyst.core.simulation</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
@@ -536,22 +501,22 @@ document.write(`
 </dd>
 <dt class="field-even">Attributes<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference internal" href="galyst.core.simulation.Simulation.all_timestep_files.html#galyst.core.simulation.Simulation.all_timestep_files" title="galyst.core.simulation.Simulation.all_timestep_files"><code class="xref py py-obj docutils literal notranslate"><span class="pre">all_timestep_files</span></code></a></dt><dd><p>Get the list of all timesteps found.</p>
+<dt><a class="reference internal" href="#galyst.core.simulation.Simulation.all_timestep_files" title="galyst.core.simulation.Simulation.all_timestep_files"><code class="xref py py-obj docutils literal notranslate"><span class="pre">all_timestep_files</span></code></a></dt><dd><p>Get the list of all timesteps found.</p>
 </dd>
-<dt><a class="reference internal" href="galyst.core.simulation.Simulation.candidate_timestep_files.html#galyst.core.simulation.Simulation.candidate_timestep_files" title="galyst.core.simulation.Simulation.candidate_timestep_files"><code class="xref py py-obj docutils literal notranslate"><span class="pre">candidate_timestep_files</span></code></a></dt><dd><p>Get the list of timestep candidates not created.</p>
+<dt><a class="reference internal" href="#galyst.core.simulation.Simulation.candidate_timestep_files" title="galyst.core.simulation.Simulation.candidate_timestep_files"><code class="xref py py-obj docutils literal notranslate"><span class="pre">candidate_timestep_files</span></code></a></dt><dd><p>Get the list of timestep candidates not created.</p>
 </dd>
 <dt><strong>creator</strong></dt><dd></dd>
-<dt><a class="reference internal" href="galyst.core.simulation.Simulation.creator_info.html#galyst.core.simulation.Simulation.creator_info" title="galyst.core.simulation.Simulation.creator_info"><code class="xref py py-obj docutils literal notranslate"><span class="pre">creator_info</span></code></a></dt><dd><p>Get the creator of the simulation.</p>
+<dt><a class="reference internal" href="#galyst.core.simulation.Simulation.creator_info" title="galyst.core.simulation.Simulation.creator_info"><code class="xref py py-obj docutils literal notranslate"><span class="pre">creator_info</span></code></a></dt><dd><p>Get the creator of the simulation.</p>
 </dd>
-<dt><a class="reference internal" href="galyst.core.simulation.Simulation.name.html#galyst.core.simulation.Simulation.name" title="galyst.core.simulation.Simulation.name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></a></dt><dd><p>Get the name of the simulation.</p>
+<dt><a class="reference internal" href="#galyst.core.simulation.Simulation.name" title="galyst.core.simulation.Simulation.name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></a></dt><dd><p>Get the name of the simulation.</p>
 </dd>
-<dt><a class="reference internal" href="galyst.core.simulation.Simulation.path.html#galyst.core.simulation.Simulation.path" title="galyst.core.simulation.Simulation.path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">path</span></code></a></dt><dd><p>Get the path of the simulation.</p>
+<dt><a class="reference internal" href="#galyst.core.simulation.Simulation.path" title="galyst.core.simulation.Simulation.path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">path</span></code></a></dt><dd><p>Get the path of the simulation.</p>
 </dd>
 <dt><a class="reference internal" href="#galyst.core.simulation.Simulation.properties" title="galyst.core.simulation.Simulation.properties"><code class="xref py py-obj docutils literal notranslate"><span class="pre">properties</span></code></a></dt><dd><p>Get the properties of the simulation.</p>
 </dd>
-<dt><a class="reference internal" href="galyst.core.simulation.Simulation.timesteps.html#galyst.core.simulation.Simulation.timesteps" title="galyst.core.simulation.Simulation.timesteps"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timesteps</span></code></a></dt><dd><p>Get the list of timesteps already created.</p>
+<dt><a class="reference internal" href="#galyst.core.simulation.Simulation.timesteps" title="galyst.core.simulation.Simulation.timesteps"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timesteps</span></code></a></dt><dd><p>Get the list of timesteps already created.</p>
 </dd>
-<dt><a class="reference internal" href="galyst.core.simulation.Simulation.workspace.html#galyst.core.simulation.Simulation.workspace" title="galyst.core.simulation.Simulation.workspace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">workspace</span></code></a></dt><dd><p>Get the workspace of the simulation.</p>
+<dt><a class="reference internal" href="#galyst.core.simulation.Simulation.workspace" title="galyst.core.simulation.Simulation.workspace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">workspace</span></code></a></dt><dd><p>Get the workspace of the simulation.</p>
 </dd>
 </dl>
 </dd>
@@ -562,16 +527,16 @@ document.write(`
 <tr class="row-odd"><td><p><a class="reference internal" href="#galyst.core.simulation.Simulation.all_simulations" title="galyst.core.simulation.Simulation.all_simulations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">all_simulations</span></code></a>()</p></td>
 <td><p>Get a list of all simulations.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="galyst.core.simulation.Simulation.get_candidate_timestep.html#galyst.core.simulation.Simulation.get_candidate_timestep" title="galyst.core.simulation.Simulation.get_candidate_timestep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_candidate_timestep</span></code></a>(key[, limit])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#galyst.core.simulation.Simulation.get_candidate_timestep" title="galyst.core.simulation.Simulation.get_candidate_timestep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_candidate_timestep</span></code></a>(key[, limit])</p></td>
 <td><p>Get the best candidate timestep for a given key.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="galyst.core.simulation.Simulation.get_output_handler.html#galyst.core.simulation.Simulation.get_output_handler" title="galyst.core.simulation.Simulation.get_output_handler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_output_handler</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#galyst.core.simulation.Simulation.get_output_handler" title="galyst.core.simulation.Simulation.get_output_handler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_output_handler</span></code></a>()</p></td>
 <td><p>Get the output handler for the simulation.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="galyst.core.simulation.Simulation.keys.html#galyst.core.simulation.Simulation.keys" title="galyst.core.simulation.Simulation.keys"><code class="xref py py-obj docutils literal notranslate"><span class="pre">keys</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#galyst.core.simulation.Simulation.keys" title="galyst.core.simulation.Simulation.keys"><code class="xref py py-obj docutils literal notranslate"><span class="pre">keys</span></code></a>()</p></td>
 <td><p>Get the keys of the simulation properties.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="galyst.core.simulation.Simulation.print_creator_details.html#galyst.core.simulation.Simulation.print_creator_details" title="galyst.core.simulation.Simulation.print_creator_details"><code class="xref py py-obj docutils literal notranslate"><span class="pre">print_creator_details</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#galyst.core.simulation.Simulation.print_creator_details" title="galyst.core.simulation.Simulation.print_creator_details"><code class="xref py py-obj docutils literal notranslate"><span class="pre">print_creator_details</span></code></a>()</p></td>
 <td><p>Print information about the creator of the simulation.</p></td>
 </tr>
 </tbody>
@@ -693,11 +658,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="galyst.core.simulation.Simulation.get_candidate_timestep.html"
+       href="galyst.core.simulation.SimulationHandler.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">下一页</p>
-        <p class="prev-next-title">galyst.core.simulation.Simulation.get_candidate_timestep</p>
+        <p class="prev-next-title">galyst.core.simulation.SimulationHandler</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

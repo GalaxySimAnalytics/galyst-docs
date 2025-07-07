@@ -31,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/galyst.css?v=5a0ae46b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/galyst.css?v=0907f922" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -48,7 +48,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'reference/_autosummary/galyst.core.timestep.TimeStep';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="galyst.core.timestep.TimeStep.add_groups" href="galyst.core.timestep.TimeStep.add_groups.html" />
+    <link rel="next" title="galyst.core.timestep.TimeStepHandler" href="galyst.core.timestep.TimeStepHandler.html" />
     <link rel="prev" title="galyst.core.timestep" href="galyst.core.timestep.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -219,39 +219,14 @@
 </ul>
 </details></li>
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="galyst.core.html">galyst.core</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.data_mapper.html">galyst.core.data_mapper</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.data_mapper.SimArrayAttributeMapper.html">galyst.core.data_mapper.SimArrayAttributeMapper</a></li>
-</ul>
-</details></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.dbdata.html">galyst.core.dbdata</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbdata.HaloImage.html">galyst.core.dbdata.HaloImage</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbdata.HaloProfile.html">galyst.core.dbdata.HaloProfile</a></li>
-</ul>
-</details></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.dbextract.html">galyst.core.dbextract</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbextract.HaloImageGetter.html">galyst.core.dbextract.HaloImageGetter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbextract.HaloImageValueGetter.html">galyst.core.dbextract.HaloImageValueGetter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbextract.HaloProfileGetter.html">galyst.core.dbextract.HaloProfileGetter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbextract.HaloProfileValueGetter.html">galyst.core.dbextract.HaloProfileValueGetter</a></li>
-</ul>
-</details></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.dbobject.html">galyst.core.dbobject</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbobject.Snapshot.html">galyst.core.dbobject.Snapshot</a></li>
-</ul>
-</details></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.dboperate.html">galyst.core.dboperate</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dboperate.remove_duplicated_halos.html">galyst.core.dboperate.remove_duplicated_halos</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dboperate.remove_haloproperties.html">galyst.core.dboperate.remove_haloproperties</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dboperate.remove_timestep_without_host_simulation.html">galyst.core.dboperate.remove_timestep_without_host_simulation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dboperate.write_property_list.html">galyst.core.dboperate.write_property_list</a></li>
-</ul>
-</details></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.dbpatch.html">galyst.core.dbpatch</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbpatch.apply.html">galyst.core.dbpatch.apply</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbpatch.get_image_objects.html">galyst.core.dbpatch.get_image_objects</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbpatch.get_images.html">galyst.core.dbpatch.get_images</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbpatch.get_profile_objects.html">galyst.core.dbpatch.get_profile_objects</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.dbpatch.get_profiles.html">galyst.core.dbpatch.get_profiles</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.db.html">galyst.core.db</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.db.data_mapper.html">galyst.core.db.data_mapper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.db.dbdata.html">galyst.core.db.dbdata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.db.dbextract.html">galyst.core.db.dbextract</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.db.dbobject.html">galyst.core.db.dbobject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.db.dboperate.html">galyst.core.db.dboperate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.db.dbpatch.html">galyst.core.db.dbpatch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="galyst.core.db.permissions.html">galyst.core.db.permissions</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.halo.html">galyst.core.halo</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -261,16 +236,6 @@
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.input_handler.html">galyst.core.input_handler</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l4"><a class="reference internal" href="galyst.core.input_handler.ArepoHDFSubfindInputHandler.html">galyst.core.input_handler.ArepoHDFSubfindInputHandler</a></li>
-</ul>
-</details></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.permissions.html">galyst.core.permissions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.permissions.add_user_with_role.html">galyst.core.permissions.add_user_with_role</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.permissions.delete_user.html">galyst.core.permissions.delete_user</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.permissions.get_current_user.html">galyst.core.permissions.get_current_user</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.permissions.initialize_permissions_system.html">galyst.core.permissions.initialize_permissions_system</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.permissions.Role.html">galyst.core.permissions.Role</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.permissions.User.html">galyst.core.permissions.User</a></li>
-<li class="toctree-l4"><a class="reference internal" href="galyst.core.permissions.UserRoles.html">galyst.core.permissions.UserRoles</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="galyst.core.simulation.html">galyst.core.simulation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -544,22 +509,22 @@ for navigating to adjacent timesteps.</p>
 <dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>creator</strong></dt><dd></dd>
-<dt><a class="reference internal" href="galyst.core.timestep.TimeStep.earliest.html#galyst.core.timestep.TimeStep.earliest" title="galyst.core.timestep.TimeStep.earliest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">earliest</span></code></a></dt><dd><p>Get the earliest timestep for the current simulation.</p>
+<dt><a class="reference internal" href="#galyst.core.timestep.TimeStep.earliest" title="galyst.core.timestep.TimeStep.earliest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">earliest</span></code></a></dt><dd><p>Get the earliest timestep for the current simulation.</p>
 </dd>
 <dt><strong>extension</strong></dt><dd></dd>
 <dt><strong>filename</strong></dt><dd></dd>
-<dt><a class="reference internal" href="galyst.core.timestep.TimeStep.latest.html#galyst.core.timestep.TimeStep.latest" title="galyst.core.timestep.TimeStep.latest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">latest</span></code></a></dt><dd><p>Get the latest timestep for the current simulation.</p>
+<dt><a class="reference internal" href="#galyst.core.timestep.TimeStep.latest" title="galyst.core.timestep.TimeStep.latest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">latest</span></code></a></dt><dd><p>Get the latest timestep for the current simulation.</p>
 </dd>
-<dt><a class="reference internal" href="galyst.core.timestep.TimeStep.next.html#galyst.core.timestep.TimeStep.next" title="galyst.core.timestep.TimeStep.next"><code class="xref py py-obj docutils literal notranslate"><span class="pre">next</span></code></a></dt><dd><p>Get the next timestep for the current timestep.</p>
+<dt><a class="reference internal" href="#galyst.core.timestep.TimeStep.next" title="galyst.core.timestep.TimeStep.next"><code class="xref py py-obj docutils literal notranslate"><span class="pre">next</span></code></a></dt><dd><p>Get the next timestep for the current timestep.</p>
 </dd>
-<dt><a class="reference internal" href="galyst.core.timestep.TimeStep.previous.html#galyst.core.timestep.TimeStep.previous" title="galyst.core.timestep.TimeStep.previous"><code class="xref py py-obj docutils literal notranslate"><span class="pre">previous</span></code></a></dt><dd><p>Get the previous timestep for the current timestep.</p>
+<dt><a class="reference internal" href="#galyst.core.timestep.TimeStep.previous" title="galyst.core.timestep.TimeStep.previous"><code class="xref py py-obj docutils literal notranslate"><span class="pre">previous</span></code></a></dt><dd><p>Get the previous timestep for the current timestep.</p>
 </dd>
 <dt><strong>redshift</strong></dt><dd></dd>
 <dt><strong>relative_filename</strong></dt><dd></dd>
-<dt><a class="reference internal" href="galyst.core.timestep.TimeStep.simulation.html#galyst.core.timestep.TimeStep.simulation" title="galyst.core.timestep.TimeStep.simulation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">simulation</span></code></a></dt><dd><p>Get the parent <a class="reference internal" href="generated/galyst.core.Simulation.html#galyst.core.Simulation" title="galyst.core.Simulation"><code class="xref py py-class docutils literal notranslate"><span class="pre">Simulation</span></code></a> object.</p>
+<dt><a class="reference internal" href="#galyst.core.timestep.TimeStep.simulation" title="galyst.core.timestep.TimeStep.simulation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">simulation</span></code></a></dt><dd><p>Get the parent <code class="xref py py-class docutils literal notranslate"><span class="pre">Simulation</span></code> object.</p>
 </dd>
 <dt><strong>time_gyr</strong></dt><dd></dd>
-<dt><a class="reference internal" href="galyst.core.timestep.TimeStep.workspace.html#galyst.core.timestep.TimeStep.workspace" title="galyst.core.timestep.TimeStep.workspace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">workspace</span></code></a></dt><dd><p>Get the workspace for the current timestep.</p>
+<dt><a class="reference internal" href="#galyst.core.timestep.TimeStep.workspace" title="galyst.core.timestep.TimeStep.workspace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">workspace</span></code></a></dt><dd><p>Get the workspace for the current timestep.</p>
 </dd>
 </dl>
 </dd>
@@ -573,34 +538,34 @@ for navigating to adjacent timesteps.</p>
 <p class="rubric">Methods</p>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="galyst.core.timestep.TimeStep.add_groups.html#galyst.core.timestep.TimeStep.add_groups" title="galyst.core.timestep.TimeStep.add_groups"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_groups</span></code></a>([min_particles, max_object, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#galyst.core.timestep.TimeStep.add_groups" title="galyst.core.timestep.TimeStep.add_groups"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_groups</span></code></a>([min_particles, max_object, ...])</p></td>
 <td><p>Add groups to the current timestep.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="galyst.core.timestep.TimeStep.add_halos.html#galyst.core.timestep.TimeStep.add_halos" title="galyst.core.timestep.TimeStep.add_halos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_halos</span></code></a>([min_particles, max_object, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#galyst.core.timestep.TimeStep.add_halos" title="galyst.core.timestep.TimeStep.add_halos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_halos</span></code></a>([min_particles, max_object, ...])</p></td>
 <td><p>Add halos to the current timestep.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="galyst.core.timestep.TimeStep.bhs.html#galyst.core.timestep.TimeStep.bhs" title="galyst.core.timestep.TimeStep.bhs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bhs</span></code></a>([finder_id, bh_number, NDM_min, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#galyst.core.timestep.TimeStep.bhs" title="galyst.core.timestep.TimeStep.bhs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bhs</span></code></a>([finder_id, bh_number, NDM_min, ...])</p></td>
 <td><p>Get the black holes for the current timestep.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="galyst.core.timestep.TimeStep.catalogue.html#galyst.core.timestep.TimeStep.catalogue" title="galyst.core.timestep.TimeStep.catalogue"><code class="xref py py-obj docutils literal notranslate"><span class="pre">catalogue</span></code></a>(*properties[, object_type, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#galyst.core.timestep.TimeStep.catalogue" title="galyst.core.timestep.TimeStep.catalogue"><code class="xref py py-obj docutils literal notranslate"><span class="pre">catalogue</span></code></a>(*properties[, object_type, ...])</p></td>
 <td><p>Get the catalogue for the current timestep.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="galyst.core.timestep.TimeStep.groups.html#galyst.core.timestep.TimeStep.groups" title="galyst.core.timestep.TimeStep.groups"><code class="xref py py-obj docutils literal notranslate"><span class="pre">groups</span></code></a>([finder_id, group_number, NDM_min, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#galyst.core.timestep.TimeStep.groups" title="galyst.core.timestep.TimeStep.groups"><code class="xref py py-obj docutils literal notranslate"><span class="pre">groups</span></code></a>([finder_id, group_number, NDM_min, ...])</p></td>
 <td><p>Get the groups for the current timestep.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="galyst.core.timestep.TimeStep.halos.html#galyst.core.timestep.TimeStep.halos" title="galyst.core.timestep.TimeStep.halos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">halos</span></code></a>([finder_id, halo_number, NDM_min, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#galyst.core.timestep.TimeStep.halos" title="galyst.core.timestep.TimeStep.halos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">halos</span></code></a>([finder_id, halo_number, NDM_min, ...])</p></td>
 <td><p>Get the halos for the current timestep.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="galyst.core.timestep.TimeStep.objects.html#galyst.core.timestep.TimeStep.objects" title="galyst.core.timestep.TimeStep.objects"><code class="xref py py-obj docutils literal notranslate"><span class="pre">objects</span></code></a>([object_type, finder_id, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#galyst.core.timestep.TimeStep.objects" title="galyst.core.timestep.TimeStep.objects"><code class="xref py py-obj docutils literal notranslate"><span class="pre">objects</span></code></a>([object_type, finder_id, ...])</p></td>
 <td><p>Get objects of the specified type for the current timestep, with optional filtering.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="galyst.core.timestep.TimeStep.phantoms.html#galyst.core.timestep.TimeStep.phantoms" title="galyst.core.timestep.TimeStep.phantoms"><code class="xref py py-obj docutils literal notranslate"><span class="pre">phantoms</span></code></a>([finder_id, phantom_number, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#galyst.core.timestep.TimeStep.phantoms" title="galyst.core.timestep.TimeStep.phantoms"><code class="xref py py-obj docutils literal notranslate"><span class="pre">phantoms</span></code></a>([finder_id, phantom_number, ...])</p></td>
 <td><p>Get the phantoms for the current timestep.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="galyst.core.timestep.TimeStep.snapshot.html#galyst.core.timestep.TimeStep.snapshot" title="galyst.core.timestep.TimeStep.snapshot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">snapshot</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#galyst.core.timestep.TimeStep.snapshot" title="galyst.core.timestep.TimeStep.snapshot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">snapshot</span></code></a>()</p></td>
 <td><p>Get the snapshot for the current timestep.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="galyst.core.timestep.TimeStep.trackers.html#galyst.core.timestep.TimeStep.trackers" title="galyst.core.timestep.TimeStep.trackers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trackers</span></code></a>([finder_id, tracker_number, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#galyst.core.timestep.TimeStep.trackers" title="galyst.core.timestep.TimeStep.trackers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trackers</span></code></a>([finder_id, tracker_number, ...])</p></td>
 <td><p>Get the trackers for the current timestep.</p></td>
 </tr>
 </tbody>
@@ -627,28 +592,28 @@ for navigating to adjacent timesteps.</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>timestep</strong> (<em>tangos.core.TimeStep</em>) – The raw tangos timestep object.</p></li>
-<li><p><strong>sim</strong> (<a class="reference internal" href="generated/galyst.core.Simulation.html#galyst.core.Simulation" title="galyst.core.Simulation"><em>Simulation</em></a>) – The parent Simulation object.</p></li>
+<li><p><strong>sim</strong> (<em>Simulation</em>) – The parent Simulation object.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Attributes<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt><strong>creator</strong></dt><dd></dd>
-<dt><a class="reference internal" href="galyst.core.timestep.TimeStep.earliest.html#galyst.core.timestep.TimeStep.earliest" title="galyst.core.timestep.TimeStep.earliest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">earliest</span></code></a></dt><dd><p>Get the earliest timestep for the current simulation.</p>
+<dt><a class="reference internal" href="#galyst.core.timestep.TimeStep.earliest" title="galyst.core.timestep.TimeStep.earliest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">earliest</span></code></a></dt><dd><p>Get the earliest timestep for the current simulation.</p>
 </dd>
 <dt><strong>extension</strong></dt><dd></dd>
 <dt><strong>filename</strong></dt><dd></dd>
-<dt><a class="reference internal" href="galyst.core.timestep.TimeStep.latest.html#galyst.core.timestep.TimeStep.latest" title="galyst.core.timestep.TimeStep.latest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">latest</span></code></a></dt><dd><p>Get the latest timestep for the current simulation.</p>
+<dt><a class="reference internal" href="#galyst.core.timestep.TimeStep.latest" title="galyst.core.timestep.TimeStep.latest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">latest</span></code></a></dt><dd><p>Get the latest timestep for the current simulation.</p>
 </dd>
-<dt><a class="reference internal" href="galyst.core.timestep.TimeStep.next.html#galyst.core.timestep.TimeStep.next" title="galyst.core.timestep.TimeStep.next"><code class="xref py py-obj docutils literal notranslate"><span class="pre">next</span></code></a></dt><dd><p>Get the next timestep for the current timestep.</p>
+<dt><a class="reference internal" href="#galyst.core.timestep.TimeStep.next" title="galyst.core.timestep.TimeStep.next"><code class="xref py py-obj docutils literal notranslate"><span class="pre">next</span></code></a></dt><dd><p>Get the next timestep for the current timestep.</p>
 </dd>
-<dt><a class="reference internal" href="galyst.core.timestep.TimeStep.previous.html#galyst.core.timestep.TimeStep.previous" title="galyst.core.timestep.TimeStep.previous"><code class="xref py py-obj docutils literal notranslate"><span class="pre">previous</span></code></a></dt><dd><p>Get the previous timestep for the current timestep.</p>
+<dt><a class="reference internal" href="#galyst.core.timestep.TimeStep.previous" title="galyst.core.timestep.TimeStep.previous"><code class="xref py py-obj docutils literal notranslate"><span class="pre">previous</span></code></a></dt><dd><p>Get the previous timestep for the current timestep.</p>
 </dd>
 <dt><strong>redshift</strong></dt><dd></dd>
 <dt><strong>relative_filename</strong></dt><dd></dd>
-<dt><a class="reference internal" href="galyst.core.timestep.TimeStep.simulation.html#galyst.core.timestep.TimeStep.simulation" title="galyst.core.timestep.TimeStep.simulation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">simulation</span></code></a></dt><dd><p>Get the parent <a class="reference internal" href="generated/galyst.core.Simulation.html#galyst.core.Simulation" title="galyst.core.Simulation"><code class="xref py py-class docutils literal notranslate"><span class="pre">Simulation</span></code></a> object.</p>
+<dt><a class="reference internal" href="#galyst.core.timestep.TimeStep.simulation" title="galyst.core.timestep.TimeStep.simulation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">simulation</span></code></a></dt><dd><p>Get the parent <code class="xref py py-class docutils literal notranslate"><span class="pre">Simulation</span></code> object.</p>
 </dd>
 <dt><strong>time_gyr</strong></dt><dd></dd>
-<dt><a class="reference internal" href="galyst.core.timestep.TimeStep.workspace.html#galyst.core.timestep.TimeStep.workspace" title="galyst.core.timestep.TimeStep.workspace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">workspace</span></code></a></dt><dd><p>Get the workspace for the current timestep.</p>
+<dt><a class="reference internal" href="#galyst.core.timestep.TimeStep.workspace" title="galyst.core.timestep.TimeStep.workspace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">workspace</span></code></a></dt><dd><p>Get the workspace for the current timestep.</p>
 </dd>
 </dl>
 </dd>
@@ -656,34 +621,34 @@ for navigating to adjacent timesteps.</p>
 <p class="rubric">Methods</p>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="galyst.core.timestep.TimeStep.add_groups.html#galyst.core.timestep.TimeStep.add_groups" title="galyst.core.timestep.TimeStep.add_groups"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_groups</span></code></a>([min_particles, max_object, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#galyst.core.timestep.TimeStep.add_groups" title="galyst.core.timestep.TimeStep.add_groups"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_groups</span></code></a>([min_particles, max_object, ...])</p></td>
 <td><p>Add groups to the current timestep.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="galyst.core.timestep.TimeStep.add_halos.html#galyst.core.timestep.TimeStep.add_halos" title="galyst.core.timestep.TimeStep.add_halos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_halos</span></code></a>([min_particles, max_object, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#galyst.core.timestep.TimeStep.add_halos" title="galyst.core.timestep.TimeStep.add_halos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_halos</span></code></a>([min_particles, max_object, ...])</p></td>
 <td><p>Add halos to the current timestep.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="galyst.core.timestep.TimeStep.bhs.html#galyst.core.timestep.TimeStep.bhs" title="galyst.core.timestep.TimeStep.bhs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bhs</span></code></a>([finder_id, bh_number, NDM_min, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#galyst.core.timestep.TimeStep.bhs" title="galyst.core.timestep.TimeStep.bhs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bhs</span></code></a>([finder_id, bh_number, NDM_min, ...])</p></td>
 <td><p>Get the black holes for the current timestep.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="galyst.core.timestep.TimeStep.catalogue.html#galyst.core.timestep.TimeStep.catalogue" title="galyst.core.timestep.TimeStep.catalogue"><code class="xref py py-obj docutils literal notranslate"><span class="pre">catalogue</span></code></a>(*properties[, object_type, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#galyst.core.timestep.TimeStep.catalogue" title="galyst.core.timestep.TimeStep.catalogue"><code class="xref py py-obj docutils literal notranslate"><span class="pre">catalogue</span></code></a>(*properties[, object_type, ...])</p></td>
 <td><p>Get the catalogue for the current timestep.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="galyst.core.timestep.TimeStep.groups.html#galyst.core.timestep.TimeStep.groups" title="galyst.core.timestep.TimeStep.groups"><code class="xref py py-obj docutils literal notranslate"><span class="pre">groups</span></code></a>([finder_id, group_number, NDM_min, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#galyst.core.timestep.TimeStep.groups" title="galyst.core.timestep.TimeStep.groups"><code class="xref py py-obj docutils literal notranslate"><span class="pre">groups</span></code></a>([finder_id, group_number, NDM_min, ...])</p></td>
 <td><p>Get the groups for the current timestep.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="galyst.core.timestep.TimeStep.halos.html#galyst.core.timestep.TimeStep.halos" title="galyst.core.timestep.TimeStep.halos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">halos</span></code></a>([finder_id, halo_number, NDM_min, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#galyst.core.timestep.TimeStep.halos" title="galyst.core.timestep.TimeStep.halos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">halos</span></code></a>([finder_id, halo_number, NDM_min, ...])</p></td>
 <td><p>Get the halos for the current timestep.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="galyst.core.timestep.TimeStep.objects.html#galyst.core.timestep.TimeStep.objects" title="galyst.core.timestep.TimeStep.objects"><code class="xref py py-obj docutils literal notranslate"><span class="pre">objects</span></code></a>([object_type, finder_id, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#galyst.core.timestep.TimeStep.objects" title="galyst.core.timestep.TimeStep.objects"><code class="xref py py-obj docutils literal notranslate"><span class="pre">objects</span></code></a>([object_type, finder_id, ...])</p></td>
 <td><p>Get objects of the specified type for the current timestep, with optional filtering.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="galyst.core.timestep.TimeStep.phantoms.html#galyst.core.timestep.TimeStep.phantoms" title="galyst.core.timestep.TimeStep.phantoms"><code class="xref py py-obj docutils literal notranslate"><span class="pre">phantoms</span></code></a>([finder_id, phantom_number, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#galyst.core.timestep.TimeStep.phantoms" title="galyst.core.timestep.TimeStep.phantoms"><code class="xref py py-obj docutils literal notranslate"><span class="pre">phantoms</span></code></a>([finder_id, phantom_number, ...])</p></td>
 <td><p>Get the phantoms for the current timestep.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="galyst.core.timestep.TimeStep.snapshot.html#galyst.core.timestep.TimeStep.snapshot" title="galyst.core.timestep.TimeStep.snapshot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">snapshot</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#galyst.core.timestep.TimeStep.snapshot" title="galyst.core.timestep.TimeStep.snapshot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">snapshot</span></code></a>()</p></td>
 <td><p>Get the snapshot for the current timestep.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="galyst.core.timestep.TimeStep.trackers.html#galyst.core.timestep.TimeStep.trackers" title="galyst.core.timestep.TimeStep.trackers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trackers</span></code></a>([finder_id, tracker_number, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#galyst.core.timestep.TimeStep.trackers" title="galyst.core.timestep.TimeStep.trackers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trackers</span></code></a>([finder_id, tracker_number, ...])</p></td>
 <td><p>Get the trackers for the current timestep.</p></td>
 </tr>
 </tbody>
@@ -959,7 +924,7 @@ for navigating to adjacent timesteps.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="galyst.core.timestep.TimeStep.simulation">
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">simulation</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="galyst.core.simulation.Simulation.html#galyst.core.simulation.Simulation" title="galyst.core.simulation.Simulation"><span class="pre">Simulation</span></a></em><a class="headerlink" href="#galyst.core.timestep.TimeStep.simulation" title="Link to this definition">#</a></dt>
-<dd><p>Get the parent <a class="reference internal" href="generated/galyst.core.Simulation.html#galyst.core.Simulation" title="galyst.core.Simulation"><code class="xref py py-class docutils literal notranslate"><span class="pre">Simulation</span></code></a> object.</p>
+<dd><p>Get the parent <code class="xref py py-class docutils literal notranslate"><span class="pre">Simulation</span></code> object.</p>
 </dd></dl>
 
 <dl class="py property">
@@ -1036,11 +1001,11 @@ for navigating to adjacent timesteps.</p>
       </div>
     </a>
     <a class="right-next"
-       href="galyst.core.timestep.TimeStep.add_groups.html"
+       href="galyst.core.timestep.TimeStepHandler.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">galyst.core.timestep.TimeStep.add_groups</p>
+        <p class="prev-next-title">galyst.core.timestep.TimeStepHandler</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
