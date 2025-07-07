@@ -49,7 +49,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'tutorials/quickstart';</script>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="Galyst Installation" href="../installation.html" />
+    <link rel="next" title="安装 Galyst" href="../installation.html" />
     <link rel="prev" title="Galyst 教程" href="tutorials.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="zh-CN"/>
@@ -464,7 +464,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-basic-properties">计算基本性质</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-1d-profiles">计算一维径向分布</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-halo-images">绘制 Halo 图像</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#storing-data-to-the-database">Storing Data to the Database</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#storing-data-to-the-database">存储分析结果</a></li>
 </ul>
             </nav>
         </div>
@@ -482,7 +482,7 @@ document.write(`
 <p class="admonition-title">备注</p>
 <p><code class="docutils literal notranslate"><span class="pre">Galyst</span></code> 构建在 <a class="reference external" href="http://pynbody.readthedocs.io">pynbody</a> 和 <a class="reference external" href="http://tangos.readthedocs.io">tangos</a> 之上。有关高级用法和更深入的理解，请参考它们的文档。</p>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">Galyst</span></code> 旨在分析和管理星系模拟数据，提供一个统一的框架，用于多维星系属性计算、模型拟合和数据管理。</p>
+<p><code class="docutils literal notranslate"><span class="pre">Galyst</span></code> 旨在分析和管理星系模拟数据，提供一个统一的框架，用于星系多个维度的性质计算、模型拟合和数据管理。</p>
 <ul>
 <li><p><strong>数据管理</strong> (<a class="reference internal" href="../reference/_autosummary/galyst.core.html#module-galyst.core" title="galyst.core"><code class="xref py py-mod docutils literal notranslate"><span class="pre">galyst.core</span></code></a>):</p>
 <blockquote>
@@ -502,7 +502,7 @@ document.write(`
 <li><p><strong>1D</strong>: 径向分布，包括密度、年龄和金属丰度。</p></li>
 <li><p><strong>2D</strong>: 图像，如表面亮度和速度场。</p></li>
 </ul>
-<p>&lt;<a class="reference external" href="https://skirt.ugent.be/root/_home.html">https://skirt.ugent.be/root/_home.html</a>&gt;`_ 进行辐射转移，生成伪观测图像。</p>
+<p><code class="docutils literal notranslate"><span class="pre">Galyst</span></code> 还与外部工具接口，如 <a class="reference external" href="https://agama.software/">agama</a> 和 <a class="reference external" href="http://galpy.readthedocs.io">galpy</a> 进行轨道分析，以及 <a class="reference external" href="https://skirt.ugent.be/root/_home.html">skirt</a> 进行辐射转移，生成伪观测图像。</p>
 </div></blockquote>
 </li>
 </ul>
@@ -612,7 +612,7 @@ document.write(`
 <span class="go">[]</span>
 </pre></div>
 </div>
-<p>然而，你仍然可以通过使用数字索引来访问尚未存储在数据库中的``TimeStep``：</p>
+<p>然而，你仍然可以通过使用数字索引来访问尚未存储在数据库中的 <code class="docutils literal notranslate"><span class="pre">TimeStep</span></code> ：</p>
 <div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [10]: </span><span class="n">timestep</span> <span class="o">=</span> <span class="n">sim</span><span class="p">[</span><span class="mi">99</span><span class="p">]</span>
 
 <span class="gp">In [11]: </span><span class="nb">print</span><span class="p">(</span><span class="n">timestep</span><span class="p">)</span>
@@ -695,10 +695,10 @@ document.write(`
 <span class="gp">   ....: </span>    <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Half-mass radius (gas):&quot;</span><span class="p">,</span> <span class="n">Re</span><span class="p">(</span><span class="n">halo_particles</span><span class="o">.</span><span class="n">g</span><span class="p">),</span>
 <span class="gp">   ....: </span><span class="p">)</span>
 <span class="gp">   ....: </span>
-<span class="go">Half-mass radius (total): 62.9724720596586 </span>
-<span class="go">Half-mass radius (DM): 67.59941239234715 </span>
-<span class="go">Half-mass radius (stars): 5.850830467864327 </span>
-<span class="go">Half-mass radius (gas): 64.86895606235284</span>
+<span class="go">Half-mass radius (total): 62.972472059575416 </span>
+<span class="go">Half-mass radius (DM): 67.59941239236483 </span>
+<span class="go">Half-mass radius (stars): 5.8508304678219965 </span>
+<span class="go">Half-mass radius (gas): 64.86895606231306</span>
 </pre></div>
 </div>
 <p>在这里，<code class="docutils literal notranslate"><span class="pre">frac</span></code> 参数指定用于计算半径的质量分数。设置 <code class="docutils literal notranslate"><span class="pre">frac=0.5</span></code> 将返回包含一半总质量的半径（即半质量半径）。</p>
@@ -712,10 +712,10 @@ document.write(`
 <span class="gp">   ....: </span>    <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Rotation energy fraction (gas):&quot;</span><span class="p">,</span> <span class="n">krot</span><span class="p">(</span><span class="n">halo_particles</span><span class="o">.</span><span class="n">g</span><span class="p">),</span>
 <span class="gp">   ....: </span><span class="p">)</span>
 <span class="gp">   ....: </span>
-<span class="go">Rotation energy fraction (total): 0.35872570255796943 </span>
-<span class="go">Rotation energy fraction (DM): 0.32376409351966806 </span>
-<span class="go">Rotation energy fraction (stars): 0.6905072443781521 </span>
-<span class="go">Rotation energy fraction (gas): 0.722732837582208</span>
+<span class="go">Rotation energy fraction (total): 0.35872570255879616 </span>
+<span class="go">Rotation energy fraction (DM): 0.32376409352040364 </span>
+<span class="go">Rotation energy fraction (stars): 0.6905072443795279 </span>
+<span class="go">Rotation energy fraction (gas): 0.7227328375828906</span>
 </pre></div>
 </div>
 </section>
@@ -730,16 +730,16 @@ document.write(`
 <div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [32]: </span><span class="kn">import</span><span class="w"> </span><span class="nn">pylab</span>
 
 <span class="gp">In [33]: </span><span class="n">pylab</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pr</span><span class="p">[</span><span class="s1">&#39;rbins&#39;</span><span class="p">],</span> <span class="n">pr</span><span class="p">[</span><span class="s1">&#39;density&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Total&#39;</span><span class="p">)</span>
-<span class="gh">Out[33]: </span><span class="go">[&lt;matplotlib.lines.Line2D at 0x73fc4b267410&gt;]</span>
+<span class="gh">Out[33]: </span><span class="go">[&lt;matplotlib.lines.Line2D at 0x7f08f5ac5190&gt;]</span>
 
 <span class="gp">In [34]: </span><span class="n">pylab</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pr</span><span class="p">[</span><span class="s1">&#39;rbins&#39;</span><span class="p">],</span> <span class="n">pr</span><span class="p">[</span><span class="s1">&#39;star-density&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Stars&#39;</span><span class="p">)</span>
-<span class="gh">Out[34]: </span><span class="go">[&lt;matplotlib.lines.Line2D at 0x73fc45c2ed50&gt;]</span>
+<span class="gh">Out[34]: </span><span class="go">[&lt;matplotlib.lines.Line2D at 0x7f08f5aa0d90&gt;]</span>
 
 <span class="gp">In [35]: </span><span class="n">pylab</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pr</span><span class="p">[</span><span class="s1">&#39;rbins&#39;</span><span class="p">],</span> <span class="n">pr</span><span class="p">[</span><span class="s1">&#39;gas-density&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Gas&#39;</span><span class="p">)</span>
-<span class="gh">Out[35]: </span><span class="go">[&lt;matplotlib.lines.Line2D at 0x73fc45c2c690&gt;]</span>
+<span class="gh">Out[35]: </span><span class="go">[&lt;matplotlib.lines.Line2D at 0x7f08f5aa9b10&gt;]</span>
 
 <span class="gp">In [36]: </span><span class="n">pylab</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pr</span><span class="p">[</span><span class="s1">&#39;rbins&#39;</span><span class="p">],</span> <span class="n">pr</span><span class="p">[</span><span class="s1">&#39;dm-density&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Dark Matter&#39;</span><span class="p">)</span>
-<span class="gh">Out[36]: </span><span class="go">[&lt;matplotlib.lines.Line2D at 0x73fc45d4fd90&gt;]</span>
+<span class="gh">Out[36]: </span><span class="go">[&lt;matplotlib.lines.Line2D at 0x7f08f5aaac10&gt;]</span>
 
 <span class="gp">In [37]: </span><span class="n">pylab</span><span class="o">.</span><span class="n">yscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
 
@@ -753,7 +753,7 @@ document.write(`
 <span class="gh">Out[40]: </span><span class="go">(0.0, 30.0)</span>
 
 <span class="gp">In [41]: </span><span class="n">pylab</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="gh">Out[41]: </span><span class="go">&lt;matplotlib.legend.Legend at 0x73fc4b307f50&gt;</span>
+<span class="gh">Out[41]: </span><span class="go">&lt;matplotlib.legend.Legend at 0x7f08f5b3efd0&gt;</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../_images/halo_manipulation_denpro.png"><img alt="../_images/halo_manipulation_denpro.png" src="../_images/halo_manipulation_denpro.png" style="width: 8in;" />
@@ -761,10 +761,10 @@ document.write(`
 <p>这里，前缀 <code class="docutils literal notranslate"><span class="pre">star-</span></code>, <code class="docutils literal notranslate"><span class="pre">gas-</span></code>, 和 <code class="docutils literal notranslate"><span class="pre">dm-</span></code> 指定了不同的物质成分。</p>
 <p>让我们看看气体温度的分布：</p>
 <div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [42]: </span><span class="n">pylab</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pr</span><span class="p">[</span><span class="s1">&#39;rbins&#39;</span><span class="p">],</span><span class="n">pr</span><span class="p">[</span><span class="s1">&#39;gas-temp_50&#39;</span><span class="p">],</span><span class="n">c</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
-<span class="gh">Out[42]: </span><span class="go">[&lt;matplotlib.lines.Line2D at 0x73fc4baf1190&gt;]</span>
+<span class="gh">Out[42]: </span><span class="go">[&lt;matplotlib.lines.Line2D at 0x7f08dc2facd0&gt;]</span>
 
 <span class="gp">In [43]: </span><span class="n">pylab</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">pr</span><span class="p">[</span><span class="s1">&#39;rbins&#39;</span><span class="p">],</span> <span class="n">pr</span><span class="p">[</span><span class="s1">&#39;gas-temp_30&#39;</span><span class="p">],</span> <span class="n">pr</span><span class="p">[</span><span class="s1">&#39;gas-temp_70&#39;</span><span class="p">],</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;grey&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;30-70th percentile&#39;</span><span class="p">)</span>
-<span class="gh">Out[43]: </span><span class="go">&lt;matplotlib.collections.FillBetweenPolyCollection at 0x73fc4bb20690&gt;</span>
+<span class="gh">Out[43]: </span><span class="go">&lt;matplotlib.collections.FillBetweenPolyCollection at 0x7f08dc3fd610&gt;</span>
 
 <span class="gp">In [44]: </span><span class="n">pylab</span><span class="o">.</span><span class="n">yscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
 
@@ -778,7 +778,7 @@ document.write(`
 <span class="gh">Out[47]: </span><span class="go">(0.0, 30.0)</span>
 
 <span class="gp">In [48]: </span><span class="n">pylab</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="gh">Out[48]: </span><span class="go">&lt;matplotlib.legend.Legend at 0x73fc45936290&gt;</span>
+<span class="gh">Out[48]: </span><span class="go">&lt;matplotlib.legend.Legend at 0x7f08dc432a50&gt;</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../_images/halo_gas_temp_profile.png"><img alt="../_images/halo_gas_temp_profile.png" src="../_images/halo_gas_temp_profile.png" style="width: 8in;" />
@@ -794,7 +794,7 @@ document.write(`
 <span class="gp">In [50]: </span><span class="n">im_g</span> <span class="o">=</span> <span class="n">im</span><span class="o">.</span><span class="n">sph_projection</span><span class="p">(</span><span class="n">halo_particles</span><span class="o">.</span><span class="n">g</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="s1">&#39;60 kpc&#39;</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;Msol kpc^-2&#39;</span><span class="p">)</span>
 
 <span class="gp">In [51]: </span><span class="n">im_g</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-<span class="gh">Out[51]: </span><span class="go">&lt;matplotlib.image.AxesImage at 0x73fc4a98acd0&gt;</span>
+<span class="gh">Out[51]: </span><span class="go">&lt;matplotlib.image.AxesImage at 0x7f08dc419050&gt;</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../_images/halo_gas_surface_density.png"><img alt="../_images/halo_gas_surface_density.png" src="../_images/halo_gas_surface_density.png" style="width: 8in;" />
@@ -803,7 +803,7 @@ document.write(`
 <div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [52]: </span><span class="n">im_g_metals</span> <span class="o">=</span> <span class="n">im</span><span class="o">.</span><span class="n">sph_projection</span><span class="p">(</span><span class="n">halo_particles</span><span class="o">.</span><span class="n">g</span><span class="p">,</span> <span class="n">quantity</span><span class="o">=</span><span class="s1">&#39;metals&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="s1">&#39;60 kpc&#39;</span><span class="p">)</span>
 
 <span class="gp">In [53]: </span><span class="n">im_g_metals</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-<span class="gh">Out[53]: </span><span class="go">&lt;matplotlib.image.AxesImage at 0x73fc4a8a2a50&gt;</span>
+<span class="gh">Out[53]: </span><span class="go">&lt;matplotlib.image.AxesImage at 0x7f08dc4bce50&gt;</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../_images/halo_gas_metallicity.png"><img alt="../_images/halo_gas_metallicity.png" src="../_images/halo_gas_metallicity.png" style="width: 8in;" />
@@ -812,7 +812,7 @@ document.write(`
 <div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [54]: </span><span class="n">im_s</span> <span class="o">=</span> <span class="n">im</span><span class="o">.</span><span class="n">star_luminosity_image</span><span class="p">(</span><span class="n">halo_particles</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="s1">&#39;60 kpc&#39;</span><span class="p">)</span>
 
 <span class="gp">In [55]: </span><span class="n">im_s</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-<span class="gh">Out[55]: </span><span class="go">&lt;matplotlib.image.AxesImage at 0x73fc4549c790&gt;</span>
+<span class="gh">Out[55]: </span><span class="go">&lt;matplotlib.image.AxesImage at 0x7f08dc145350&gt;</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../_images/halo_star_luminosity.png"><img alt="../_images/halo_star_luminosity.png" src="../_images/halo_star_luminosity.png" style="width: 8in;" />
@@ -825,14 +825,14 @@ document.write(`
 <span class="gp">In [58]: </span><span class="n">image</span> <span class="o">=</span> <span class="n">im_s_v</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
 <span class="gp">In [59]: </span><span class="n">im_s_m</span><span class="o">.</span><span class="n">show_contour</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
-<span class="gh">Out[59]: </span><span class="go">&lt;matplotlib.contour.QuadContourSet at 0x73fc454e1d50&gt;</span>
+<span class="gh">Out[59]: </span><span class="go">&lt;matplotlib.contour.QuadContourSet at 0x7f08c7f28090&gt;</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../_images/halo_star_velocity.png"><img alt="../_images/halo_star_velocity.png" src="../_images/halo_star_velocity.png" style="width: 8in;" />
 </a>
 </section>
 <section id="storing-data-to-the-database">
-<h2>Storing Data to the Database<a class="headerlink" href="#storing-data-to-the-database" title="Link to this heading">#</a></h2>
+<h2>存储分析结果<a class="headerlink" href="#storing-data-to-the-database" title="Link to this heading">#</a></h2>
 <p>在分析完一些数据后，我们需要将结果存储到数据库中。首先我们存基本的属性：</p>
 <div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [60]: </span><span class="n">halo</span><span class="o">.</span><span class="n">add_pending_property</span><span class="p">(</span><span class="s2">&quot;krot_star&quot;</span><span class="p">,</span> <span class="n">krot</span><span class="p">(</span><span class="n">halo_particles</span><span class="o">.</span><span class="n">s</span><span class="p">))</span>
 
@@ -908,7 +908,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">下一页</p>
-        <p class="prev-next-title">Galyst Installation</p>
+        <p class="prev-next-title">安装 Galyst</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -936,7 +936,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-basic-properties">计算基本性质</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-1d-profiles">计算一维径向分布</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-halo-images">绘制 Halo 图像</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#storing-data-to-the-database">Storing Data to the Database</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#storing-data-to-the-database">存储分析结果</a></li>
 </ul>
   </nav></div>
 
@@ -951,7 +951,7 @@ document.write(`
   <div class="footer-item">
     
 <p class="component-author">
-作者： Shuai Lu
+作者： 卢帅
 </p>
 
   </div>

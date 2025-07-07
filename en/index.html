@@ -472,11 +472,19 @@ document.write(`
                   
   <section id="welcome-to-the-galyst-documentation">
 <h1>Welcome to the Galyst documentation!<a class="headerlink" href="#welcome-to-the-galyst-documentation" title="Link to this heading">#</a></h1>
-<div style="border:1px solid #ccc; background:#f9f9f9; padding:8px; border-radius:6px; width:max-content; float:right;">
+<div style="border:1px solid #ccc; background:#f9f9f9; padding:8px; border-radius:6px; width:max-content; margin-bottom:18px;">
   <a href="../en/index.html">English</a> |
   <a href="../zh_CN/index.html">简体中文</a>
-</div><p><code class="docutils literal notranslate"><span class="pre">Galyst</span></code>: a Python package for multi-dimensional analysis of galaxy simulations. Built on top of <a class="reference external" href="http://pynbody.readthedocs.io">pynbody</a> and <a class="reference external" href="https://tangos.readthedocs.io/">tangos</a>.
-It uses <code class="docutils literal notranslate"><span class="pre">pynbody</span></code> for data processing and analysis, and <code class="docutils literal notranslate"><span class="pre">tangos</span></code> for data management. <code class="docutils literal notranslate"><span class="pre">Galyst</span></code> provides a complete toolchain for analyzing galaxies in simulations from multiple dimensions.</p>
+</div><p><code class="docutils literal notranslate"><span class="pre">Galyst</span></code> is an omni-dimensional analysis toolkit for galaxy simulations.
+It is a Python package designed for multi-dimensional (0D, 1D, 2D, 3D) analysis of galaxy numerical simulations.
+Built on top of <a class="reference external" href="http://pynbody.readthedocs.io">Pynbody</a> and <a class="reference external" href="https://tangos.readthedocs.io/">Tangos</a>, <code class="docutils literal notranslate"><span class="pre">Galyst</span></code> leverages <code class="docutils literal notranslate"><span class="pre">pynbody</span></code> for data processing and analysis, and <code class="docutils literal notranslate"><span class="pre">tangos</span></code> for data management. It provides a comprehensive toolchain for analyzing galaxies in simulations across multiple dimensions.</p>
+<p>Key features:</p>
+<ul class="simple">
+<li><p><strong>Efficient data management:</strong> <a class="reference external" href="https://tangos.readthedocs.io/">Tangos</a> organizes and manages diverse simulation projects, supporting storage and retrieval of analysis results.</p></li>
+<li><p><strong>Broad data compatibility:</strong> <a class="reference external" href="https://pynbody.readthedocs.io/">Pynbody</a> reads mainstream simulation data formats, enabling in-depth computation and analysis.</p></li>
+<li><p><strong>Collaborative workflows:</strong> Galyst includes a robust user permission management system with built-in row-level security (RLS), allowing flexible user access control and efficient collaboration.</p></li>
+<li><p><strong>Extensible analysis tools:</strong> Galyst integrates easily with external analysis tools, such as radiative transfer (<a class="reference external" href="https://skirt.ugent.be/root/_home.html">SKIRT</a>), dynamical analysis (<a class="reference external" href="https://agama.software/">AGAMA</a>, <a class="reference external" href="http://galpy.readthedocs.io">galpy</a>), 2D image processing (<a class="reference external" href="https://users.obs.carnegiescience.edu/peng/work/galfit/galfit.html">galfit</a>, <a class="reference external" href="https://imfit.readthedocs.io/en/latest/">imfit</a>), and 3D morphology modeling (<a class="reference external" href="https://github.com/GalaxySimAnalytics/gal3d">gal3d</a>), greatly enhancing analytical efficiency and extensibility.</p></li>
+</ul>
 </section>
 <section id="installation">
 <h1>Installation<a class="headerlink" href="#installation" title="Link to this heading">#</a></h1>

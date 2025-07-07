@@ -473,10 +473,17 @@ document.write(`
                   
   <section id="welcome-to-the-galyst-documentation">
 <h1>欢迎阅读 Galyst 文档！<a class="headerlink" href="#welcome-to-the-galyst-documentation" title="Link to this heading">#</a></h1>
-<div style="border:1px solid #ccc; background:#f9f9f9; padding:8px; border-radius:6px; width:max-content; float:right;">
+<div style="border:1px solid #ccc; background:#f9f9f9; padding:8px; border-radius:6px; width:max-content; margin-bottom:18px;">
   <a href="../en/index.html">English</a> |
   <a href="../zh_CN/index.html">简体中文</a>
-</div><p><code class="docutils literal notranslate"><span class="pre">Galyst</span></code>：一个用于星系模拟多维分析的 Python 软件包。基于 <a class="reference external" href="http://pynbody.readthedocs.io">pynbody</a> 和 <a class="reference external" href="https://tangos.readthedocs.io/">tangos</a> 构建。它使用 <code class="docutils literal notranslate"><span class="pre">pynbody</span></code> 进行数据处理与分析，使用 <code class="docutils literal notranslate"><span class="pre">tangos</span></code> 进行数据管理。<code class="docutils literal notranslate"><span class="pre">Galyst</span></code> 为多维度分析模拟中的星系提供了完整的工具链。</p>
+</div><p><code class="docutils literal notranslate"><span class="pre">Galyst</span></code> 是一个面向星系模拟的全维度分析工具包。它是一个用于星系数值模拟多维（0D、1D、2D、3D）分析的 Python 软件包。基于 <a class="reference external" href="http://pynbody.readthedocs.io">pynbody</a> 和 <a class="reference external" href="https://tangos.readthedocs.io/">tangos</a>，<code class="docutils literal notranslate"><span class="pre">Galyst</span></code> 利用 <code class="docutils literal notranslate"><span class="pre">pynbody</span></code> 进行数据处理与分析，利用 <code class="docutils literal notranslate"><span class="pre">tangos</span></code> 进行数据管理。它为模拟中的星系多维分析提供了完整的工具链。</p>
+<p>主要特性：</p>
+<ul class="simple">
+<li><p><strong>高效的数据管理：</strong> <a class="reference external" href="https://tangos.readthedocs.io/">Tangos</a> 组织和管理多样化的模拟项目，支持分析结果的存储与检索。</p></li>
+<li><p><strong>广泛的数据兼容性：</strong> <a class="reference external" href="https://pynbody.readthedocs.io/">Pynbody</a> 支持主流模拟数据格式的读取，实现深入的计算与分析。</p></li>
+<li><p><strong>协作分析：</strong> Galyst 内置完善的用户权限管理系统和行级安全（RLS），实现灵活的用户访问控制与高效协作。</p></li>
+<li><p><strong>可扩展的分析工具：</strong> Galyst 提供灵活的分析工具和接口，便于集成多种外部分析工具，如辐射转移（<a class="reference external" href="https://skirt.ugent.be/root/_home.html">SKIRT</a>）、动力学分析（<a class="reference external" href="https://agama.software/">AGAMA</a>、<a class="reference external" href="http://galpy.readthedocs.io">galpy</a>）、二维图像处理（<a class="reference external" href="https://users.obs.carnegiescience.edu/peng/work/galfit/galfit.html">galfit</a>、 <a class="reference external" href="https://imfit.readthedocs.io/en/latest/">imfit</a>）和三维形态建模（<a class="reference external" href="https://github.com/GalaxySimAnalytics/gal3d">gal3d</a>），极大提升分析效率与可扩展性。</p></li>
+</ul>
 </section>
 <section id="installation">
 <h1>安装<a class="headerlink" href="#installation" title="Link to this heading">#</a></h1>
@@ -492,7 +499,7 @@ pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </s
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">安装</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="installation.html#quick-installation">简易安装</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#quick-installation">直接安装</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="reference/index.html">参考</a><ul>
@@ -560,7 +567,7 @@ pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </s
   <div class="footer-item">
     
 <p class="component-author">
-作者： Shuai Lu
+作者： 卢帅
 </p>
 
   </div>
